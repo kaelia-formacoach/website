@@ -43,14 +43,25 @@
 </header>
 
 <script>
-  // Détection de la page active avec window.location.pathname
-  document.addEventListener('DOMContentLoaded', function () {
-    const currentPath = window.location.pathname;
+document.addEventListener('DOMContentLoaded', function () {
+    // Récupère le chemin actuel et supprime la barre oblique finale, s'il y en a une
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+
+    // Sélectionne tous les liens du menu de navigation
     const links = document.querySelectorAll('.nav-link');
 
     links.forEach(link => {
-      if (link.getAttribute('href') === currentPath) {
-        link.classList.add('text-purple-600', 'underline', 'underline-offset-4');
+      // Récupérer l'attribut href et vérifier s'il n'est pas null
+      const href = link.getAttribute('href');
+
+      // Si href existe, on supprime la barre oblique à la fin
+      if (href) {
+        const linkPath = href.replace(/\/$/, "");
+
+        // Comparaison des chemins
+        if (linkPath === currentPath) {
+          link.classList.add('text-purple-600', 'underline', 'underline-offset-4');
+        }
       }
     });
   });
