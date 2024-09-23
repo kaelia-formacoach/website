@@ -1,0 +1,73 @@
+<header class="bg-white shadow-md p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo aligné à gauche -->
+    <div class="flex items-center space-x-2">
+      <img src="/logo.png" alt="Kaelia Logo" class="h-12" />
+    </div>
+
+    <!-- Menu Burger pour mobile -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-700 focus:outline-none">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <div id="menu" class="hidden md:flex items-center space-x-8">
+      <nav class="space-x-8 text-gray-700">
+        <a href="/" class="nav-link hover:text-purple-600 font-semibold">Accueil</a>
+        <a href="/formations" class="nav-link hover:text-purple-600 font-semibold">Formations</a>
+        <a href="/entreprise" class="nav-link hover:text-purple-600 font-semibold">Entreprise</a>
+        <a href="/equipe" class="nav-link hover:text-purple-600 font-semibold">Équipe</a>
+      </nav>
+
+      <!-- Contact Button -->
+      <a href="/contact" class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-500">
+        Contactez-nous
+      </a>
+    </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden flex-col space-y-6 mt-6">
+    <a href="/" class="nav-link block hover:text-purple-600 font-semibold">Accueil</a>
+    <a href="/formations" class="nav-link block hover:text-purple-600 font-semibold">Formations</a>
+    <a href="/entreprise" class="nav-link block hover:text-purple-600 font-semibold">Entreprise</a>
+    <a href="/equipe" class="nav-link block hover:text-purple-600 font-semibold">Équipe</a>
+    <a href="/contact" class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-500">
+      Contactez-nous
+    </a>
+  </div>
+</header>
+
+<script>
+  // Détection de la page active avec window.location.pathname
+  document.addEventListener('DOMContentLoaded', function () {
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('text-purple-600', 'underline', 'underline-offset-4');
+      }
+    });
+  });
+
+  // Toggle pour le menu mobile
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', function () {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+      } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+      }
+    });
+  }
+</script>
