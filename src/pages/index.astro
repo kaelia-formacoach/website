@@ -3,4 +3,158 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+  <section class="bg-white py-20">
+    <div class="container mx-auto px-6 md:flex md:items-center md:justify-between">
+      <!-- Text Section -->
+      <div class="md:w-1/2">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-6">Ensemble, développons nos compétences.</h1> <!-- Changed to <h1> for SEO -->
+        <p class="text-lg text-gray-600 mb-8">
+          Chez Kaelia, nous mettons à votre disposition des formations sur mesure, conçues pour répondre aux besoins du marché et certifiées Qualiopi. Que vous soyez un professionnel en reconversion ou un salarié souhaitant renforcer ses compétences, notre équipe vous accompagne tout au long de votre parcours.
+        </p>
+        <a href="/contact" class="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-purple-500" aria-label="Contactez-nous">
+          Contactez-nous
+        </a>
+      </div>
+
+      <!-- SVG Section -->
+      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
+        <img src="/home.svg" alt="Illustration de développement des compétences" class="w-full object-contain"> <!-- Improved alt text for SEO -->
+      </div>
+    </div>
+
+    <div class="container mx-auto px-6 mt-16">
+      <h2 class="text-center text-3xl font-bold mb-16">Notre Processus</h2> <!-- Improved text for SEO -->
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="relative inline-block mb-4">
+            <span class="text-6xl font-extrabold text-purple-800">01</span>
+            <img src="/handshake.svg" alt="Icone comprendre le besoin" class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12"> <!-- Improved alt text -->
+          </div>
+          <h3 class="text-xl font-semibold">Comprendre votre besoin</h3>
+          <p class="text-gray-600 mt-4 mb-6">Nous échangeons pour vous aider à comprendre votre besoin</p>
+          <a href="#" class="text-purple-600 font-semibold underline">En savoir plus</a>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="relative inline-block mb-4">
+            <span class="text-6xl font-extrabold text-purple-800">02</span>
+            <img src="/drawer-alt.svg" alt="Icone construire la formation" class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold">Construisez la formation</h3>
+          <p class="text-gray-600 mt-2 mb-4">Nous vous aidons à créer une formation sur-mesure en adéquation avec vos attentes</p>
+          <a href="#" class="text-purple-600 font-semibold underline">En savoir plus</a>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="relative inline-block mb-4">
+            <span class="text-6xl font-extrabold text-purple-800">03</span>
+            <img src="/book-open-cover.svg" alt="Icone apprendre et se former" class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold">Apprendre et se former</h3>
+          <p class="text-gray-600 mt-2 mb-4">Vous vous formez avec des professionnels qualifiés selon vos disponibilités</p>
+          <a href="#" class="text-purple-600 font-semibold underline">En savoir plus</a>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center">
+          <div class="relative inline-block mb-4">
+            <span class="text-6xl font-extrabold text-purple-800">04</span>
+            <img src="/file-edit.svg" alt="Icone faire le point" class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12">
+          </div>
+          <h3 class="text-xl font-semibold">Faire le point sur votre apprentissage</h3>
+          <p class="text-gray-600 mt-2 mb-4">Nous débriefons sur l'ensemble de la formation et sur vos acquis</p>
+          <a href="#" class="text-purple-600 font-semibold underline">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Call to Action Button -->
+      <div class="mt-16 text-center">
+        <a href="/contact" class="bg-purple-600 text-white py-3 px-8 rounded-lg shadow-md hover:bg-purple-500" aria-label="Contactez-nous">
+          Contactez-nous
+        </a>
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container mx-auto px-6 mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+        <!-- Card 1 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
+            <img src="/online-learning.png" alt="Icone Juridique" class="w-12 h-12">
+          </div>
+          <h3 class="text-purple-800 font-semibold">Juridique</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
+            <img src="/atom.png" alt="Icone RSE" class="w-12 h-12">
+          </div>
+          <h3 class="text-purple-800 font-semibold">RSE</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
+            <img src="/startup.png" alt="Icone Stratégie" class="w-12 h-12">
+          </div>
+          <h3 class="text-purple-800 font-semibold">Stratégie d'entreprise</h3>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col items-center">
+          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
+            <img src="/ux-design.png" alt="Icone Numérique" class="w-12 h-12">
+          </div>
+          <h3 class="text-purple-800 font-semibold">Numérique</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="container mx-auto px-6 text-center mt-20 mb-20">
+      <h2 class="text-4xl font-extrabold text-purple-800 mb-12">Votre parcours, votre formation</h2>
+      <div class="bg-gray-100 rounded-lg p-8 md:p-12 max-w-3xl mx-auto">
+        <p class="text-5xl text-purple-800 font-bold inline-block leading-none mb-8">“</p>
+        <p class="text-gray-700 text-lg leading-relaxed inline-block mx-4">
+        "Chez Kaelia, nous croyons que chaque personne, chaque entreprise, chaque projet est unique.
+                  C’est pourquoi nous créons des formations personnalisées qui s’adaptent à vos besoins spécifiques,
+                  à votre rythme et à vos objectifs. Que vous souhaitiez vous perfectionner dans votre domaine ou explorer de
+                  nouvelles compétences, notre approche sur-mesure vous permet de tirer le meilleur parti de votre apprentissage."
+        </p>
+        <p class="text-5xl text-purple-800 font-bold inline-block leading-none mb-8">”</p>
+      </div>
+    </div>
+
+    <!-- Logos Section -->
+    <div class="container mx-auto px-6 mt-20">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-center">
+        <!-- Logo 1 -->
+        <div class="flex justify-center">
+          <img src="/IUT.png" alt="Logo IUT Lumière Lyon" class="max-h-16"> <!-- Improved alt text for SEO -->
+        </div>
+
+        <!-- Logo 2 -->
+        <div class="flex justify-center">
+          <img src="/webkonseil.png" alt="Logo Webkonseil" class="max-h-16"> <!-- Improved alt text for SEO -->
+        </div>
+
+        <!-- Logo 3 -->
+        <div class="flex justify-center">
+          <img src="/opus.png" alt="Logo Opus Formation" class="max-h-16"> <!-- Improved alt text for SEO -->
+        </div>
+
+        <!-- Logo 4 -->
+        <div class="flex justify-center">
+          <img src="/webylab.png" alt="Logo Webylab" class="max-h-16"> <!-- Improved alt text for SEO -->
+        </div>
+      </div>
+    </div>
+
+  </section>
 </Layout>
