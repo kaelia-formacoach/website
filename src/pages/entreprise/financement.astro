@@ -3,5 +3,25 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h1>Financement</h1>
+  <section class="bg-white py-20">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left Section: SVG Image -->
+      <div class="flex justify-center md:justify-start">
+        <img src="/financement/financement.svg" alt="Illustration financements" class="max-w-full h-auto">
+      </div>
+
+      <!-- Right Section: Text Content -->
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">Des solutions de financement pour tous vos projets de formation</h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Profitez d’un accompagnement personnalisé pour financer votre parcours CPF, OPCO, aides régionales... Découvrez toutes les options qui s’offrent à vous pour vous concrétiser vos ambitions professionnelles sans contrainte financière.
+        </p>
+        <a href="/contact" class="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-purple-500">
+          Contactez-nous
+        </a>
+      </div>
+
+    </div>
+  </section>
 </Layout>
