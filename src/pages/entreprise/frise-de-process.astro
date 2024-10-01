@@ -3,5 +3,111 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h1>Frise de process</h1>
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 md:flex md:items-center md:justify-between">
+      <!-- Image Section -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="/frise-de-process/frise-de-process.svg" alt="Frise de Process" class="w-full max-w-lg object-contain" />
+      </div>
+
+      <!-- Text Section -->
+      <div class="md:w-1/2 mt-12 md:mt-0 md:ml-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Les étapes clés pour atteindre vos objectifs de formation</h2>
+        <p class="text-lg text-gray-600 mb-6">
+          Découvrez notre processus simple et efficace, conçu pour vous guider à chaque étape de votre parcours d’apprentissage, de la sélection du programme à la validation de vos compétences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Process Section -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <!-- Steps Section with SVG Icons and Arrows -->
+      <div class="relative space-y-12">
+
+        <!-- Step 1 -->
+        <div class="flex items-start space-x-6 relative">
+          <div class="relative">
+            <!-- Pictogram for Step 1 positioned above and to the left -->
+            <img src="/handshake.svg" alt="Icon for Step 1" class="absolute -top-0 -left-5 w-10 h-10 z-10" />
+            <span class="text-6xl font-extrabold text-purple-800 relative">01</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Comprendre votre besoin</h3>
+            <p class="text-gray-600 mt-4">
+              Nous commençons par une discussion approfondie pour identifier vos objectifs, vos défis et vos attentes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Enlarged Arrow between Step 1 and Step 2 -->
+        <div class="absolute right-[10rem] top-[0rem] transform rotate-[-10deg]">
+          <img src="/frise-de-process/arrow-11 1.svg" alt="Arrow between Step 1 and 2" class="w-24 h-24" />
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex items-start space-x-6 relative">
+          <div class="relative">
+            <!-- Pictogram for Step 2 positioned above and to the left -->
+            <img src="/drawer-alt.svg" alt="Icon for Step 2" class="absolute -top-0 -left-5 w-10 h-10 z-10" />
+            <span class="text-6xl font-extrabold text-purple-800 relative">02</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Construisez la formation</h3>
+            <p class="text-gray-600 mt-4">
+              Ensemble, nous élaborons un parcours de formation personnalisé qui répond à vos exigences et à vos contraintes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Enlarged Arrow between Step 2 and Step 3 -->
+        <div class="absolute left-[-7rem] top-[6rem] transform rotate-[10deg]">
+          <img src="/frise-de-process/arrow-11 2.svg" alt="Arrow between Step 2 and 3" class="w-24 h-24" />
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex items-start space-x-6 relative">
+          <div class="relative">
+            <!-- Pictogram for Step 3 positioned above and to the left -->
+            <img src="/book-open-cover.svg" alt="Icon for Step 3" class="absolute -top-0 -left-5 w-10 h-10 z-10" />
+            <span class="text-6xl font-extrabold text-purple-800 relative">03</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Apprendre et se former</h3>
+            <p class="text-gray-600 mt-4">
+              Suivez des sessions de formation adaptées à votre rythme et à votre style d’apprentissage.
+            </p>
+          </div>
+        </div>
+
+        <!-- Arrow between Step 3 and Step 4 -->
+        <div class="absolute right-[10rem] top-[15rem] transform rotate-[-10deg]">
+          <img src="/frise-de-process/arrow-11 3.svg" alt="Arrow between Step 3 and 4" class="w-24 h-24" />
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex items-start space-x-6 relative">
+          <div class="relative">
+            <!-- Pictogram for Step 4 positioned above and to the left -->
+            <img src="/file-edit.svg" alt="Icon for Step 4" class="absolute -top-0 -left-5 w-10 h-10 z-10" />
+            <span class="text-6xl font-extrabold text-purple-800 relative">04</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Faire le point sur votre apprentissage</h3>
+            <p class="text-gray-600 mt-4">
+              À la fin de la formation, nous effectuons un bilan complet de vos acquis pour vous aider à mesurer vos progrès.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Button -->
+      <div class="mt-16 text-center">
+        <a href="#" class="bg-purple-600 text-white py-3 px-8 rounded-lg shadow-md hover:bg-purple-500">
+          À toi de créer ta formation !
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
