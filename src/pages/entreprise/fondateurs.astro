@@ -1,46 +1,78 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
   <section class="py-12">
     <div class="container mx-auto px-4 flex">
-
       <!-- Vertical Title -->
       <div class="flex items-center justify-center pr-8">
-        <h1 class="text-3xl font-bold text-gray-900" style="writing-mode: vertical-rl; transform: rotate(180deg);">FONDATEURS</h1>
+        <h1
+          class="text-3xl font-bold text-gray-900"
+          style="writing-mode: vertical-rl; transform: rotate(180deg);"
+        >
+          FONDATEURS
+        </h1>
       </div>
 
       <!-- Profiles Section -->
       <div class="flex space-x-2 md:space-x-4 overflow-hidden">
-
         <!-- Founder 1: Kilian GUILLEMOIS (le plus grand par défaut, ne s'agrandit pas au survol) -->
-        <div class="relative flex-[2] bg-gray-100 rounded-lg transition-all duration-300 ease-in-out group-hover:flex-[1]" style="width: 260px; height: 400px;">
-          <img src="/fondateurs/kilian.png" alt="Kilian GUILLEMOIS" class="w-full h-full object-cover object-top rounded-lg">
-          <div class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 rounded-lg">
+        <div
+          class="relative flex-[2] bg-gray-100 rounded-lg transition-all duration-300 ease-in-out group-hover:flex-[1]"
+          style="width: 260px; height: 400px;"
+        >
+          <img
+            src="/images/fondateurs/photo-kilian.webp"
+            loading="lazy"
+            alt="Kilian GUILLEMOIS"
+            class="w-full h-full object-cover object-top rounded-lg"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 rounded-lg"
+          >
             <h3 class="text-lg font-semibold text-white">Kilian GUILLEMOIS</h3>
             <p class="text-sm text-gray-300">Intitulé de poste</p>
           </div>
         </div>
 
         <!-- Founder 2: Tarik BACHIR (agrandit au survol) -->
-        <div class="relative flex-1 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out hover:flex-[3] group-hover:flex-[1]" style="width: 260px; height: 400px;">
-          <img src="/fondateurs/tarik.png" alt="Tarik BACHIR" class="w-full h-full object-cover object-top rounded-lg">
-          <div class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 rounded-lg">
+        <div
+          class="relative flex-1 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out hover:flex-[3] group-hover:flex-[1]"
+          style="width: 260px; height: 400px;"
+        >
+          <img
+            src="/images/fondateurs/photo-tarik.webp"
+            loading="lazy"
+            alt="Tarik BACHIR"
+            class="w-full h-full object-cover object-top rounded-lg"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 rounded-lg"
+          >
             <h3 class="text-lg font-semibold text-white">Tarik BACHIR</h3>
             <p class="text-sm text-gray-300">Intitulé de poste</p>
           </div>
         </div>
 
         <!-- Founder 3: Karine WEIL (agrandit au survol) -->
-        <div class="relative flex-1 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out hover:flex-[3] group-hover:flex-[1]" style="width: 260px; height: 400px;">
-          <img src="/fondateurs/karine.png" alt="Karine WEIL" class="w-full h-full object-cover object-top rounded-lg">
-          <div class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 rounded-lg">
+        <div
+          class="relative flex-1 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out hover:flex-[3] group-hover:flex-[1]"
+          style="width: 260px; height: 400px;"
+        >
+          <img
+            src="/images/fondateurs/photo-karine.webp"
+            loading="lazy"
+            alt="Karine WEIL"
+            class="w-full h-full object-cover object-top rounded-lg"
+          />
+          <div
+            class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-transparent to-transparent opacity-75 rounded-lg"
+          >
             <h3 class="text-lg font-semibold text-white">Karine WEIL</h3>
             <p class="text-sm text-gray-300">Intitulé de poste</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -48,20 +80,33 @@ import Layout from '../../layouts/Layout.astro';
   <!-- New Section with Quote -->
   <section class="py-12">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold text-gray-900 mb-8">Passionnés par l’excellence, engagés pour votre réussite</h2>
+      <h2 class="text-4xl font-bold text-gray-900 mb-8">
+        Passionnés par l’excellence, engagés pour votre réussite
+      </h2>
 
       <div class="bg-gray-100 p-8 rounded-lg shadow-lg relative text-left">
         <!-- Opening Quote -->
-        <span class="absolute left-6 top-0 text-5xl text-black leading-none font-bold">“</span>
+        <span
+          class="absolute left-6 top-0 text-5xl text-black leading-none font-bold"
+          >“</span
+        >
 
         <p class="text-xl text-gray-600 italic">
-          Chez Kaelia, nous croyons que chaque personne, chaque entreprise, chaque projet est unique. C’est pourquoi nous créons des formations personnalisées qui s’adaptent à vos besoins spécifiques, à votre rythme et à vos objectifs. Que vous souhaitiez vous perfectionner dans votre domaine ou explorer de nouvelles compétences, notre approche sur-mesure vous permet de tirer le meilleur parti de votre apprentissage.
+          Chez Kaelia, nous croyons que chaque personne, chaque entreprise,
+          chaque projet est unique. C’est pourquoi nous créons des formations
+          personnalisées qui s’adaptent à vos besoins spécifiques, à votre
+          rythme et à vos objectifs. Que vous souhaitiez vous perfectionner dans
+          votre domaine ou explorer de nouvelles compétences, notre approche
+          sur-mesure vous permet de tirer le meilleur parti de votre
+          apprentissage.
         </p>
 
         <!-- Closing Quote -->
-        <span class="absolute right-6 bottom-0 text-5xl text-black leading-none font-bold">”</span>
+        <span
+          class="absolute right-6 bottom-0 text-5xl text-black leading-none font-bold"
+          >”</span
+        >
       </div>
     </div>
   </section>
-
 </Layout>

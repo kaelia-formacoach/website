@@ -1,13 +1,20 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
   <section class="bg-white py-20">
-    <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-16 space-y-8 md:space-y-0">
+    <div
+      class="container mx-auto flex flex-col md:flex-row items-center md:space-x-16 space-y-8 md:space-y-0"
+    >
       <!-- Image Section -->
       <div class="md:w-1/2 flex justify-center md:justify-start">
-        <img src="/formateurs/formateurs.svg" alt="Illustration des formateurs" class="w-full max-w-md object-contain">
+        <img
+          src="/images/formateurs/photo-formateurs.webp"
+          loading="lazy"
+          alt="Illustration des formateurs"
+          class="w-full max-w-md object-contain"
+        />
       </div>
 
       <!-- Text Section -->
@@ -16,7 +23,12 @@ import Layout from '../../layouts/Layout.astro';
           Des professionnels qualifiés pour vous accompagner dans votre projet
         </h2>
         <p class="text-gray-600 text-lg leading-relaxed mb-6">
-          Découvrez une équipe de formateurs passionnés et expérimentés, prêts à vous guider vers l'excellence. Chez Kaelia, chaque formateur est un expert dans son domaine, engagé à vous offrir des formations de qualité adaptées à vos besoins et à vos objectifs. Faites le choix d’un accompagnement personnalisé pour développer vos compétences et atteindre vos ambitions.
+          Découvrez une équipe de formateurs passionnés et expérimentés, prêts à
+          vous guider vers l'excellence. Chez Kaelia, chaque formateur est un
+          expert dans son domaine, engagé à vous offrir des formations de
+          qualité adaptées à vos besoins et à vos objectifs. Faites le choix
+          d’un accompagnement personnalisé pour développer vos compétences et
+          atteindre vos ambitions.
         </p>
       </div>
     </div>
@@ -24,27 +36,50 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- Filter Section -->
   <section class="bg-white py-12 text-center">
-    <h2 class="text-3xl font-extrabold text-purple-900 mb-6">NOTRE EQUIPE DE FORMATEURS</h2>
-    <p class="text-gray-600 text-lg mb-8">Utilisez les filtres pour en découvrir davantage sur l’équipe qui vous accompagnera tout au long de votre apprentissage</p>
+    <h2 class="text-3xl font-extrabold text-purple-900 mb-6">
+      NOTRE EQUIPE DE FORMATEURS
+    </h2>
+    <p class="text-gray-600 text-lg mb-8">
+      Utilisez les filtres pour en découvrir davantage sur l’équipe qui vous
+      accompagnera tout au long de votre apprentissage
+    </p>
 
     <!-- Filters Buttons -->
     <div class="flex flex-wrap justify-center space-x-4 space-y-4">
-      <button class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none" data-category="all">
+      <button
+        class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none"
+        data-category="all"
+      >
         Tous
       </button>
-      <button class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none" data-category="Informatique">
+      <button
+        class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none"
+        data-category="Informatique"
+      >
         Informatique
       </button>
-      <button class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none" data-category="RSE">
+      <button
+        class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none"
+        data-category="RSE"
+      >
         RSE
       </button>
-      <button class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none" data-category="Juridique">
+      <button
+        class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none"
+        data-category="Juridique"
+      >
         Juridique
       </button>
-      <button class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none" data-category="Entreprenariat">
+      <button
+        class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none"
+        data-category="Entreprenariat"
+      >
         Entreprenariat
       </button>
-      <button class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none" data-category="Management">
+      <button
+        class="bg-purple-900 text-white py-3 px-6 rounded-full hover:bg-purple-700 focus:outline-none"
+        data-category="Management"
+      >
         Management
       </button>
     </div>
@@ -52,11 +87,18 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- Trainers Cards Section -->
   <section class="bg-white py-12">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8" id="trainer-list">
+    <div
+      class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
+      id="trainer-list"
+    >
       <!-- Trainer Card 1 -->
-      <div class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card" data-category="Juridique">
-        <img src="/assets/trainer1.jpg" alt="Tarik BACHIR" class="w-full h-60 object-cover">
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white">
+      <div
+        class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card"
+        data-category="Juridique"
+      >
+        <div
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+        >
           <h3 class="font-bold text-xl">Tarik BACHIR</h3>
           <p class="text-sm">Avocat au barreau de Lyon</p>
           <span class="text-sm text-blue-400">Juridique</span>
@@ -64,37 +106,63 @@ import Layout from '../../layouts/Layout.astro';
       </div>
 
       <!-- Trainer Card 2 -->
-      <div class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card" data-category="RSE">
-        <img src="/assets/trainer2.jpg" alt="Aurélia SAINT-JEAN" class="w-full h-60 object-cover">
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white">
+      <div
+        class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card"
+        data-category="RSE"
+      >
+        <div
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+        >
           <h3 class="font-bold text-xl">Aurélia SAINT-JEAN</h3>
           <p class="text-sm">Coach certifiée</p>
-          <span class="text-sm text-blue-400">Coaching</span> <span class="text-sm text-purple-400">RSE</span>
+          <span class="text-sm text-blue-400">Coaching</span>
+          <span class="text-sm text-purple-400">RSE</span>
         </div>
       </div>
 
       <!-- Trainer Card 3 -->
-      <div class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card" data-category="RSE Coaching">
-        <img src="/assets/trainer3.jpg" alt="Hayet RHARDA BOUALI" class="w-full h-60 object-cover">
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white">
+      <div
+        class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card"
+        data-category="RSE Coaching"
+      >
+        <img
+          src="/assets/trainer3.jpg"
+          loading="lazy"
+          alt="Hayet RHARDA BOUALI"
+          class="w-full h-60 object-cover"
+        />
+        <div
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+        >
           <h3 class="font-bold text-xl">Hayet RHARDA BOUALI</h3>
           <p class="text-sm">Coach certifiée</p>
-          <span class="text-sm text-blue-400">Coaching</span> <span class="text-sm text-purple-400">RSE</span>
+          <span class="text-sm text-blue-400">Coaching</span>
+          <span class="text-sm text-purple-400">RSE</span>
         </div>
       </div>
 
       <!-- Placeholder Trainer Cards -->
-      <div class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card" data-category="Informatique">
+      <div
+        class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card"
+        data-category="Informatique"
+      >
         <div class="w-full h-60 bg-gray-300"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white">
+        <div
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+        >
           <h3 class="font-bold text-xl">Prénom NOM</h3>
           <p class="text-sm">Profession</p>
           <span class="text-sm text-blue-400">Informatique</span>
         </div>
       </div>
-      <div class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card" data-category="Management">
+      <div
+        class="relative bg-white shadow-lg rounded-lg overflow-hidden trainer-card"
+        data-category="Management"
+      >
         <div class="w-full h-60 bg-gray-300"></div>
-        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white">
+        <div
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+        >
           <h3 class="font-bold text-xl">Prénom NOM</h3>
           <p class="text-sm">Profession</p>
           <span class="text-sm text-blue-400">Management</span>
@@ -105,21 +173,23 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- Client-side Script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('button[data-category]');
-      const trainers = document.querySelectorAll<HTMLElement>('.trainer-card');
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll("button[data-category]");
+      const trainers = document.querySelectorAll<HTMLElement>(".trainer-card");
 
-      buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          const category = button.getAttribute('data-category');
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const category = button.getAttribute("data-category");
 
-          trainers.forEach(trainer => {
-            const trainerCategories = trainer.getAttribute('data-category')?.split(' ');
+          trainers.forEach((trainer) => {
+            const trainerCategories = trainer
+              .getAttribute("data-category")
+              ?.split(" ");
 
-            if (category === 'all' || trainerCategories?.includes(category!)) {
-              trainer.style.display = 'block';
+            if (category === "all" || trainerCategories?.includes(category!)) {
+              trainer.style.display = "block";
             } else {
-              trainer.style.display = 'none';
+              trainer.style.display = "none";
             }
           });
         });

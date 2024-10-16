@@ -3,15 +3,25 @@
     <!-- Logo aligned to the left -->
     <div class="flex items-center space-x-2">
       <a href="/">
-        <img src="/logo.png" alt="Kaelia Logo" class="h-12" />
+        <img src="/images/header/logo-kaelia.png" loading="lazy" alt="Kaelia Logo" class="h-12" />
       </a>
     </div>
 
     <!-- Burger button for mobile -->
     <div class="md:hidden">
       <button id="menu-btn" class="text-gray-700 focus:outline-none">
-        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        <svg
+          class="h-8 w-8"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
     </div>
@@ -19,20 +29,34 @@
     <!-- Desktop Navigation -->
     <div class="hidden md:flex items-center space-x-8">
       <nav class="flex space-x-8 text-gray-700">
-        <a href="/" class="nav-link hover:text-purple-600 font-semibold">Accueil</a>
+        <a href="/" class="nav-link hover:text-purple-600 font-semibold"
+          >Accueil</a
+        >
 
         <!-- Dropdown for Formations -->
         <div class="relative group">
-          <a href="/formations" class="nav-link hover:text-purple-600 font-semibold">Formations</a>
-          <div class="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-md" style="min-width: 200px;">
+          <a
+            href="/formations"
+            class="nav-link hover:text-purple-600 font-semibold">Formations</a
+          >
+          <div
+            class="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-md"
+            style="min-width: 200px;"
+          >
             <ul class="py-2">
               <li>
-                <a href="/formations/liste-prefaite" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/formations/liste-prefaite"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Liste Préfaite
                 </a>
               </li>
               <li>
-                <a href="/formations/fa-brique" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/formations/fa-brique"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Fa'brique
                 </a>
               </li>
@@ -42,26 +66,44 @@
 
         <!-- Dropdown for Entreprise -->
         <div class="relative group">
-          <a href="/entreprise" class="nav-link hover:text-purple-600 font-semibold">Entreprise</a>
-          <div class="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-md" style="min-width: 200px;">
+          <a
+            href="/entreprise"
+            class="nav-link hover:text-purple-600 font-semibold">Entreprise</a
+          >
+          <div
+            class="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-md"
+            style="min-width: 200px;"
+          >
             <ul class="py-2">
               <li>
-                <a href="/entreprise/valeurs" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/entreprise/valeurs"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Valeurs
                 </a>
               </li>
               <li>
-                <a href="/entreprise/fondateurs" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/entreprise/fondateurs"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Fondateurs
                 </a>
               </li>
               <li>
-                <a href="/entreprise/frise-de-process" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/entreprise/frise-de-process"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Frise de process
                 </a>
               </li>
               <li>
-                <a href="/entreprise/financement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/entreprise/financement"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Financement
                 </a>
               </li>
@@ -71,11 +113,19 @@
 
         <!-- Dropdown for Équipe -->
         <div class="relative group">
-          <a href="/equipe" class="nav-link hover:text-purple-600 font-semibold">Équipe</a>
-          <div class="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-md" style="min-width: 200px;">
+          <a href="/equipe" class="nav-link hover:text-purple-600 font-semibold"
+            >Équipe</a
+          >
+          <div
+            class="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-md"
+            style="min-width: 200px;"
+          >
             <ul class="py-2">
               <li>
-                <a href="/equipe/formateurs" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                <a
+                  href="/equipe/formateurs"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
                   Formateurs
                 </a>
               </li>
@@ -85,7 +135,10 @@
       </nav>
 
       <!-- Contact Button -->
-      <a href="/contact" class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-500">
+      <a
+        href="/contact"
+        class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-500"
+      >
         Contactez-nous
       </a>
     </div>
@@ -93,143 +146,243 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden flex-col mt-4 space-y-4 md:hidden">
-    <a href="/" class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold">Accueil</a>
+    <a
+      href="/"
+      class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold"
+      >Accueil</a
+    >
 
     <!-- Formations with submenu -->
     <div>
       <div class="flex items-center justify-between">
-        <a href="/formations" class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold">
+        <a
+          href="/formations"
+          class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold"
+        >
           Formations
         </a>
-        <button class="toggle-submenu focus:outline-none" data-submenu="formations-submenu">
+        <button
+          class="toggle-submenu focus:outline-none"
+          data-submenu="formations-submenu"
+        >
           <!-- Chevron Down Icon -->
-          <svg class="h-5 w-5 text-gray-700 hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <svg
+            class="h-5 w-5 text-gray-700 hover:text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
       </div>
-      <div id="formations-submenu" class="submenu hidden flex-col ml-4 mt-2 space-y-2">
-        <a href="/formations/liste-prefaite" class="block text-gray-700 hover:text-purple-600 font-semibold">Liste Préfaite</a>
-        <a href="/formations/fa-brique" class="block text-gray-700 hover:text-purple-600 font-semibold">Fa'brique</a>
+      <div
+        id="formations-submenu"
+        class="submenu hidden flex-col ml-4 mt-2 space-y-2"
+      >
+        <a
+          href="/formations/liste-prefaite"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Liste Préfaite</a
+        >
+        <a
+          href="/formations/fa-brique"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Fa'brique</a
+        >
       </div>
     </div>
 
     <!-- Entreprise with submenu -->
     <div>
       <div class="flex items-center justify-between">
-        <a href="/entreprise" class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold">
+        <a
+          href="/entreprise"
+          class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold"
+        >
           Entreprise
         </a>
-        <button class="toggle-submenu focus:outline-none" data-submenu="entreprise-submenu">
+        <button
+          class="toggle-submenu focus:outline-none"
+          data-submenu="entreprise-submenu"
+        >
           <!-- Chevron Down Icon -->
-          <svg class="h-5 w-5 text-gray-700 hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <svg
+            class="h-5 w-5 text-gray-700 hover:text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
       </div>
-      <div id="entreprise-submenu" class="submenu hidden flex-col ml-4 mt-2 space-y-2">
-        <a href="/entreprise/valeurs" class="block text-gray-700 hover:text-purple-600 font-semibold">Valeurs</a>
-        <a href="/entreprise/fondateurs" class="block text-gray-700 hover:text-purple-600 font-semibold">Fondateurs</a>
-        <a href="/entreprise/frise-de-process" class="block text-gray-700 hover:text-purple-600 font-semibold">Frise de process</a>
-        <a href="/entreprise/financement" class="block text-gray-700 hover:text-purple-600 font-semibold">Financement</a>
+      <div
+        id="entreprise-submenu"
+        class="submenu hidden flex-col ml-4 mt-2 space-y-2"
+      >
+        <a
+          href="/entreprise/valeurs"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Valeurs</a
+        >
+        <a
+          href="/entreprise/fondateurs"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Fondateurs</a
+        >
+        <a
+          href="/entreprise/frise-de-process"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Frise de process</a
+        >
+        <a
+          href="/entreprise/financement"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Financement</a
+        >
       </div>
     </div>
 
     <!-- Équipe with submenu -->
     <div>
       <div class="flex items-center justify-between">
-        <a href="/equipe" class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold">
+        <a
+          href="/equipe"
+          class="nav-link-mobile block text-gray-700 hover:text-purple-600 font-semibold"
+        >
           Équipe
         </a>
-        <button class="toggle-submenu focus:outline-none" data-submenu="equipe-submenu">
+        <button
+          class="toggle-submenu focus:outline-none"
+          data-submenu="equipe-submenu"
+        >
           <!-- Chevron Down Icon -->
-          <svg class="h-5 w-5 text-gray-700 hover:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <svg
+            class="h-5 w-5 text-gray-700 hover:text-purple-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
       </div>
-      <div id="equipe-submenu" class="submenu hidden flex-col ml-4 mt-2 space-y-2">
-        <a href="/equipe/formateurs" class="block text-gray-700 hover:text-purple-600 font-semibold">Formateurs</a>
+      <div
+        id="equipe-submenu"
+        class="submenu hidden flex-col ml-4 mt-2 space-y-2"
+      >
+        <a
+          href="/equipe/formateurs"
+          class="block text-gray-700 hover:text-purple-600 font-semibold"
+          >Formateurs</a
+        >
       </div>
     </div>
 
     <!-- Contact Button (mobile) -->
-    <a href="/contact" class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-500 block text-center">
+    <a
+      href="/contact"
+      class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-500 block text-center"
+    >
       Contactez-nous
     </a>
   </div>
 </header>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Highlight active links for both desktop and mobile menus
-  const currentPath = window.location.pathname.replace(/\/$/, "");
-  const links = document.querySelectorAll('.nav-link, .nav-link-mobile');
+  document.addEventListener("DOMContentLoaded", function () {
+    // Highlight active links for both desktop and mobile menus
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+    const links = document.querySelectorAll(".nav-link, .nav-link-mobile");
 
-  links.forEach(link => {
-    let href = link.getAttribute('href');
-    if (href) {
-      href = href.replace(/\/$/, "");
+    links.forEach((link) => {
+      let href = link.getAttribute("href");
+      if (href) {
+        href = href.replace(/\/$/, "");
 
-      // Check if the current path matches the link or its subpages
-      if ((href === "" && currentPath === "") || (href !== "" && (currentPath === href || currentPath.startsWith(href + '/')))) {
-        link.classList.add('text-purple-600', 'underline', 'underline-offset-4');
-      }
-    }
-  });
-
-  // Toggle for the mobile menu
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-
-  if (menuBtn && menu) {
-    menuBtn.addEventListener('click', function () {
-      menu.classList.toggle('hidden');
-
-      // Close all submenus when closing the main menu
-      if (menu.classList.contains('hidden')) {
-        const submenus = document.querySelectorAll('.submenu');
-        submenus.forEach(submenu => {
-          submenu.classList.add('hidden');
-        });
+        // Check if the current path matches the link or its subpages
+        if (
+          (href === "" && currentPath === "") ||
+          (href !== "" &&
+            (currentPath === href || currentPath.startsWith(href + "/")))
+        ) {
+          link.classList.add(
+            "text-purple-600",
+            "underline",
+            "underline-offset-4"
+          );
+        }
       }
     });
-  }
 
-  // Handle mobile submenu toggles
-  const toggleButtons = document.querySelectorAll('.toggle-submenu');
+    // Toggle for the mobile menu
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
-  toggleButtons.forEach(button => {
-    const submenuId = button.getAttribute('data-submenu');
-    if (submenuId) {
-      const submenu = document.getElementById(submenuId);
-      if (submenu) {
-        button.addEventListener('click', function (e) {
-          // Prevent the click from bubbling up to parent elements
-          e.stopPropagation();
+    if (menuBtn && menu) {
+      menuBtn.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
 
-          // Close other submenus
-          toggleButtons.forEach(otherButton => {
-            const otherSubmenuId = otherButton.getAttribute('data-submenu');
-            if (otherSubmenuId && otherSubmenuId !== submenuId) {
-              const otherSubmenu = document.getElementById(otherSubmenuId);
-              if (otherSubmenu && !otherSubmenu.classList.contains('hidden')) {
-                otherSubmenu.classList.add('hidden');
-              }
-            }
+        // Close all submenus when closing the main menu
+        if (menu.classList.contains("hidden")) {
+          const submenus = document.querySelectorAll(".submenu");
+          submenus.forEach((submenu) => {
+            submenu.classList.add("hidden");
           });
-
-          // Toggle the current submenu
-          submenu.classList.toggle('hidden');
-        });
-      }
+        }
+      });
     }
-  });
 
-  // Close all submenus on page load
-  const submenus = document.querySelectorAll('.submenu');
-  submenus.forEach(submenu => {
-    submenu.classList.add('hidden');
+    // Handle mobile submenu toggles
+    const toggleButtons = document.querySelectorAll(".toggle-submenu");
+
+    toggleButtons.forEach((button) => {
+      const submenuId = button.getAttribute("data-submenu");
+      if (submenuId) {
+        const submenu = document.getElementById(submenuId);
+        if (submenu) {
+          button.addEventListener("click", function (e) {
+            // Prevent the click from bubbling up to parent elements
+            e.stopPropagation();
+
+            // Close other submenus
+            toggleButtons.forEach((otherButton) => {
+              const otherSubmenuId = otherButton.getAttribute("data-submenu");
+              if (otherSubmenuId && otherSubmenuId !== submenuId) {
+                const otherSubmenu = document.getElementById(otherSubmenuId);
+                if (
+                  otherSubmenu &&
+                  !otherSubmenu.classList.contains("hidden")
+                ) {
+                  otherSubmenu.classList.add("hidden");
+                }
+              }
+            });
+
+            // Toggle the current submenu
+            submenu.classList.toggle("hidden");
+          });
+        }
+      }
+    });
+
+    // Close all submenus on page load
+    const submenus = document.querySelectorAll(".submenu");
+    submenus.forEach((submenu) => {
+      submenu.classList.add("hidden");
+    });
   });
-});
 </script>
