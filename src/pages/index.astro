@@ -3,281 +3,346 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="bg-white py-20">
+  <!-- Section d'introduction avec l'image de fond agrandie et animation synchronisée -->
+  <section
+    class="relative bg-cover bg-center h-[80vh]"
+    style="background-image: url('/images/index/photo-accueil.webp');"
+  >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
     <div
-      class="container mx-auto px-6 md:flex md:items-center md:justify-between"
+      class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4"
     >
-      <!-- Text Section -->
-      <div class="md:w-1/2">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-6">
-          Ensemble, développons nos compétences.
-        </h1>
-        <!-- Changed to <h1> for SEO -->
-        <p class="text-lg text-gray-600 mb-8">
-          Chez Kaelia, nous mettons à votre disposition des formations sur
-          mesure, conçues pour répondre aux besoins du marché et certifiées
-          Qualiopi. Que vous soyez un professionnel en reconversion ou un
-          salarié souhaitant renforcer ses compétences, notre équipe vous
-          accompagne tout au long de votre parcours.
-        </p>
-        <a
-          href="/contact"
-          class="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-purple-500"
-          aria-label="Contactez-nous"
-        >
-          Contactez-nous
-        </a>
-      </div>
+      <!-- Titre avec effet de zoom et montée simultanée -->
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-intro">
+        L'accompagnement de proximité
+      </h1>
 
-      <!-- SVG Section -->
-      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
-        <img
-          src="/images/index/photo-accueil.webp"
-          loading="eager"
-          alt="Illustration de développement des compétences"
-          class="w-full object-contain"
-        />
-        <!-- Improved alt text for SEO -->
-      </div>
-    </div>
+      <!-- Paragraphe avec le même effet de montée simultanée -->
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-6 animate-intro">
+        Chez Kaelia, nous mettons à votre disposition des formations sur mesure,
+        conçues pour répondre aux besoins du marché et certifiées Qualiopi. Que
+        vous soyez un professionnel en reconversion ou un salarié souhaitant
+        renforcer ses compétences, notre équipe vous accompagne tout au long de
+        votre parcours.
+      </p>
 
-    <div class="container mx-auto px-6 mt-16">
-      <h2 class="text-center text-3xl font-bold mb-16">Notre Processus</h2>
-      <!-- Improved text for SEO -->
-
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-        <!-- Step 1 -->
-        <div class="text-center">
-          <div class="relative inline-block mb-4">
-            <span class="text-6xl font-extrabold text-purple-800">01</span>
-            <img
-              src="/images/index/pictogramme-handshake.svg"
-              loading="eager"
-              alt="Icone comprendre le besoin"
-              class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12"
-            />
-            <!-- Improved alt text -->
-          </div>
-          <h3 class="text-xl font-semibold">Comprendre votre besoin</h3>
-          <p class="text-gray-600 mt-4 mb-6">
-            Nous échangeons pour vous aider à comprendre votre besoin
-          </p>
-          <a href="#" class="text-purple-600 font-semibold underline"
-            >En savoir plus</a
-          >
-        </div>
-
-        <!-- Step 2 -->
-        <div class="text-center">
-          <div class="relative inline-block mb-4">
-            <span class="text-6xl font-extrabold text-purple-800">02</span>
-            <img
-              src="/images/index/pictogramme-drawer.svg"
-              loading="eager"
-              alt="Icone construire la formation"
-              class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12"
-            />
-          </div>
-          <h3 class="text-xl font-semibold">Construisez la formation</h3>
-          <p class="text-gray-600 mt-2 mb-4">
-            Nous vous aidons à créer une formation sur-mesure en adéquation avec
-            vos attentes
-          </p>
-          <a href="#" class="text-purple-600 font-semibold underline"
-            >En savoir plus</a
-          >
-        </div>
-
-        <!-- Step 3 -->
-        <div class="text-center">
-          <div class="relative inline-block mb-4">
-            <span class="text-6xl font-extrabold text-purple-800">03</span>
-            <img
-              src="/images/index/pictogramme-book.svg"
-              loading="eager"
-              alt="Icone apprendre et se former"
-              class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12"
-            />
-          </div>
-          <h3 class="text-xl font-semibold">Apprendre et se former</h3>
-          <p class="text-gray-600 mt-2 mb-4">
-            Vous vous formez avec des professionnels qualifiés selon vos
-            disponibilités
-          </p>
-          <a href="#" class="text-purple-600 font-semibold underline"
-            >En savoir plus</a
-          >
-        </div>
-
-        <!-- Step 4 -->
-        <div class="text-center">
-          <div class="relative inline-block mb-4">
-            <span class="text-6xl font-extrabold text-purple-800">04</span>
-            <img
-              src="/images/index/pictogramme-file.svg"
-              loading="eager"
-              alt="Icone faire le point"
-              class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 w-12 h-12"
-            />
-          </div>
-          <h3 class="text-xl font-semibold">
-            Faire le point sur votre apprentissage
-          </h3>
-          <p class="text-gray-600 mt-2 mb-4">
-            Nous débriefons sur l'ensemble de la formation et sur vos acquis
-          </p>
-          <a href="#" class="text-purple-600 font-semibold underline"
-            >En savoir plus</a
-          >
-        </div>
-      </div>
-
-      <!-- Call to Action Button -->
-      <div class="mt-16 text-center">
-        <a
-          href="/contact"
-          class="bg-purple-600 text-white py-3 px-8 rounded-lg shadow-md hover:bg-purple-500"
-          aria-label="Contactez-nous"
-        >
-          Contactez-nous
-        </a>
-      </div>
-    </div>
-
-    <!-- Cards Section -->
-    <div class="container mx-auto px-6 mt-20">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-        <!-- Card 1 -->
-        <div class="flex flex-col items-center">
-          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
-            <img
-              src="/images/index/pictogramme-learning.svg"
-              loading="lazy"
-              alt="Icone Juridique"
-              class="w-12 h-12"
-            />
-          </div>
-          <h3 class="text-purple-800 font-semibold">Juridique</h3>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="flex flex-col items-center">
-          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
-            <img
-              src="/images/index/pictogramme-rse.svg"
-              loading="lazy"
-              alt="Icone RSE"
-              class="w-12 h-12"
-            />
-          </div>
-          <h3 class="text-purple-800 font-semibold">RSE</h3>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="flex flex-col items-center">
-          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
-            <img
-              src="/images/index/pictogramme-startup.svg"
-              loading="lazy"
-              alt="Icone Stratégie"
-              class="w-12 h-12"
-            />
-          </div>
-          <h3 class="text-purple-800 font-semibold">Stratégie d'entreprise</h3>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="flex flex-col items-center">
-          <div class="bg-white rounded-full p-6 shadow-lg mb-4">
-            <img
-              src="/images/index/pictogramme-design.svg"
-              loading="lazy"
-              alt="Icone Numérique"
-              class="w-12 h-12"
-            />
-          </div>
-          <h3 class="text-purple-800 font-semibold">Numérique</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quote Section -->
-    <div class="container mx-auto px-6 text-center mt-20 mb-20">
-      <h2 class="text-4xl font-extrabold text-purple-800 mb-12">
-        Votre parcours, votre formation
-      </h2>
-      <div class="bg-gray-100 rounded-lg p-8 md:p-12 max-w-3xl mx-auto">
-        <p
-          class="text-5xl text-purple-800 font-bold inline-block leading-none mb-8"
-        >
-          “
-        </p>
-        <p class="text-gray-700 text-lg leading-relaxed inline-block mx-4">
-          "Chez Kaelia, nous croyons que chaque personne, chaque entreprise,
-          chaque projet est unique. C’est pourquoi nous créons des formations
-          personnalisées qui s’adaptent à vos besoins spécifiques, à votre
-          rythme et à vos objectifs. Que vous souhaitiez vous perfectionner dans
-          votre domaine ou explorer de nouvelles compétences, notre approche
-          sur-mesure vous permet de tirer le meilleur parti de votre
-          apprentissage."
-        </p>
-        <p
-          class="text-5xl text-purple-800 font-bold inline-block leading-none mb-8"
-        >
-          ”
-        </p>
-      </div>
-    </div>
-
-    <!-- Logos Section -->
-    <div class="container mx-auto px-6 mt-20">
-      <div
-        class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-center"
+      <!-- Bouton avec le même effet de montée simultanée et dégradé -->
+      <a
+        href="/contact"
+        class="bg-white text-purple-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition animate-intro"
       >
-        <!-- Logo 1 -->
-        <div class="flex justify-center">
-          <img
-            src="/images/index/logo-partenaire-IUT.webp"
-            loading="lazy"
-            alt="Logo IUT Lumière Lyon"
-            class="max-h-16"
-          />
-          <!-- Improved alt text for SEO -->
+        Contactez-nous
+      </a>
+    </div>
+  </section>
+
+  <!-- Section "Pourquoi choisir Kaelia ?" sans les icônes circulaires ou carrés -->
+  <section class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-10">
+        Pourquoi choisir <span class="text-purple-600">Kaelia</span> ?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Premier élément : L'humain au cœur de nos actions -->
+        <div class="text-center">
+          <h3 class="text-lg font-semibold text-purple-700 mb-2">
+            L'humain au cœur de nos actions
+          </h3>
+          <p class="text-gray-700">
+            Nous croyons en l'importance de créer des relations durables avec
+            nos clients et de les accompagner dans leur réussite.
+          </p>
         </div>
 
-        <!-- Logo 2 -->
-        <div class="flex justify-center">
-          <img
-            src="/images/index/logo-partenaire-webkonseil.webp"
-            loading="lazy"
-            alt="Logo Webkonseil"
-            class="max-h-16"
-          />
-          <!-- Improved alt text for SEO -->
+        <!-- Deuxième élément : Des experts à votre écoute -->
+        <div class="text-center">
+          <h3 class="text-lg font-semibold text-purple-700 mb-2">
+            Des experts à votre écoute
+          </h3>
+          <p class="text-gray-700">
+            Notre équipe est composée de professionnels expérimentés et
+            passionnés, chacun apportant son expertise spécifique.
+          </p>
         </div>
 
-        <!-- Logo 3 -->
-        <div class="flex justify-center">
-          <img
-            src="/images/index/logo-partenaire-opus.webp"
-            loading="lazy"
-            alt="Logo Opus Formation"
-            class="max-h-16"
-          />
-          <!-- Improved alt text for SEO -->
+        <!-- Troisième élément : Un accompagnement personnalisé -->
+        <div class="text-center">
+          <h3 class="text-lg font-semibold text-purple-700 mb-2">
+            Un accompagnement personnalisé
+          </h3>
+          <p class="text-gray-700">
+            Nous sommes à vos côtés à chaque étape de votre projet.
+          </p>
         </div>
+      </div>
 
-        <!-- Logo 4 -->
-        <div class="flex justify-center">
-          <img
-            src="/images/index/logo-partenaire-webylab.webp"
-            loading="lazy"
-            alt="Logo Webylab"
-            class="max-h-16"
-          />
-          <!-- Improved alt text for SEO -->
+      <!-- Bouton d'appel à l'action avec dégradé -->
+      <div class="mt-10">
+        <a
+          href="/formations"
+          class="text-white font-semibold py-4 px-10 rounded-lg hover:opacity-90 transition text-lg"
+          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+        >
+          Commencer votre formation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "Les 4 étapes de notre accompagnement" avec dégradé -->
+  <section
+    class="py-20 text-white"
+    style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+  >
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">
+        Les 4 étapes de notre <span class="text-pink-300">accompagnement</span>
+      </h2>
+      <p class="text-lg mb-10">
+        De l'identification de vos besoins à la certification de vos
+        compétences. Prêt à transformer votre carrière ? Contactez-nous dès
+        maintenant !
+      </p>
+
+      <!-- Ligne décorative avec un carré au centre -->
+      <div class="flex justify-center items-center mb-12">
+        <div class="w-1/4 border-t border-white"></div>
+        <div class="mx-2 h-4 w-4 bg-white"></div>
+        <div class="w-1/4 border-t border-white"></div>
+      </div>
+
+      <!-- Grille des étapes -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Étapes 1 à 4 avec bordures blanches (pas de changement ici) -->
+        <div
+          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
+        >
+          <h3 class="text-5xl font-bold mb-2">01</h3>
+          <h4 class="text-xl font-semibold mb-2">Contact</h4>
+          <p class="text-sm">
+            Nous échangeons pour vous aider à comprendre votre besoin.
+          </p>
+        </div>
+        <div
+          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
+        >
+          <h3 class="text-5xl font-bold mb-2">02</h3>
+          <h4 class="text-xl font-semibold mb-2">Construction</h4>
+          <p class="text-sm">
+            Nous vous aidons à créer une formation sur-mesure.
+          </p>
+        </div>
+        <div
+          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
+        >
+          <h3 class="text-5xl font-bold mb-2">03</h3>
+          <h4 class="text-xl font-semibold mb-2">Apprentissage</h4>
+          <p class="text-sm">
+            Vous vous formez avec des professionnels qualifiés.
+          </p>
+        </div>
+        <div
+          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
+        >
+          <h3 class="text-5xl font-bold mb-2">04</h3>
+          <h4 class="text-xl font-semibold mb-2">Bilan</h4>
+          <p class="text-sm">
+            Nous débriefons sur l'ensemble de la formation et de vos acquis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "KAELIA en quelques chiffres..." -->
+  <section class="py-20 bg-white text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-2">
+        <span class="text-purple-600">KAELIA</span> en quelques chiffres...
+      </h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
+        Votre succès, notre priorité. Devenez l'expert que vous avez toujours
+        rêvé d'être grâce à nos formations personnalisées et à l'accompagnement
+        de nos coachs expérimentés.
+      </p>
+
+      <!-- Grille des statistiques avec dégradé sur chaque carte -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div
+          class="text-white rounded-lg p-8"
+          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+        >
+          <h3 class="text-6xl font-bold mb-2">4,9/5</h3>
+          <p class="text-xl font-semibold text-pink-300">
+            Satisfaction<br />Client
+          </p>
+        </div>
+        <div
+          class="text-white rounded-lg p-8"
+          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+        >
+          <h3 class="text-6xl font-bold mb-2">0%</h3>
+          <p class="text-xl font-semibold text-pink-300">
+            Taux<br />d'Absentéisme
+          </p>
+        </div>
+        <div
+          class="text-white rounded-lg p-8"
+          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+        >
+          <h3 class="text-6xl font-bold mb-2">35</h3>
+          <p class="text-xl font-semibold text-pink-300">Clients<br />Formés</p>
+        </div>
+        <div
+          class="text-white rounded-lg p-8"
+          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+        >
+          <h3 class="text-6xl font-bold mb-2">5/5</h3>
+          <p class="text-xl font-semibold text-pink-300">
+            Satisfaction<br />Google
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section "Ils nous font confiance" (pas de changement ici) -->
+  <section class="py-20 bg-white text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-2">
+        Ils nous font <span class="text-purple-600">confiance</span>
+      </h2>
+      <p class="text-lg text-gray-700 max-w-xl mx-auto mb-10">
+        La confiance de nos partenaires, notre plus belle récompense.
+      </p>
+      <div class="logo-carousel">
+        <div class="logo-track">
+          <div class="logo-item">
+            <img
+              loading="lazy"
+              src="/images/index/logo-partenaire-IUT.webp"
+              alt="IUT Lumière"
+            />
+          </div>
+          <div class="logo-item">
+            <img
+              loading="lazy"
+              src="/images/index/logo-partenaire-webkonseil.webp"
+              alt="Webkonseil"
+            />
+          </div>
+          <div class="logo-item">
+            <img
+              loading="lazy"
+              src="/images/index/logo-partenaire-opus.webp"
+              alt="Opus Formation"
+            />
+          </div>
+          <div class="logo-item">
+            <img
+              loading="lazy"
+              src="/images/index/logo-partenaire-webylab.webp"
+              alt="Webylab"
+            />
+          </div>
         </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  /* Animation de montée et de fondu simultanée pour tous les éléments de la section d'introduction */
+  @keyframes introAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-intro {
+    animation: introAnimation 1s ease-out forwards;
+  }
+</style>
+
+<style>
+  /* Style de base pour le carrousel */
+  .logo-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo-track {
+    display: flex;
+    width: max-content;
+  }
+
+  .logo-item {
+    flex: 0 0 auto;
+    padding: 0 1rem;
+  }
+
+  .logo-item img {
+    height: 6rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+
+  .logo-item:hover img {
+    filter: grayscale(0%);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const trackElement = document.querySelector(
+      ".logo-track"
+    ) as HTMLElement | null;
+    const items = document.querySelectorAll(".logo-item");
+
+    if (!trackElement) {
+      console.error("L'élément avec la classe .logo-track n'a pas été trouvé.");
+      return;
+    }
+
+    const track = trackElement;
+
+    // Cloner les éléments pour permettre un défilement infini
+    function cloneItems() {
+      const parent = track.parentElement as HTMLElement | null;
+      if (!parent) {
+        console.error("Le parent de .logo-track n'a pas été trouvé.");
+        return;
+      }
+
+      const carouselWidth = parent.offsetWidth;
+
+      while (track.scrollWidth < carouselWidth * 2) {
+        items.forEach((item) => {
+          const clone = item.cloneNode(true) as HTMLElement;
+          track.appendChild(clone);
+        });
+      }
+    }
+
+    cloneItems();
+
+    let scrollPosition = 0;
+
+    function animate() {
+      scrollPosition += 1; // Vitesse de défilement
+      if (scrollPosition >= track.scrollWidth / 2) {
+        scrollPosition = 0;
+      }
+      track.style.transform = `translateX(-${scrollPosition}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+</script>
