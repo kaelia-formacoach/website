@@ -1,60 +1,38 @@
-<footer
-  class="text-white py-8"
-  style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
->
+<footer class="bg-gradient-to-r from-blue-800 to-purple-600 text-white py-12">
   <div
-    class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:items-center"
+    class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6"
   >
-    <!-- Logo Section -->
-    <div class="flex flex-col items-start space-y-2">
+    <!-- Section Logo et Qualiopi -->
+    <div class="space-y-4 text-center sm:text-left">
       <img
         src="/images/header/logo-kaelia.png"
-        loading="lazy"
-        alt="Kaelia Logo"
-        class="h-16"
+        alt="Logo Kaelia"
+        class="h-12 mx-auto sm:mx-0"
       />
-      <!-- Company Name and Address -->
       <p>SAS KAELIA FORMA’COACH</p>
-      <p>198 rue des amis de l’industrie,</p>
-      <p>42590 NEULISE</p>
+      <p>198 rue des amis de l’industrie,<br />42590 NEULISE, France</p>
+      <img
+        src="/images/footer/logo-qualiopi.webp"
+        alt="Certification Qualiopi"
+        class="h-12 w-auto mx-auto sm:mx-0"
+      />
     </div>
 
-    <!-- Menu Section -->
-    <div
-      class="flex flex-col space-y-4 md:flex-row md:space-x-16 md:space-y-0 text-center md:text-left"
-    >
-      <!-- Formations Section -->
-      <div>
-        <h3 class="font-semibold text-lg">
-          <a href="/formations" class="hover:underline">Formations</a>
-        </h3>
-      </div>
-
-      <!-- Entreprise Section -->
-      <div>
-        <h3 class="font-semibold text-lg">
-          <a href="/entreprise" class="hover:underline">Entreprise</a>
-        </h3>
-      </div>
-
-      <!-- Équipe Section -->
-      <div>
-        <h3 class="font-semibold text-lg">
-          <a href="/le-klub" class="hover:underline">Le Klub</a>
-        </h3>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-lg">
-          <a href="/contact" class="hover:underline">Contact</a>
-        </h3>
-      </div>
+    <!-- Liens de Navigation -->
+    <div class="space-y-2 text-center sm:text-left">
+      <h3 class="font-semibold text-lg">Navigation</h3>
+      <ul class="space-y-1">
+        <li><a href="/formations" class="hover:underline">Formations</a></li>
+        <li><a href="/entreprise" class="hover:underline">Entreprise</a></li>
+        <li><a href="/le-klub" class="hover:underline">Le Klub</a></li>
+        <li><a href="/contact" class="hover:underline">Contact</a></li>
+      </ul>
     </div>
 
-    <!-- Social Media Links, Qualiopi Logo, and Contact Section -->
-    <div class="flex flex-col items-start md:items-end space-y-4">
-      <!-- Social Media Links -->
-      <div class="flex items-center space-x-4">
+    <!-- Réseaux Sociaux et Contact -->
+    <div class="space-y-4 text-center sm:text-left">
+      <h3 class="font-semibold text-lg">Suivez-nous</h3>
+      <div class="flex justify-center sm:justify-start space-x-4">
         <a
           href="https://www.instagram.com/kaeliaformacoach/"
           target="_blank"
@@ -63,7 +41,6 @@
         >
           <img
             src="/images/footer/icon-instagram.svg"
-            loading="lazy"
             alt="Instagram"
             class="h-6 w-6"
           />
@@ -76,55 +53,52 @@
         >
           <img
             src="/images/footer/icon-linkedin.svg"
-            loading="lazy"
             alt="LinkedIn"
             class="h-6 w-6"
           />
         </a>
       </div>
-
-      <!-- Qualiopi Logo -->
-      <div>
-        <img
-          src="/images/footer/logo-qualiopi.webp"
-          loading="lazy"
-          alt="Qualiopi Logo"
-          class="h-20 w-auto"
-        />
-      </div>
-
-      <!-- Contact Section -->
-      <div class="text-sm">
+      <div class="text-sm space-y-1">
         <h3 class="font-semibold text-lg">Contactez-nous</h3>
-        <ul class="space-y-1">
-          <li>
-            Email: <a href="mailto:contact@kaelia.com" class="hover:underline"
-              >contact@kaelia.com</a
-            >
-          </li>
-          <li>
-            Téléphone: <a href="tel:+33123456789" class="hover:underline"
-              >+33 1 23 45 67 89</a
-            >
-          </li>
-        </ul>
+        <p>
+          Email : <a
+            href="mailto:contact@kaelia-formacoach.com"
+            class="hover:underline">contact@kaelia-formacoach.com</a
+          >
+        </p>
+        <p>
+          Téléphone : <a href="tel:+33123456789" class="hover:underline"
+            >+33 1 23 45 67 89</a
+          >
+        </p>
       </div>
+    </div>
+
+    <!-- Mentions légales et Politique -->
+    <div class="text-sm space-y-2 text-center sm:text-left">
+      <h3 class="font-semibold text-lg">Informations Légales</h3>
+      <ul class="space-y-1">
+        <li>
+          <a href="/mentions-legales" class="hover:underline"
+            >Mentions légales</a
+          >
+        </li>
+        <li>
+          <a href="/conditions-generales" class="hover:underline"
+            >Conditions générales</a
+          >
+        </li>
+        <li>
+          <a href="/politique-confidentialite" class="hover:underline"
+            >Politique de confidentialité</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- Bottom Section with Copyright and Legal Links -->
-  <div
-    class="container mx-auto px-4 mt-8 border-t border-white pt-4 text-center text-sm"
-  >
-    <p>© 2023 – KAELIA FORMA’COACH</p>
-    <div class="flex justify-center space-x-4 mt-2">
-      <a href="/mentions-legales" class="hover:underline">Mentions légales</a>
-      <a href="/conditions-generales" class="hover:underline"
-        >Conditions générales</a
-      >
-      <a href="/politique-confidentialite" class="hover:underline"
-        >Politique de confidentialité</a
-      >
-    </div>
+  <!-- Section Copyright -->
+  <div class="border-t border-gray-400 mt-8 pt-4 text-center text-sm">
+    <p>© 2023 – KAELIA FORMA’COACH. Tous droits réservés.</p>
   </div>
 </footer>

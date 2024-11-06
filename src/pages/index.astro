@@ -13,12 +13,14 @@ import Layout from "../layouts/Layout.astro";
       class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4"
     >
       <!-- Titre avec effet de zoom et montée simultanée -->
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-intro">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-intro">
         L'accompagnement de proximité
       </h1>
 
       <!-- Paragraphe avec le même effet de montée simultanée -->
-      <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-6 animate-intro">
+      <p
+        class="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 animate-intro"
+      >
         Chez Kaelia, nous mettons à votre disposition des formations sur mesure,
         conçues pour répondre aux besoins du marché et certifiées Qualiopi. Que
         vous soyez un professionnel en reconversion ou un salarié souhaitant
@@ -39,16 +41,16 @@ import Layout from "../layouts/Layout.astro";
   <!-- Section "Pourquoi choisir Kaelia ?" sans les icônes circulaires ou carrés -->
   <section class="py-20">
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10">
         Pourquoi choisir <span class="text-purple-600">Kaelia</span> ?
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Premier élément : L'humain au cœur de nos actions -->
         <div class="text-center">
-          <h3 class="text-lg font-semibold text-purple-700 mb-2">
+          <h3 class="text-base md:text-lg font-semibold text-purple-700 mb-2">
             L'humain au cœur de nos actions
           </h3>
-          <p class="text-gray-700">
+          <p class="text-sm md:text-base text-gray-700">
             Nous croyons en l'importance de créer des relations durables avec
             nos clients et de les accompagner dans leur réussite.
           </p>
@@ -56,10 +58,10 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Deuxième élément : Des experts à votre écoute -->
         <div class="text-center">
-          <h3 class="text-lg font-semibold text-purple-700 mb-2">
+          <h3 class="text-base md:text-lg font-semibold text-purple-700 mb-2">
             Des experts à votre écoute
           </h3>
-          <p class="text-gray-700">
+          <p class="text-sm md:text-base text-gray-700">
             Notre équipe est composée de professionnels expérimentés et
             passionnés, chacun apportant son expertise spécifique.
           </p>
@@ -67,10 +69,10 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Troisième élément : Un accompagnement personnalisé -->
         <div class="text-center">
-          <h3 class="text-lg font-semibold text-purple-700 mb-2">
+          <h3 class="text-base md:text-lg font-semibold text-purple-700 mb-2">
             Un accompagnement personnalisé
           </h3>
-          <p class="text-gray-700">
+          <p class="text-sm md:text-base text-gray-700">
             Nous sommes à vos côtés à chaque étape de votre projet.
           </p>
         </div>
@@ -95,10 +97,10 @@ import Layout from "../layouts/Layout.astro";
     style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
   >
     <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
         Les 4 étapes de notre <span class="text-pink-300">accompagnement</span>
       </h2>
-      <p class="text-lg mb-10">
+      <p class="text-base md:text-lg mb-10">
         De l'identification de vos besoins à la certification de vos
         compétences. Prêt à transformer votre carrière ? Contactez-nous dès
         maintenant !
@@ -113,12 +115,12 @@ import Layout from "../layouts/Layout.astro";
 
       <!-- Grille des étapes -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <!-- Étapes 1 à 4 avec bordures blanches (pas de changement ici) -->
+        <!-- Étapes 1 à 4 avec bordures blanches -->
         <div
           class="border border-white rounded-lg p-6 transition transform hover:scale-105"
         >
-          <h3 class="text-5xl font-bold mb-2">01</h3>
-          <h4 class="text-xl font-semibold mb-2">Contact</h4>
+          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">01</h3>
+          <h4 class="text-lg font-semibold mb-2">Contact</h4>
           <p class="text-sm">
             Nous échangeons pour vous aider à comprendre votre besoin.
           </p>
@@ -126,8 +128,8 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="border border-white rounded-lg p-6 transition transform hover:scale-105"
         >
-          <h3 class="text-5xl font-bold mb-2">02</h3>
-          <h4 class="text-xl font-semibold mb-2">Construction</h4>
+          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">02</h3>
+          <h4 class="text-lg font-semibold mb-2">Construction</h4>
           <p class="text-sm">
             Nous vous aidons à créer une formation sur-mesure.
           </p>
@@ -135,8 +137,8 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="border border-white rounded-lg p-6 transition transform hover:scale-105"
         >
-          <h3 class="text-5xl font-bold mb-2">03</h3>
-          <h4 class="text-xl font-semibold mb-2">Apprentissage</h4>
+          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">03</h3>
+          <h4 class="text-lg font-semibold mb-2">Apprentissage</h4>
           <p class="text-sm">
             Vous vous formez avec des professionnels qualifiés.
           </p>
@@ -144,8 +146,8 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="border border-white rounded-lg p-6 transition transform hover:scale-105"
         >
-          <h3 class="text-5xl font-bold mb-2">04</h3>
-          <h4 class="text-xl font-semibold mb-2">Bilan</h4>
+          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">04</h3>
+          <h4 class="text-lg font-semibold mb-2">Bilan</h4>
           <p class="text-sm">
             Nous débriefons sur l'ensemble de la formation et de vos acquis.
           </p>
@@ -157,10 +159,10 @@ import Layout from "../layouts/Layout.astro";
   <!-- Section "KAELIA en quelques chiffres..." -->
   <section class="py-20 bg-white text-center">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-2">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">
         <span class="text-purple-600">KAELIA</span> en quelques chiffres...
       </h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
+      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-10">
         Votre succès, notre priorité. Devenez l'expert que vous avez toujours
         rêvé d'être grâce à nos formations personnalisées et à l'accompagnement
         de nos coachs expérimentés.
@@ -172,8 +174,8 @@ import Layout from "../layouts/Layout.astro";
           class="text-white rounded-lg p-8"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-6xl font-bold mb-2">4,9/5</h3>
-          <p class="text-xl font-semibold text-pink-300">
+          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4,9/5</h3>
+          <p class="text-lg font-semibold text-pink-300">
             Satisfaction<br />Client
           </p>
         </div>
@@ -181,8 +183,8 @@ import Layout from "../layouts/Layout.astro";
           class="text-white rounded-lg p-8"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-6xl font-bold mb-2">0%</h3>
-          <p class="text-xl font-semibold text-pink-300">
+          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">0%</h3>
+          <p class="text-lg font-semibold text-pink-300">
             Taux<br />d'Absentéisme
           </p>
         </div>
@@ -190,15 +192,15 @@ import Layout from "../layouts/Layout.astro";
           class="text-white rounded-lg p-8"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-6xl font-bold mb-2">35</h3>
-          <p class="text-xl font-semibold text-pink-300">Clients<br />Formés</p>
+          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">35</h3>
+          <p class="text-lg font-semibold text-pink-300">Clients<br />Formés</p>
         </div>
         <div
           class="text-white rounded-lg p-8"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-6xl font-bold mb-2">5/5</h3>
-          <p class="text-xl font-semibold text-pink-300">
+          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">5/5</h3>
+          <p class="text-lg font-semibold text-pink-300">
             Satisfaction<br />Google
           </p>
         </div>
@@ -206,13 +208,13 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Section "Ils nous font confiance" (pas de changement ici) -->
+  <!-- Section "Ils nous font confiance" -->
   <section class="py-20 bg-white text-center">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-2">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">
         Ils nous font <span class="text-purple-600">confiance</span>
       </h2>
-      <p class="text-lg text-gray-700 max-w-xl mx-auto mb-10">
+      <p class="text-base md:text-lg text-gray-700 max-w-xl mx-auto mb-10">
         La confiance de nos partenaires, notre plus belle récompense.
       </p>
       <div class="logo-carousel">
@@ -222,6 +224,7 @@ import Layout from "../layouts/Layout.astro";
               loading="lazy"
               src="/images/index/logo-partenaire-IUT.webp"
               alt="IUT Lumière"
+              class="h-16 md:h-20 lg:h-24"
             />
           </div>
           <div class="logo-item">
@@ -229,6 +232,7 @@ import Layout from "../layouts/Layout.astro";
               loading="lazy"
               src="/images/index/logo-partenaire-webkonseil.webp"
               alt="Webkonseil"
+              class="h-16 md:h-20 lg:h-24"
             />
           </div>
           <div class="logo-item">
@@ -236,6 +240,7 @@ import Layout from "../layouts/Layout.astro";
               loading="lazy"
               src="/images/index/logo-partenaire-opus.webp"
               alt="Opus Formation"
+              class="h-16 md:h-20 lg:h-24"
             />
           </div>
           <div class="logo-item">
@@ -243,6 +248,7 @@ import Layout from "../layouts/Layout.astro";
               loading="lazy"
               src="/images/index/logo-partenaire-webylab.webp"
               alt="Webylab"
+              class="h-16 md:h-20 lg:h-24"
             />
           </div>
         </div>
@@ -267,9 +273,7 @@ import Layout from "../layouts/Layout.astro";
   .animate-intro {
     animation: introAnimation 1s ease-out forwards;
   }
-</style>
 
-<style>
   /* Style de base pour le carrousel */
   .logo-carousel {
     overflow: hidden;
@@ -287,8 +291,8 @@ import Layout from "../layouts/Layout.astro";
     padding: 0 1rem;
   }
 
+  /* Suppression de la hauteur fixe des images */
   .logo-item img {
-    height: 6rem;
     filter: grayscale(100%);
     transition: filter 0.3s;
   }
