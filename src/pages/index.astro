@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <!-- Section d'introduction avec l'image de fond agrandie et animation synchronisée -->
   <section
-    class="relative bg-cover bg-center h-[80vh]"
+    class="relative bg-cover bg-center h-[88vh]"
     style="background-image: url('/images/index/photo-accueil.webp');"
   >
     <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -28,12 +28,15 @@ import Layout from "../layouts/Layout.astro";
         votre parcours.
       </p>
 
-      <!-- Bouton avec le même effet de montée simultanée et dégradé -->
+      <!-- Updated Contact Button in the Introduction Section -->
       <a
         href="/contact"
-        class="bg-white text-purple-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition animate-intro"
+        class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-colors duration-300 group hover:bg-white hover:text-purple-800 animate-intro"
       >
-        Contactez-nous
+        <span>Contactez-nous</span>
+        <span class="ml-2 group-hover:translate-x-1 transition-transform"
+          >→</span
+        >
       </a>
     </div>
   </section>
@@ -80,12 +83,16 @@ import Layout from "../layouts/Layout.astro";
 
       <!-- Bouton d'appel à l'action avec dégradé -->
       <div class="mt-10">
+        <!-- Updated Call-to-Action Button in the Why Choose Us Section -->
+        <!-- Updated Call-to-Action Button in the Why Choose Us Section on White Background -->
         <a
           href="/formations"
-          class="text-white font-semibold py-4 px-10 rounded-lg hover:opacity-90 transition text-lg"
-          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+          class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 rounded-full transition-colors duration-300 group hover:bg-purple-800 hover:text-white text-lg"
         >
-          Commencer votre formation
+          <span>Commencer votre formation</span>
+          <span class="ml-2 group-hover:translate-x-1 transition-transform"
+            >→</span
+          >
         </a>
       </div>
     </div>
@@ -156,52 +163,69 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Section "KAELIA en quelques chiffres..." -->
+  <!-- Section "KAELIA en quelques chiffres..." with Responsive Adjustments for Mobile -->
   <section class="py-20 bg-white text-center">
-    <div class="container mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-2">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
         <span class="text-purple-600">KAELIA</span> en quelques chiffres...
       </h2>
-      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-10">
+      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-12">
         Votre succès, notre priorité. Devenez l'expert que vous avez toujours
         rêvé d'être grâce à nos formations personnalisées et à l'accompagnement
         de nos coachs expérimentés.
       </p>
 
-      <!-- Grille des statistiques avec dégradé sur chaque carte -->
+      <!-- Responsive Grid Layout for Blocks -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Large Main Block -->
         <div
-          class="text-white rounded-lg p-8"
+          class="text-white p-6 md:p-10 rounded-lg flex flex-col justify-center col-span-1 md:col-span-2 md:row-span-2"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4,9/5</h3>
-          <p class="text-lg font-semibold text-pink-300">
-            Satisfaction<br />Client
+          <h3 class="text-5xl md:text-6xl font-bold mb-2 md:mb-4">4,9/5</h3>
+          <p class="text-lg md:text-xl font-semibold">
+            <span class="text-pink-300">Satisfaction</span><br /><span
+              class="text-white">Client</span
+            >
           </p>
         </div>
+
+        <!-- Smaller Top-Right Block -->
         <div
-          class="text-white rounded-lg p-8"
+          class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">0%</h3>
-          <p class="text-lg font-semibold text-pink-300">
-            Taux<br />d'Absentéisme
+          <h3 class="text-4xl md:text-5xl font-bold mb-2">0%</h3>
+          <p class="text-lg font-semibold">
+            <span class="text-pink-300">Taux</span><br /><span
+              class="text-white">d'Absentéisme</span
+            >
           </p>
         </div>
+
+        <!-- Smaller Center-Right Block -->
         <div
-          class="text-white rounded-lg p-8"
+          class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">35</h3>
-          <p class="text-lg font-semibold text-pink-300">Clients<br />Formés</p>
+          <h3 class="text-4xl md:text-5xl font-bold mb-2">35</h3>
+          <p class="text-lg font-semibold">
+            <span class="text-pink-300">Clients</span><br /><span
+              class="text-white">Formés</span
+            >
+          </p>
         </div>
+
+        <!-- Smaller Bottom-Right Block Spanning Across Columns -->
         <div
-          class="text-white rounded-lg p-8"
+          class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center col-span-1 md:col-span-2"
           style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
         >
-          <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">5/5</h3>
-          <p class="text-lg font-semibold text-pink-300">
-            Satisfaction<br />Google
+          <h3 class="text-4xl md:text-5xl font-bold mb-2">5/5</h3>
+          <p class="text-lg font-semibold">
+            <span class="text-pink-300">Satisfaction</span><br /><span
+              class="text-white">Google</span
+            >
           </p>
         </div>
       </div>
