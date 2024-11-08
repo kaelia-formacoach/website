@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+    <div class="bg-gradient-to-r from-blue-800 to-purple-600 px-6 py-12 w-full">
+        <div class="w-full flex flex-col justify-center items-center text-center">
+          <h2 class="text-white sm:text-4xl text-3xl font-bold mb-4">Ma pause santé</h2>
+          <p class="text-white text-base text-center mb-8">
+            Prévention santé au travail
+          </p>
+      
+          <a href="/contact">
+            <button type="button" class="bg-white text-sm text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-slate-100">
+              Demandez un devis
+            </button>
+          </a>
+        </div>
+    </div>
+
+    <div class="grid mb-8 md:mb-12 md:grid-cols-2 bg-white">
+        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-e dark:bg-gray-800 dark:border-gray-700 text-l">
+            <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                <!-- TODO : change color with the right one -->
+                <span class="text-purple-500">Modalités</span> de formation
+            </h2>
+                <p class="mt-4 mb-8 text-md italic">La formation est destinée aux dirigeants et salariés souhaitant faire de la prévention santé au travail.
+                </p>
+                <!-- TODO : change color -->
+                <ul class="text-left text-grey-900 list-disc list-inside dark:text-gray-400 text-l">
+                <li class="mb-4">
+                    <span class="text-purple-500 font-bold">Prérequis : </span> Pas de contre-indications médicales à la pratique de l'exercice.
+                </li>
+                <li class="mb-4">
+                    <span class="text-purple-500 font-bold">Durée de la formation : </span> 1h par semaine (fréquence à définir selon les besoins)
+                </li>
+                <li class="mb-4">
+                    <span class="text-purple-500 font-bold">Tarif : </span> 90€ HT/personne (minimum 3 personnes). Prix à titre indicatif pour une session de formation de 1h en présentiel. À définir en fonction du nombre de participants et de vos besoins. Une formule d'abonnement est disponible.
+                </li>
+            </ul>
+            </blockquote>   
+        </figure>
+        
+        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+            <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                <!-- TODO : change color with the right one -->
+                Le <span class="text-purple-500">formateur</span>
+            </h2>
+            </blockquote>
+            <img class="rounded-full w-200 h-200" src="https://e7.pngegg.com/pngimages/340/946/png-clipart-avatar-user-computer-icons-software-developer-avatar-child-face-thumbnail.png" alt="Photo du formateur">
+            <!-- Just the great version of me 🙄 -->
+            <figcaption class="flex items-center justify-center ">
+                
+                <div class="text-center space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                    <div class="text-purple-500 mt-3 text-xl">Prénom NOM</div>
+                    <div class="text-md text-gray-500 dark:text-gray-400">Professionnel de santé</div>
+                </div>
+            </figcaption>    
+        </figure>
+        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700 text-l">
+            <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                <!-- TODO : change color with the right one -->
+                <span class="text-purple-500">Objectifs</span> pédagogiques
+            </h2>
+                <p class="mt-4 mb-8 text-md italic">Découvrez les savoir-faire et savoir-être que vous développerez tout au long de cette formation.</p>
+                <!-- TODO : change color -->
+                <ul class="text-left text-grey-900 list-disc list-inside dark:text-gray-400">
+                <li class="mb-4">
+                    Eviter la sédentarité au travail
+                </li>
+                <li class="mb-4">
+                    Créer un environnement de bien être à son poste (gestes répétitifs, pénibilité physique)
+                </li>
+                <li class="mb-4">
+                    Changer les habitudes de travail pour améliorer son bien-être au travail
+                </li>
+                <li>
+                    Retrouver l’énergie et la motivation dans son quotidien au travail
+                </li>
+            </ul>
+            </blockquote>   
+        </figure>
+        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400 text-md">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            <!-- TODO : change color with the right one -->
+            <span class="text-purple-500">Programme</span> de la formation
+            </h2>
+            <p class="mt-4 mb-8 italic">Explorez le contenu détaillé de notre programme pour atteindre vos objectifs de manière structurée et efficace.</p>
+            <!-- TODO : change color -->
+            <ul class="text-left text-grey-900 list-disc list-inside dark:text-gray-400">
+                <li class="mb-4">
+                Apprentissage du renforcement des muscles du dos, des épaules et des jambes pour protéger les articulations des contraintes physiques du travail
+                </li>
+                <li class="mb-4">
+                Exercices pour assouplir ses muscles et articulations pour améliorer sa flexibilité ainsi que ses gestes et postures au quotidien
+                </li>
+                <li class="mb-4">
+                Apprendre les bons gestes pour soulager ses douleurs
+                </li>
+                <li class="mb-4">
+                    Mieux gérer son stress
+                </li>
+            </ul>
+        </blockquote>   
+    </figure>
+    
+        
+    </div>
+</Layout>

@@ -1,7 +1,187 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+
 ---
 
+
 <Layout>
-  <h1>Formations</h1>
+  <script> // This shit doesn't work
+    // JavaScript function to filter courses by category
+    function filterCourses(category) {
+        // Hide all course cards
+        const courses = document.querySelectorAll('.course-card');
+        courses.forEach(course => {
+            course.style.display = 'none';
+        });
+  
+        // Show only the selected category
+        const selectedCourses = document.querySelectorAll(`.${category}`);
+        console.log(category)
+        selectedCourses.forEach(course => {
+            course.style.display = 'block';
+        });
+    }
+  </script>
+  <!-- Header Section -->
+  <section class="text-center py-10">
+    <h1 class="text-4xl font-bold">NOTRE CATALOGUE DE FORMATION</h1>
+    <p class="text-gray-500 mt-2">
+      Explorez nos formations personnalisées en <strong>informatique</strong>, <strong>RSE</strong>, <strong>juridique</strong>, <strong>entrepreneuriat</strong> et <strong>management</strong>, éligibles au <strong>CPF</strong>, conçues pour répondre à vos besoins professionnels et accompagner votre parcours de carrière.
+    </p>
+
+    <!-- Category Buttons -->
+    <div class="flex flex-wrap justify-center mt-6 space-x-4">
+      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
+        onclick="filterCourses('informatique')">Informatique</button
+      >
+      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
+      onclick="filterCourses('rse')">RSE</button
+      >
+      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
+      onclick="filterCourses('juridique')">Juridique</button
+      >
+      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
+      onclick="filterCourses('entreprenariat')">Entreprenariat</button
+      >
+      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
+      onclick="filterCourses('management')">Management</button
+      >
+    </div>
+  </section>
+
+  <!-- Training Cards Section -->
+  <section class="container mx-auto py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Training Card 1 -->
+      <div
+        class="course-card juridique entreprenariat flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+      >
+        <img
+          class="object-cover w-full md:w-48 rounded-tl-lg md:rounded-l-lg"
+          src="/public/images/formation/droit-et-entreprenariat.jpg"
+          loading="lazy"
+          alt="Formation Image"
+        />
+        <div class="p-4">
+          <h5 class="text-2xl font-bold">
+            <span class="text-purple-900">Aspects juridiques de la création et de la reprise d'entreprise</span> : Droit et entrepreneuriat
+          </h5>
+          <p class="text-gray-600 mt-2">2 000€ HT/personne</p>
+          <p class="text-gray-700 mt-4">
+            Pour vous protéger, protéger votre entreprise et bonifier le développement de votre business
+          </p>
+          <a
+            href="formation/droit-et-entreprenariat"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+
+      <!-- Training Card 2 -->
+      <div
+        class="course-card juridique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+      >
+        <img
+          class="object-cover w-full md:w-48 rounded-tl-lg md:rounded-l-lg"
+          src="/public/images/formation/droit-contrat.png"
+          loading="lazy"
+          alt="Formation Image"
+        />
+        <div class="p-4">
+          <h5 class="text-2xl font-bold">
+            Règles générales du <span class="text-purple-900">droit des contrats</span>
+          </h5>
+          <p class="text-gray-600 mt-2">3 900€ HT/personne</p>
+          <p class="text-gray-700 mt-4">
+            Pour rédiger, négocier et signer vos contrats en toute sérénité
+          </p>
+          <a
+            href="formation/droit-des-contrats"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+
+      <!-- Training Card 3 -->
+      <div
+        class="course-card rse flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+      >
+        <img
+          class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+          src="/public/images/formation/sante-physique-mentale.png"
+          loading="lazy"
+          alt="Formation Image"
+        />
+        <div class="p-4">
+          <h5 class="text-2xl font-bold">
+            Améliorer ma <span class="text-purple-900">santé physique et mentale</span> au travail
+          </h5>
+          <p class="text-gray-600 mt-2">350€ HT/personne (minimum 3 personnes)</p>
+          <p class="text-gray-700 mt-4">
+            Atelier prévention santé au travail
+          </p>
+          <a
+            href="/formation/ameliorer-sante-physique-et-mentale"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+
+      <!-- Training Card 4 -->
+      <div
+        class="course-card rse flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+      >
+        <img
+          class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+          src="/public/images/formation/sante-physique-mentale.png"
+          loading="lazy"
+          alt="Formation Image"
+        />
+        <div class="p-4">
+          <h5 class="text-2xl font-bold">
+            Ma <span class="text-purple-900">pause santé</span>
+          </h5>
+          <p class="text-gray-600 mt-2">90€ HT/personne (minimum 3 personnes)</p>
+          <p class="text-gray-700 mt-4">
+            Prévention santé au travail
+          </p>
+          <a
+            href="/formation/ma-pause-sante"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+            >En savoir plus</a
+          >
+        </div>
+      </div>
+
+       <!-- Training Card 5 -->
+       <div
+       class="course-card informatique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+       <img
+         class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+         src="/public/images/formation/visible-net.png"
+         loading="lazy"
+         alt="Formation Image"
+       />
+       <div class="p-4">
+         <h5 class="text-2xl font-bold">
+           Être <span class="text-purple-900">visible</span> sur le net
+         </h5>
+         <p class="text-gray-600 mt-2">A partir de 600€ HT/personne</p>
+         <p class="text-gray-700 mt-4">
+          Concevez la stratégie et les supports de communication qui correspondent à votre entreprise
+         </p>
+         <a
+           href="/formation/ma-pause-sante"
+           class="text-purple-600 mt-4 block font-semibold hover:underline"
+           >En savoir plus</a
+         >
+       </div>
+     </div>
+    </div>
+  </section>
 </Layout>
+
