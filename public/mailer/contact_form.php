@@ -1,11 +1,17 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 require '../../vendor/autoload.php';
 
+// Charger le fichier .env
+$dotenv = Dotenv::createImmutable('../../');
+$dotenv->load();
+
 // Informations sur le destinataire et le sujet
-$recipient_email = "m.barre@kaelia-formacoach.com"; // Remplacez par votre email de contact
+$recipient_email = "m.barre@kaelia-formacoach.com";
 $subject = "Nouveau message de contact - Kaelia Forma'Coach";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,22 +30,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Initialisation de PHPMailer
     $mail = new PHPMailer(true);
 
     try {
-        // Configuration du serveur SMTP
+        // Configuration du serveur SMTP en utilisant les variables d’environnement
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Remplacez par votre serveur SMTP
+        $mail->Host = $_ENV['SMTP_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Username = 'm.barre@kaelia-formacoach.com'; // Remplacez par votre adresse email
-        $mail->Password = 'ebre cibg edyh jwmt'; // Remplacez par votre mot de passe
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // ou PHPMailer::ENCRYPTION_SMTPS pour SSL
-        $mail->Port = 587; // Utilisez 465 pour SSL ou 587 pour TLS
+        $mail->Username = $_ENV['MAIL_USERNAME'];
+        $mail->Password = $_ENV['MAIL_PASSWORD'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = $_ENV['SMTP_PORT'];
 
         // Expéditeur et Destinataire
-        $mail->setFrom('m.barre@kaelia-formacoach.com', 'Kaelia Forma\'Coach'); // Adresse et nom de l'expéditeur
-        $mail->addAddress($recipient_email); // Envoyer à l'adresse de contact elle-même
+        $mail->setFrom($_ENV['MAIL_USERNAME'], 'Kaelia Forma\'Coach');
+        $mail->addAddress($recipient_email);
 
         // Contenu de l'email
         $mail->isHTML(false);
@@ -48,7 +53,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Envoyer l'email
         if ($mail->send()) {
-            // Redirection vers la page de confirmation
             header("Location: http://localhost:4321/confirmation");
             exit;
         } else {
@@ -60,4 +64,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Méthode de requête non valide.";
 }
-?>
