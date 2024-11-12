@@ -1,61 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 
-
 <Layout>
-  <script>
-    // JavaScript function to filter courses by category
-    function filterCourses(category: string) {
-      // Hide all course cards
-      const courses = document.querySelectorAll<HTMLElement>('.course-card');
-      courses.forEach(course => {
-        course.style.display = 'none';
-      });
-  
-      // Show only the selected category
-      const selectedCourses = document.querySelectorAll<HTMLElement>(`.${category}`);
-      console.log(category);
-      selectedCourses.forEach(course => {
-        course.style.display = 'block';
-      });
-    }
-  </script>
   <!-- Header Section -->
   <section class="text-center py-10">
     <h1 class="text-4xl font-bold">NOTRE CATALOGUE DE FORMATION</h1>
     <p class="text-gray-500 mt-2">
-      Explorez nos formations personnalisées en <strong>informatique</strong>, <strong>RSE</strong>, <strong>juridique</strong>, <strong>entrepreneuriat</strong> et <strong>management</strong>, éligibles au <strong>CPF</strong>, conçues pour répondre à vos besoins professionnels et accompagner votre parcours de carrière.
+      Explorez nos formations personnalisées en <strong>informatique</strong>, <strong
+        >RSE</strong
+      >, <strong>juridique</strong>, <strong>entrepreneuriat</strong> et <strong
+        >management</strong
+      >, éligibles au <strong>CPF</strong>, conçues pour répondre à vos besoins
+      professionnels et accompagner votre parcours de carrière.
     </p>
 
     <!-- Category Buttons -->
     <div class="flex flex-wrap justify-center mt-6 space-x-4">
-      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
-        onclick="filterCourses('informatique')">Informatique</button
+      <button
+        class="bg-purple-700 text-white px-4 py-2 rounded-full filter-button active"
+        data-category="all"
       >
-      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
-      onclick="filterCourses('rse')">RSE</button
+        Tous
+      </button>
+      <button
+        class="bg-purple-700 text-white px-4 py-2 rounded-full filter-button"
+        data-category="informatique"
       >
-      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
-      onclick="filterCourses('juridique')">Juridique</button
+        Informatique
+      </button>
+      <button
+        class="bg-purple-700 text-white px-4 py-2 rounded-full filter-button"
+        data-category="rse"
       >
-      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
-      onclick="filterCourses('entreprenariat')">Entreprenariat</button
+        RSE
+      </button>
+      <button
+        class="bg-purple-700 text-white px-4 py-2 rounded-full filter-button"
+        data-category="juridique"
       >
-      <button class="bg-purple-700 text-white px-4 py-2 rounded-full"
-      onclick="filterCourses('management')">Management</button
+        Juridique
+      </button>
+      <button
+        class="bg-purple-700 text-white px-4 py-2 rounded-full filter-button"
+        data-category="entreprenariat"
       >
+        Entreprenariat
+      </button>
+      <button
+        class="bg-purple-700 text-white px-4 py-2 rounded-full filter-button"
+        data-category="management"
+      >
+        Management
+      </button>
     </div>
   </section>
 
   <!-- Training Cards Section -->
   <section class="container mx-auto py-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="course-list">
       <!-- Training Card 1 -->
       <div
         class="course-card juridique entreprenariat flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="juridique entreprenariat"
       >
         <img
           class="object-cover w-full md:w-48 rounded-tl-lg md:rounded-l-lg"
@@ -65,23 +72,29 @@ import Layout from "../layouts/Layout.astro";
         />
         <div class="p-4">
           <h5 class="text-2xl font-bold">
-            <span class="text-purple-900">Aspects juridiques de la création et de la reprise d'entreprise</span> : Droit et entrepreneuriat
+            <span class="text-purple-900">
+              Aspects juridiques de la création et de la reprise d'entreprise
+            </span>
+            : Droit et entrepreneuriat
           </h5>
           <p class="text-gray-600 mt-2">2 000€ HT/personne</p>
           <p class="text-gray-700 mt-4">
-            Pour vous protéger, protéger votre entreprise et bonifier le développement de votre business
+            Pour vous protéger, protéger votre entreprise et bonifier le
+            développement de votre business
           </p>
           <a
             href="formation/droit-et-entreprenariat"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
-            >En savoir plus</a
           >
+            En savoir plus
+          </a>
         </div>
       </div>
 
       <!-- Training Card 2 -->
       <div
         class="course-card juridique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="juridique"
       >
         <img
           class="object-cover w-full md:w-48 rounded-tl-lg md:rounded-l-lg"
@@ -91,7 +104,9 @@ import Layout from "../layouts/Layout.astro";
         />
         <div class="p-4">
           <h5 class="text-2xl font-bold">
-            Règles générales du <span class="text-purple-900">droit des contrats</span>
+            Règles générales du <span class="text-purple-900"
+              >droit des contrats</span
+            >
           </h5>
           <p class="text-gray-600 mt-2">3 900€ HT/personne</p>
           <p class="text-gray-700 mt-4">
@@ -100,14 +115,16 @@ import Layout from "../layouts/Layout.astro";
           <a
             href="formation/droit-des-contrats"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
-            >En savoir plus</a
           >
+            En savoir plus
+          </a>
         </div>
       </div>
 
       <!-- Training Card 3 -->
       <div
         class="course-card rse flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="rse"
       >
         <img
           class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
@@ -117,23 +134,27 @@ import Layout from "../layouts/Layout.astro";
         />
         <div class="p-4">
           <h5 class="text-2xl font-bold">
-            Améliorer ma <span class="text-purple-900">santé physique et mentale</span> au travail
+            Améliorer ma <span class="text-purple-900"
+              >santé physique et mentale</span
+            > au travail
           </h5>
-          <p class="text-gray-600 mt-2">350€ HT/personne (minimum 3 personnes)</p>
-          <p class="text-gray-700 mt-4">
-            Atelier prévention santé au travail
+          <p class="text-gray-600 mt-2">
+            350€ HT/personne (minimum 3 personnes)
           </p>
+          <p class="text-gray-700 mt-4">Atelier prévention santé au travail</p>
           <a
             href="/formation/ameliorer-sante-physique-et-mentale"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
-            >En savoir plus</a
           >
+            En savoir plus
+          </a>
         </div>
       </div>
 
       <!-- Training Card 4 -->
       <div
         class="course-card rse flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="rse"
       >
         <img
           class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
@@ -145,43 +166,113 @@ import Layout from "../layouts/Layout.astro";
           <h5 class="text-2xl font-bold">
             Ma <span class="text-purple-900">pause santé</span>
           </h5>
-          <p class="text-gray-600 mt-2">90€ HT/personne (minimum 3 personnes)</p>
-          <p class="text-gray-700 mt-4">
-            Prévention santé au travail
+          <p class="text-gray-600 mt-2">
+            90€ HT/personne (minimum 3 personnes)
           </p>
+          <p class="text-gray-700 mt-4">Prévention santé au travail</p>
           <a
             href="/formation/ma-pause-sante"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
-            >En savoir plus</a
           >
+            En savoir plus
+          </a>
         </div>
       </div>
 
-       <!-- Training Card 5 -->
-       <div
-       class="course-card informatique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-       <img
-         class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
-         src="/images/formation/visible-net.png"
-         loading="lazy"
-         alt="Formation Image"
-       />
-       <div class="p-4">
-         <h5 class="text-2xl font-bold">
-           Être <span class="text-purple-900">visible</span> sur le net
-         </h5>
-         <p class="text-gray-600 mt-2">A partir de 600€ HT/personne</p>
-         <p class="text-gray-700 mt-4">
-          Concevez la stratégie et les supports de communication qui correspondent à votre entreprise
-         </p>
-         <a
-           href="/formation/ma-pause-sante"
-           class="text-purple-600 mt-4 block font-semibold hover:underline"
-           >En savoir plus</a
-         >
-       </div>
-     </div>
+      <!-- Training Card 5 -->
+      <div
+        class="course-card informatique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="informatique"
+      >
+        <img
+          class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+          src="/images/formation/visible-net.png"
+          loading="lazy"
+          alt="Formation Image"
+        />
+        <div class="p-4">
+          <h5 class="text-2xl font-bold">
+            Être <span class="text-purple-900">visible</span> sur le net
+          </h5>
+          <p class="text-gray-600 mt-2">À partir de 600€ HT/personne</p>
+          <p class="text-gray-700 mt-4">
+            Concevez la stratégie et les supports de communication qui
+            correspondent à votre entreprise
+          </p>
+          <a
+            href="/formation/etre-visible-sur-le-net"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-</Layout>
 
+  <!-- Client-side Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Sélection des boutons de filtre en tant que HTMLButtonElement
+      const buttons =
+        document.querySelectorAll<HTMLButtonElement>(".filter-button");
+      // Sélection des cartes de cours en tant qu'HTMLElement
+      const courses = document.querySelectorAll<HTMLElement>(".course-card");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event: Event) => {
+          // Utilisation de event.currentTarget et typage en tant que HTMLButtonElement
+          const target = event.currentTarget as HTMLButtonElement;
+          const category = target.getAttribute("data-category") || "";
+
+          // Retirer la classe active de tous les boutons
+          buttons.forEach((btn) => btn.classList.remove("active"));
+
+          // Ajouter la classe active au bouton sélectionné
+          target.classList.add("active");
+
+          if (category === "all") {
+            // Afficher toutes les cartes
+            courses.forEach((course) => {
+              course.style.display = "block";
+            });
+          } else {
+            // Masquer toutes les cartes
+            courses.forEach((course) => {
+              course.style.display = "none";
+            });
+
+            // Afficher les cartes correspondant à la catégorie sélectionnée
+            courses.forEach((course) => {
+              const courseCategories =
+                course.getAttribute("data-category")?.split(" ") ?? [];
+              if (courseCategories.includes(category)) {
+                course.style.display = "block";
+              }
+            });
+          }
+        });
+      });
+
+      // Afficher toutes les cartes par défaut
+      courses.forEach((course) => {
+        course.style.display = "block";
+      });
+    });
+  </script>
+
+  <!-- Optional Styles for Active Button -->
+  <style>
+    /* Style des boutons par défaut */
+    .filter-button {
+      transition: transform 0.3s ease;
+    }
+
+    /* Style du bouton actif */
+    .filter-button.active {
+      transform: scale(1.1); /* Agrandir légèrement */
+      font-weight: bold; /* Rendre le texte plus gras */
+      background-color: #5a31af; /* Couleur personnalisée pour le bouton actif */
+    }
+  </style>
+</Layout>
