@@ -23,6 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-#chatgpy
+#chatgp
 script.py
 code_contenu.md
+
+#php
+vendor

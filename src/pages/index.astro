@@ -3,91 +3,75 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <!-- Section d'introduction avec l'image de fond agrandie et animation synchronisée -->
-  <section
-    class="relative bg-cover bg-center h-[88vh]"
-    style="background-image: url('/images/index/photo-accueil.webp');"
-  >
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div
-      class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4"
+  <!-- Conteneur principal avec le scroll snapping -->
+  <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <!-- Section d'introduction avec l'image de fond en full page -->
+    <section
+      class="snap-start snap-always relative bg-cover bg-center min-h-screen flex items-center justify-center section-wave animate-on-scroll"
+      style="background-image: url('/images/index/photo-accueil.webp');"
     >
-      <!-- Titre avec effet de zoom et montée simultanée -->
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-intro">
-        L'accompagnement de proximité
-      </h1>
-
-      <!-- Paragraphe avec le même effet de montée simultanée -->
-      <p
-        class="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 animate-intro"
-      >
-        Chez Kaelia, nous mettons à votre disposition des formations sur mesure,
-        conçues pour répondre aux besoins du marché et certifiées Qualiopi. Que
-        vous soyez un professionnel en reconversion ou un salarié souhaitant
-        renforcer ses compétences, notre équipe vous accompagne tout au long de
-        votre parcours.
-      </p>
-
-      <!-- Updated Contact Button in the Introduction Section -->
-      <a
-        href="/contact"
-        class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-colors duration-300 group hover:bg-white hover:text-purple-800 animate-intro"
-      >
-        <span>Contactez-nous</span>
-        <span class="ml-2 group-hover:translate-x-1 transition-transform"
-          >→</span
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative z-10 text-center text-white px-4">
+        <h1
+          class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 animate-intro drop-shadow-lg"
         >
-      </a>
-    </div>
-  </section>
-
-  <!-- Section "Pourquoi choisir Kaelia ?" sans les icônes circulaires ou carrés -->
-  <section class="py-20">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-10">
-        Pourquoi choisir <span class="text-purple-600">Kaelia</span> ?
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Premier élément : L'humain au cœur de nos actions -->
-        <div class="text-center">
-          <h3 class="text-base md:text-lg font-semibold text-purple-700 mb-2">
-            L'humain au cœur de nos actions
-          </h3>
-          <p class="text-sm md:text-base text-gray-700">
-            Nous croyons en l'importance de créer des relations durables avec
-            nos clients et de les accompagner dans leur réussite.
-          </p>
-        </div>
-
-        <!-- Deuxième élément : Des experts à votre écoute -->
-        <div class="text-center">
-          <h3 class="text-base md:text-lg font-semibold text-purple-700 mb-2">
-            Des experts à votre écoute
-          </h3>
-          <p class="text-sm md:text-base text-gray-700">
-            Notre équipe est composée de professionnels expérimentés et
-            passionnés, chacun apportant son expertise spécifique.
-          </p>
-        </div>
-
-        <!-- Troisième élément : Un accompagnement personnalisé -->
-        <div class="text-center">
-          <h3 class="text-base md:text-lg font-semibold text-purple-700 mb-2">
-            Un accompagnement personnalisé
-          </h3>
-          <p class="text-sm md:text-base text-gray-700">
-            Nous sommes à vos côtés à chaque étape de votre projet.
-          </p>
-        </div>
+          L'accompagnement de proximité
+        </h1>
+        <p
+          class="text-xl md:text-2xl lg:text-3xl max-w-3xl mx-auto mb-6 animate-intro drop-shadow-md"
+        >
+          Chez Kaelia, nous mettons à votre disposition des formations sur
+          mesure...
+        </p>
+        <a
+          href="/contact"
+          class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
+        >
+          <span>Contactez-nous</span>
+          <span class="ml-2 group-hover:translate-x-1 transition-transform"
+            >→</span
+          >
+        </a>
       </div>
+    </section>
 
-      <!-- Bouton d'appel à l'action avec dégradé -->
-      <div class="mt-10">
-        <!-- Updated Call-to-Action Button in the Why Choose Us Section -->
-        <!-- Updated Call-to-Action Button in the Why Choose Us Section on White Background -->
+    <!-- Section "Pourquoi choisir Kaelia ?" en full page -->
+    <section
+      class="snap-start snap-always relative min-h-screen flex flex-col justify-center items-center text-center py-0 bg-white section-angle animate-on-scroll"
+    >
+      <div class="container mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-10 drop-shadow-md">
+          Pourquoi choisir <span class="text-purple-600">Kaelia</span> ?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <div class="text-center">
+            <h3 class="text-lg md:text-xl font-semibold text-purple-700 mb-2">
+              L'humain au cœur de nos actions
+            </h3>
+            <p class="text-base md:text-lg text-gray-700">
+              Nous croyons en l'importance de créer des relations durables...
+            </p>
+          </div>
+          <div class="text-center">
+            <h3 class="text-lg md:text-xl font-semibold text-purple-700 mb-2">
+              Des experts à votre écoute
+            </h3>
+            <p class="text-base md:text-lg text-gray-700">
+              Notre équipe est composée de professionnels expérimentés...
+            </p>
+          </div>
+          <div class="text-center">
+            <h3 class="text-lg md:text-xl font-semibold text-purple-700 mb-2">
+              Un accompagnement personnalisé
+            </h3>
+            <p class="text-base md:text-lg text-gray-700">
+              Nous sommes à vos côtés à chaque étape de votre projet.
+            </p>
+          </div>
+        </div>
         <a
           href="/formations"
-          class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 rounded-full transition-colors duration-300 group hover:bg-purple-800 hover:text-white text-lg"
+          class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 rounded-full transition-all duration-500 hover:bg-purple-800 hover:text-white text-lg drop-shadow-lg transform hover:scale-105"
         >
           <span>Commencer votre formation</span>
           <span class="ml-2 group-hover:translate-x-1 transition-transform"
@@ -95,190 +79,179 @@ import Layout from "../layouts/Layout.astro";
           >
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Section "Les 4 étapes de notre accompagnement" avec dégradé -->
-  <section
-    class="py-20 text-white"
-    style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
-  >
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        Les 4 étapes de notre <span class="text-pink-300">accompagnement</span>
-      </h2>
-      <p class="text-base md:text-lg mb-10">
-        De l'identification de vos besoins à la certification de vos
-        compétences. Prêt à transformer votre carrière ? Contactez-nous dès
-        maintenant !
-      </p>
-
-      <!-- Ligne décorative avec un carré au centre -->
-      <div class="flex justify-center items-center mb-12">
-        <div class="w-1/4 border-t border-white"></div>
-        <div class="mx-2 h-4 w-4 bg-white"></div>
-        <div class="w-1/4 border-t border-white"></div>
-      </div>
-
-      <!-- Grille des étapes -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <!-- Étapes 1 à 4 avec bordures blanches -->
-        <div
-          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
-        >
-          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">01</h3>
-          <h4 class="text-lg font-semibold mb-2">Contact</h4>
-          <p class="text-sm">
-            Nous échangeons pour vous aider à comprendre votre besoin.
-          </p>
+    <!-- Section "Les 4 étapes de notre accompagnement" en full page avec dégradé -->
+    <section
+      class="snap-start snap-always relative min-h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
+      style="background: linear-gradient(90deg, #6b46c1, #4a90e2);"
+    >
+      <div class="container mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+          Les 4 étapes de notre <span class="text-pink-300">accompagnement</span
+          >
+        </h2>
+        <p class="text-lg md:text-xl mb-10 drop-shadow-md">
+          De l'identification de vos besoins à la certification de vos
+          compétences...
+        </p>
+        <div class="flex justify-center items-center mb-12">
+          <div class="w-1/4 border-t border-white"></div>
+          <div class="mx-2 h-4 w-4 bg-white"></div>
+          <div class="w-1/4 border-t border-white"></div>
         </div>
-        <div
-          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
-        >
-          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">02</h3>
-          <h4 class="text-lg font-semibold mb-2">Construction</h4>
-          <p class="text-sm">
-            Nous vous aidons à créer une formation sur-mesure.
-          </p>
-        </div>
-        <div
-          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
-        >
-          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">03</h3>
-          <h4 class="text-lg font-semibold mb-2">Apprentissage</h4>
-          <p class="text-sm">
-            Vous vous formez avec des professionnels qualifiés.
-          </p>
-        </div>
-        <div
-          class="border border-white rounded-lg p-6 transition transform hover:scale-105"
-        >
-          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">04</h3>
-          <h4 class="text-lg font-semibold mb-2">Bilan</h4>
-          <p class="text-sm">
-            Nous débriefons sur l'ensemble de la formation et de vos acquis.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section "KAELIA en quelques chiffres..." with Responsive Adjustments for Mobile -->
-  <section class="py-20 bg-white text-center">
-    <div class="container mx-auto max-w-5xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        <span class="text-purple-600">KAELIA</span> en quelques chiffres...
-      </h2>
-      <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-12">
-        Votre succès, notre priorité. Devenez l'expert que vous avez toujours
-        rêvé d'être grâce à nos formations personnalisées et à l'accompagnement
-        de nos coachs expérimentés.
-      </p>
-
-      <!-- Responsive Grid Layout for Blocks -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <!-- Large Main Block -->
-        <div
-          class="text-white p-6 md:p-10 rounded-lg flex flex-col justify-center col-span-1 md:col-span-2 md:row-span-2"
-          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
-        >
-          <h3 class="text-5xl md:text-6xl font-bold mb-2 md:mb-4">4,9/5</h3>
-          <p class="text-lg md:text-xl font-semibold">
-            <span class="text-pink-300">Satisfaction</span><br /><span
-              class="text-white">Client</span
-            >
-          </p>
-        </div>
-
-        <!-- Smaller Top-Right Block -->
-        <div
-          class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center"
-          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
-        >
-          <h3 class="text-4xl md:text-5xl font-bold mb-2">0%</h3>
-          <p class="text-lg font-semibold">
-            <span class="text-pink-300">Taux</span><br /><span
-              class="text-white">d'Absentéisme</span
-            >
-          </p>
-        </div>
-
-        <!-- Smaller Center-Right Block -->
-        <div
-          class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center"
-          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
-        >
-          <h3 class="text-4xl md:text-5xl font-bold mb-2">35</h3>
-          <p class="text-lg font-semibold">
-            <span class="text-pink-300">Clients</span><br /><span
-              class="text-white">Formés</span
-            >
-          </p>
-        </div>
-
-        <!-- Smaller Bottom-Right Block Spanning Across Columns -->
-        <div
-          class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center col-span-1 md:col-span-2"
-          style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
-        >
-          <h3 class="text-4xl md:text-5xl font-bold mb-2">5/5</h3>
-          <p class="text-lg font-semibold">
-            <span class="text-pink-300">Satisfaction</span><br /><span
-              class="text-white">Google</span
-            >
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section "Ils nous font confiance" -->
-  <section class="py-20 bg-white text-center">
-    <div class="container mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-2">
-        Ils nous font <span class="text-purple-600">confiance</span>
-      </h2>
-      <p class="text-base md:text-lg text-gray-700 max-w-xl mx-auto mb-10">
-        La confiance de nos partenaires, notre plus belle récompense.
-      </p>
-      <div class="logo-carousel">
-        <div class="logo-track">
-          <div class="logo-item">
-            <img
-              loading="lazy"
-              src="/images/index/logo-partenaire-IUT.webp"
-              alt="IUT Lumière"
-              class="h-16 md:h-20 lg:h-24"
-            />
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div
+            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+          >
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">01</h3>
+            <h4 class="text-xl font-semibold mb-2">Contact</h4>
+            <p class="text-base">
+              Nous échangeons pour vous aider à comprendre votre besoin.
+            </p>
           </div>
-          <div class="logo-item">
-            <img
-              loading="lazy"
-              src="/images/index/logo-partenaire-webkonseil.webp"
-              alt="Webkonseil"
-              class="h-16 md:h-20 lg:h-24"
-            />
+          <div
+            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+          >
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">02</h3>
+            <h4 class="text-xl font-semibold mb-2">Construction</h4>
+            <p class="text-base">
+              Nous vous aidons à créer une formation sur-mesure.
+            </p>
           </div>
-          <div class="logo-item">
-            <img
-              loading="lazy"
-              src="/images/index/logo-partenaire-opus.webp"
-              alt="Opus Formation"
-              class="h-16 md:h-20 lg:h-24"
-            />
+          <div
+            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+          >
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">03</h3>
+            <h4 class="text-xl font-semibold mb-2">Apprentissage</h4>
+            <p class="text-base">
+              Vous vous formez avec des professionnels qualifiés.
+            </p>
           </div>
-          <div class="logo-item">
-            <img
-              loading="lazy"
-              src="/images/index/logo-partenaire-webylab.webp"
-              alt="Webylab"
-              class="h-16 md:h-20 lg:h-24"
-            />
+          <div
+            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+          >
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">04</h3>
+            <h4 class="text-xl font-semibold mb-2">Bilan</h4>
+            <p class="text-base">
+              Nous débriefons sur l'ensemble de la formation et de vos acquis.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Section "KAELIA en quelques chiffres..." en full page -->
+    <section
+      class="snap-start snap-always min-h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
+    >
+      <div class="container mx-auto max-w-5xl">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-md">
+          <span class="text-purple-600">KAELIA</span> en quelques chiffres...
+        </h2>
+        <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-12">
+          Votre succès, notre priorité. Devenez l'expert que vous avez toujours
+          rêvé d'être...
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div
+            class="text-white p-6 md:p-10 rounded-lg flex flex-col justify-center col-span-1 md:col-span-2 md:row-span-2 drop-shadow-lg animate-fade-in-on-scroll"
+            style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+          >
+            <h3 class="text-6xl md:text-7xl font-bold mb-2 md:mb-4">4,9/5</h3>
+            <p class="text-xl font-semibold">
+              <span class="text-pink-300">Satisfaction</span><br /><span
+                class="text-white">Client</span
+              >
+            </p>
+          </div>
+          <div
+            class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center drop-shadow-lg animate-fade-in-on-scroll"
+            style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+          >
+            <h3 class="text-5xl font-bold mb-2">0%</h3>
+            <p class="text-xl font-semibold">
+              <span class="text-pink-300">Taux</span><br /><span
+                class="text-white">d'Absentéisme</span
+              >
+            </p>
+          </div>
+          <div
+            class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center drop-shadow-lg animate-fade-in-on-scroll"
+            style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+          >
+            <h3 class="text-5xl font-bold mb-2">35</h3>
+            <p class="text-xl font-semibold">
+              <span class="text-pink-300">Clients</span><br /><span
+                class="text-white">Formés</span
+              >
+            </p>
+          </div>
+          <div
+            class="text-white p-6 md:p-8 rounded-lg flex flex-col justify-center col-span-1 md:col-span-2 drop-shadow-lg animate-fade-in-on-scroll"
+            style="background: linear-gradient(90deg, #004aad, #cb6ce6);"
+          >
+            <h3 class="text-5xl font-bold mb-2">5/5</h3>
+            <p class="text-xl font-semibold">
+              <span class="text-pink-300">Satisfaction</span><br /><span
+                class="text-white">Google</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section "Ils nous font confiance" en full page -->
+    <section
+      class="snap-start snap-always min-h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
+    >
+      <div class="container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-2 drop-shadow-md">
+          Ils nous font <span class="text-purple-600">confiance</span>
+        </h2>
+        <p class="text-base md:text-lg text-gray-700 max-w-xl mx-auto mb-10">
+          La confiance de nos partenaires, notre plus belle récompense.
+        </p>
+        <div class="logo-carousel">
+          <div class="logo-track">
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-IUT.webp"
+                alt="IUT Lumière"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-webkonseil.webp"
+                alt="Webkonseil"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-opus.webp"
+                alt="Opus Formation"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-webylab.webp"
+                alt="Webylab"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>
 
 <style>
@@ -295,7 +268,27 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .animate-intro {
-    animation: introAnimation 1s ease-out forwards;
+    animation: introAnimation 1.2s ease-out forwards;
+  }
+
+  /* Animation de fade-in pour les sections */
+  @keyframes sectionFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+  }
+
+  .animate-on-scroll.animate {
+    animation: sectionFadeIn 1s ease-out forwards;
   }
 
   /* Style de base pour le carrousel */
@@ -323,6 +316,31 @@ import Layout from "../layouts/Layout.astro";
 
   .logo-item:hover img {
     filter: grayscale(0%);
+  }
+
+  /* Animation de fade-in pour les éléments au scroll */
+  @keyframes fadeInOnScroll {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-on-scroll {
+    opacity: 0;
+  }
+
+  .animate-fade-in-on-scroll.animate {
+    animation: fadeInOnScroll 1s ease-out forwards;
+  }
+
+  /* Ajout de la classe pour scroll-snap-stop */
+  .snap-always {
+    scroll-snap-stop: always;
   }
 </style>
 
@@ -372,5 +390,25 @@ import Layout from "../layouts/Layout.astro";
     }
 
     animate();
+
+    // Animation au scroll pour les éléments des chiffres et les sections
+    const animateOnScrollElements = document.querySelectorAll(
+      ".animate-fade-in-on-scroll, .animate-on-scroll"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate"); // Ajoute la classe pour déclencher l'animation
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    animateOnScrollElements.forEach((element) => {
+      observer.observe(element);
+    });
   });
 </script>
