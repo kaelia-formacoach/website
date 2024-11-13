@@ -59,32 +59,31 @@ import Layout from "../layouts/Layout.astro";
   <!-- Training Cards Section -->
   <section class="container mx-auto py-10">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="course-list">
-      <!-- Training Card 1 -->
-       
-  
-
+      <!-- Formation 1 -->
       <div
-        class="course-card juridique entreprenariat flex flex-col bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        class="course-card juridique entreprenariat flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         data-category="juridique entreprenariat"
       >
         <img
-          class="object-cover w-full md:w-48 rounded-tl-lg md:rounded-l-lg"
+          class="object-cover w-48 h-48 rounded-l-lg"
           src="/images/formation/droit-et-entreprenariat.jpg"
           loading="lazy"
-          alt="Formation Image"
+          alt="Aspects juridiques de la création et de la reprise d'entreprise"
         />
-        <div class="p-4">
-          <h5 class="text-2xl font-bold">
-            <span class="text-purple-900">
-              Aspects juridiques de la création et de la reprise d'entreprise
-            </span>
-            : Droit et entrepreneuriat
-          </h5>
-          <p class="text-gray-600 mt-2">2 000€ HT/personne</p>
-          <p class="text-gray-700 mt-4">
-            Pour vous protéger, protéger votre entreprise et bonifier le
-            développement de votre business
-          </p>
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              <span class="text-purple-900">
+                Aspects juridiques de la création et de la reprise d'entreprise
+              </span>
+              : Droit et entrepreneuriat
+            </h5>
+            <p class="text-gray-600 mt-2">2 000€ HT/personne</p>
+            <p class="text-gray-700 mt-4">
+              Pour vous protéger, protéger votre entreprise et bonifier le
+              développement de votre business.
+            </p>
+          </div>
           <a
             href="formations/droit-et-entreprenariat"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
@@ -93,29 +92,30 @@ import Layout from "../layouts/Layout.astro";
           </a>
         </div>
       </div>
-      
 
-      <!-- Training Card 2 -->
+      <!-- Formation 2 -->
       <div
-        class="course-card juridique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        class="course-card juridique flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         data-category="juridique"
       >
         <img
-          class="object-cover w-full md:w-48 rounded-tl-lg md:rounded-l-lg"
+          class="object-cover w-48 h-48 rounded-l-lg"
           src="/images/formation/droit-contrat.png"
           loading="lazy"
-          alt="Formation Image"
+          alt="Règles générales du droit des contrats"
         />
-        <div class="p-4">
-          <h5 class="text-2xl font-bold">
-            Règles générales du <span class="text-purple-900"
-              >droit des contrats</span
-            >
-          </h5>
-          <p class="text-gray-600 mt-2">3 900€ HT/personne</p>
-          <p class="text-gray-700 mt-4">
-            Pour rédiger, négocier et signer vos contrats en toute sérénité
-          </p>
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Règles générales du <span class="text-purple-900"
+                >droit des contrats</span
+              >
+            </h5>
+            <p class="text-gray-600 mt-2">3 900€ HT/personne</p>
+            <p class="text-gray-700 mt-4">
+              Pour rédiger, négocier et signer vos contrats en toute sérénité.
+            </p>
+          </div>
           <a
             href="formations/droit-des-contrats"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
@@ -125,27 +125,31 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <!-- Training Card 3 -->
+      <!-- Formation 3 -->
       <div
-        class="course-card rse flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        class="course-card rse flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         data-category="rse"
       >
         <img
-          class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+          class="object-cover w-48 h-48 rounded-l-lg"
           src="/images/formation/sante-physique-mentale.png"
           loading="lazy"
-          alt="Formation Image"
+          alt="Améliorer ma santé physique et mentale au travail"
         />
-        <div class="p-4">
-          <h5 class="text-2xl font-bold">
-            Améliorer ma <span class="text-purple-900"
-              >santé physique et mentale</span
-            > au travail
-          </h5>
-          <p class="text-gray-600 mt-2">
-            350€ HT/personne (minimum 3 personnes)
-          </p>
-          <p class="text-gray-700 mt-4">Atelier prévention santé au travail</p>
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Améliorer ma <span class="text-purple-900"
+                >santé physique et mentale</span
+              > au travail
+            </h5>
+            <p class="text-gray-600 mt-2">
+              350€ HT/personne (minimum 3 personnes)
+            </p>
+            <p class="text-gray-700 mt-4">
+              Atelier prévention santé au travail.
+            </p>
+          </div>
           <a
             href="/formations/ameliorer-sante-physique-et-mentale"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
@@ -155,26 +159,27 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-
-      <!-- Training Card 4 -->
+      <!-- Formation 4 -->
       <div
-        class="course-card rse flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        class="course-card rse flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         data-category="rse"
       >
         <img
-          class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+          class="object-cover w-48 h-48 rounded-l-lg"
           src="/images/formation/sante-physique-mentale.png"
           loading="lazy"
-          alt="Formation Image"
+          alt="Ma pause santé"
         />
-        <div class="p-4">
-          <h5 class="text-2xl font-bold">
-            Ma <span class="text-purple-900">pause santé</span>
-          </h5>
-          <p class="text-gray-600 mt-2">
-            90€ HT/personne (minimum 3 personnes)
-          </p>
-          <p class="text-gray-700 mt-4">Prévention santé au travail</p>
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Ma <span class="text-purple-900">pause santé</span>
+            </h5>
+            <p class="text-gray-600 mt-2">
+              90€ HT/personne (minimum 3 personnes)
+            </p>
+            <p class="text-gray-700 mt-4">Prévention santé au travail.</p>
+          </div>
           <a
             href="/formations/ma-pause-sante"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
@@ -184,26 +189,28 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <!-- Training Card 5 -->
+      <!-- Formation 5 -->
       <div
-        class="course-card informatique flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        class="course-card informatique flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         data-category="informatique"
       >
         <img
-          class="object-cover w-full h-48 md:w-48 rounded-tl-lg md:rounded-l-lg"
+          class="object-cover w-48 h-48 rounded-l-lg"
           src="/images/formation/visible-net.png"
           loading="lazy"
-          alt="Formation Image"
+          alt="Être visible sur le net"
         />
-        <div class="p-4">
-          <h5 class="text-2xl font-bold">
-            Être <span class="text-purple-900">visible</span> sur le net
-          </h5>
-          <p class="text-gray-600 mt-2">À partir de 600€ HT/personne</p>
-          <p class="text-gray-700 mt-4">
-            Concevez la stratégie et les supports de communication qui
-            correspondent à votre entreprise
-          </p>
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Être <span class="text-purple-900">visible</span> sur le net
+            </h5>
+            <p class="text-gray-600 mt-2">À partir de 600€ HT/personne</p>
+            <p class="text-gray-700 mt-4">
+              Concevez la stratégie et les supports de communication qui
+              correspondent à votre entreprise.
+            </p>
+          </div>
           <a
             href="/formations/etre-visible-sur-le-net"
             class="text-purple-600 mt-4 block font-semibold hover:underline"
@@ -218,16 +225,20 @@ import Layout from "../layouts/Layout.astro";
   <!-- Client-side Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Sélection des boutons de filtre en tant que HTMLButtonElement
       const buttons =
         document.querySelectorAll<HTMLButtonElement>(".filter-button");
-      // Sélection des cartes de cours en tant qu'HTMLElement
       const courses = document.querySelectorAll<HTMLElement>(".course-card");
 
       buttons.forEach((button) => {
         button.addEventListener("click", (event: Event) => {
-          // Utilisation de event.currentTarget et typage en tant que HTMLButtonElement
-          const target = event.currentTarget as HTMLButtonElement;
+          // Utilisation de event.currentTarget avec assertion de type
+          const target = event.currentTarget as HTMLButtonElement | null;
+
+          if (!target) {
+            console.warn("Le bouton cliqué est null.");
+            return;
+          }
+
           const category = target.getAttribute("data-category") || "";
 
           // Retirer la classe active de tous les boutons
@@ -239,7 +250,7 @@ import Layout from "../layouts/Layout.astro";
           if (category === "all") {
             // Afficher toutes les cartes
             courses.forEach((course) => {
-              course.style.display = "block";
+              course.style.display = "flex";
             });
           } else {
             // Masquer toutes les cartes
@@ -250,9 +261,9 @@ import Layout from "../layouts/Layout.astro";
             // Afficher les cartes correspondant à la catégorie sélectionnée
             courses.forEach((course) => {
               const courseCategories =
-                course.getAttribute("data-category")?.split(" ") ?? [];
+                course.getAttribute("data-category")?.split(" ") || [];
               if (courseCategories.includes(category)) {
-                course.style.display = "block";
+                course.style.display = "flex";
               }
             });
           }
@@ -261,7 +272,7 @@ import Layout from "../layouts/Layout.astro";
 
       // Afficher toutes les cartes par défaut
       courses.forEach((course) => {
-        course.style.display = "block";
+        course.style.display = "flex";
       });
     });
   </script>
@@ -270,7 +281,10 @@ import Layout from "../layouts/Layout.astro";
   <style>
     /* Style des boutons par défaut */
     .filter-button {
-      transition: transform 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        font-weight 0.3s ease;
     }
 
     /* Style du bouton actif */
@@ -278,6 +292,39 @@ import Layout from "../layouts/Layout.astro";
       transform: scale(1.1); /* Agrandir légèrement */
       font-weight: bold; /* Rendre le texte plus gras */
       background-color: #5a31af; /* Couleur personnalisée pour le bouton actif */
+    }
+
+    /* Ajustements supplémentaires pour les cartes */
+    .course-card img {
+      /* Assurez-vous que les images occupent toute la hauteur disponible */
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .course-card h5 {
+      /* Limiter le nombre de lignes si nécessaire */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Responsivité pour les petites écrans */
+    @media (max-width: 768px) {
+      .course-card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .course-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .course-card div {
+        text-align: center;
+      }
     }
   </style>
 </Layout>
