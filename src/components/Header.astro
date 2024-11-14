@@ -2,16 +2,47 @@
   <div class="container mx-auto flex items-center justify-between px-6">
     <!-- Menu de gauche (caché sur mobile) -->
     <nav class="hidden md:flex space-x-6">
+      <!-- Menu "Formations" avec sous-menu -->
+      <div class="relative">
+        <button
+          id="formations-desktop-btn"
+          class="text-xl text-gray-700 font-semibold hover:text-purple-600 focus:text-gray-700 transition focus:outline-none"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Formations
+        </button>
+        <!-- Sous-menu pour desktop -->
+        <div
+          id="formations-desktop-submenu"
+          class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden"
+          role="menu"
+          aria-label="Sous-menu Formations"
+        >
+          <a
+            href="/formations/nos-formations"
+            class="block px-4 py-2 text-gray-700 hover:bg-purple-100 transition menu-link"
+            role="menuitem"
+          >
+            Nos Formations
+          </a>
+          <a
+            href="/formations/sur-mesure"
+            class="block px-4 py-2 text-gray-700 hover:bg-purple-100 transition menu-link"
+            role="menuitem"
+          >
+            Sur Mesure
+          </a>
+        </div>
+      </div>
+
       <a
-        href="/formations"
+        href="/inside-kaelia"
         class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
-        >Formations</a
+        role="menuitem"
       >
-      <a
-        href="/entreprise"
-        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
-        >Entreprise</a
-      >
+        Inside Kaelia
+      </a>
     </nav>
 
     <!-- Logo centré -->
@@ -27,18 +58,26 @@
     <nav class="hidden md:flex space-x-6">
       <a
         href="/le-klub"
-        class=" text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
-        >Le Klub</a
+        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
+        role="menuitem"
       >
+        Le Klub
+      </a>
       <a
         href="/contact"
         class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
-        >Contact</a
+        role="menuitem"
       >
+        Contact
+      </a>
     </nav>
 
     <!-- Bouton hamburger pour les petits écrans -->
-    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+    <button
+      id="menu-btn"
+      class="md:hidden text-gray-700 focus:outline-none"
+      aria-label="Ouvrir le menu"
+    >
       <svg
         id="hamburger-icon"
         class="h-8 w-8 transition-transform"
@@ -59,12 +98,15 @@
   <!-- Menu mobile en plein écran avec animation -->
   <div
     id="mobile-menu"
-    class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-6 text-lg font-semibold text-gray-700 z-40 transform -translate-y-full transition-transform duration-300 ease-in-out"
+    class="fixed inset-0 bg-white flex flex-col items-start justify-center space-y-6 text-lg font-semibold text-gray-700 z-40 transform -translate-y-full transition-transform duration-300 ease-in-out px-6"
+    role="menu"
+    aria-label="Menu Mobile"
   >
     <!-- Bouton pour fermer le menu mobile -->
     <button
       id="close-menu-btn"
       class="absolute top-4 right-4 text-gray-700 focus:outline-none"
+      aria-label="Fermer le menu"
     >
       <svg
         class="h-8 w-8"
@@ -85,72 +127,231 @@
     <a
       href="/"
       class="menu-link text-gray-700 hover:text-purple-600 transition text-xl"
-      >Accueil</a
+      role="menuitem"
     >
+      Accueil
+    </a>
+
+    <!-- Menu "Formations" avec sous-menu pour mobile -->
+    <div class="w-full">
+      <button
+        id="formations-mobile-btn"
+        class="w-full text-left text-gray-700 font-semibold hover:text-purple-600 focus:text-gray-700 transition focus:outline-none"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Formations
+      </button>
+      <div
+        id="formations-mobile-submenu"
+        class="mt-2 hidden flex-col space-y-4 pl-4"
+        role="menu"
+        aria-label="Sous-menu Formations Mobile"
+      >
+        <a
+          href="/formations/nos-formations"
+          class="block text-gray-700 hover:text-purple-600 transition text-lg menu-link"
+          role="menuitem"
+        >
+          Nos Formations
+        </a>
+        <a
+          href="/formations/sur-mesure"
+          class="block text-gray-700 hover:text-purple-600 transition text-lg menu-link"
+          role="menuitem"
+        >
+          Sur Mesure
+        </a>
+      </div>
+    </div>
 
     <a
-      href="/formations"
+      href="/inside-kaelia"
       class="menu-link text-gray-700 hover:text-purple-600 transition text-xl"
-      >Formations</a
+      role="menuitem"
     >
-    <a
-      href="/entreprise"
-      class="menu-link text-gray-700 hover:text-purple-600 transition text-xl"
-      >Entreprise</a
-    >
+      Inside Kaelia
+    </a>
     <a
       href="/le-klub"
       class="menu-link text-gray-700 hover:text-purple-600 transition text-xl"
-      >Le Klub</a
+      role="menuitem"
     >
+      Le Klub
+    </a>
     <a
       href="/contact"
       class="menu-link text-gray-700 hover:text-purple-600 transition text-xl"
-      >Contact</a
+      role="menuitem"
     >
+      Contact
+    </a>
   </div>
 </header>
 
-<!-- Script pour gérer l'affichage du menu mobile et l'élément actif -->
+<!-- Script JavaScript Corrigé -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn")!;
-    const mobileMenu = document.getElementById("mobile-menu")!;
-    const menuLinks = document.querySelectorAll(".menu-link");
-    const closeMenuBtn = document.getElementById("close-menu-btn")!;
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuLinks = document.querySelectorAll("a.menu-link"); // Sélectionner uniquement les liens <a>
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const formationsDesktopBtn = document.getElementById(
+      "formations-desktop-btn"
+    );
+    const formationsDesktopSubmenu = document.getElementById(
+      "formations-desktop-submenu"
+    );
+    const formationsMobileBtn = document.getElementById(
+      "formations-mobile-btn"
+    );
+    const formationsMobileSubmenu = document.getElementById(
+      "formations-mobile-submenu"
+    );
+
+    // Fonction pour fermer tous les sous-menus
+    function closeAllSubmenus() {
+      // Desktop
+      if (formationsDesktopSubmenu && formationsDesktopBtn) {
+        formationsDesktopSubmenu.classList.add("hidden");
+        formationsDesktopBtn.setAttribute("aria-expanded", "false");
+      }
+      // Mobile
+      if (formationsMobileSubmenu && formationsMobileBtn) {
+        formationsMobileSubmenu.classList.add("hidden");
+        formationsMobileBtn.setAttribute("aria-expanded", "false");
+      }
+    }
 
     // Afficher/Masquer le menu mobile avec animation au clic
     if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener("click", () => {
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Empêcher la propagation pour éviter de fermer immédiatement le menu
         mobileMenu.classList.toggle("open");
         menuBtn.classList.toggle("active");
+        // Fermer tous les sous-menus lorsque le menu principal est fermé
+        if (!mobileMenu.classList.contains("open")) {
+          closeAllSubmenus();
+        }
       });
     }
 
+    // Fermer le menu mobile au clic sur le bouton de fermeture
     if (closeMenuBtn && mobileMenu) {
-      closeMenuBtn.addEventListener("click", () => {
+      closeMenuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         mobileMenu.classList.remove("open");
-        menuBtn.classList.remove("active");
+        if (menuBtn) menuBtn.classList.remove("active");
+        closeAllSubmenus();
       });
     }
 
-    // Récupérer l'URL actuelle et retirer le dernier / s'il est présent
+    // Gestion du sous-menu "Formations" dans le menu desktop
+    if (formationsDesktopBtn && formationsDesktopSubmenu) {
+      formationsDesktopBtn.addEventListener("click", (e) => {
+        e.preventDefault(); // Empêcher le comportement par défaut du bouton
+        e.stopPropagation(); // Empêcher la propagation pour éviter de fermer le menu
+        const isHidden = formationsDesktopSubmenu.classList.contains("hidden");
+        if (isHidden) {
+          formationsDesktopSubmenu.classList.remove("hidden");
+          formationsDesktopBtn.setAttribute("aria-expanded", "true");
+        } else {
+          formationsDesktopSubmenu.classList.add("hidden");
+          formationsDesktopBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    // Gestion du sous-menu "Formations" dans le menu mobile
+    if (formationsMobileBtn && formationsMobileSubmenu) {
+      formationsMobileBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        formationsMobileSubmenu.classList.toggle("hidden");
+        const isExpanded =
+          !formationsMobileSubmenu.classList.contains("hidden");
+        formationsMobileBtn.setAttribute(
+          "aria-expanded",
+          isExpanded.toString()
+        );
+      });
+    }
+
+    // Fermer les sous-menus si l'utilisateur clique en dehors
+    document.addEventListener("click", function (event) {
+      // Vérifier que event.target est un Node
+      if (!(event.target instanceof Node)) {
+        return;
+      }
+
+      const isClickInsideDesktop =
+        formationsDesktopBtn?.contains(event.target) ||
+        formationsDesktopSubmenu?.contains(event.target);
+      const isClickInsideMobile =
+        formationsMobileBtn?.contains(event.target) ||
+        formationsMobileSubmenu?.contains(event.target);
+      const isClickInsideMenu =
+        mobileMenu?.contains(event.target) || menuBtn?.contains(event.target);
+
+      if (!isClickInsideDesktop) {
+        if (formationsDesktopSubmenu && formationsDesktopBtn) {
+          formationsDesktopSubmenu.classList.add("hidden");
+          formationsDesktopBtn.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      if (!isClickInsideMobile && !isClickInsideMenu) {
+        if (formationsMobileSubmenu && formationsMobileBtn) {
+          formationsMobileSubmenu.classList.add("hidden");
+          formationsMobileBtn.setAttribute("aria-expanded", "false");
+        }
+      }
+    });
+
+    // Récupérer l'URL actuelle et retirer le dernier / si ce n'est pas la racine
     let currentPath = window.location.pathname;
-    if (currentPath.endsWith("/")) {
+    if (currentPath.length > 1 && currentPath.endsWith("/")) {
       currentPath = currentPath.slice(0, -1);
     }
 
-    // Boucler sur chaque lien et ajouter la classe 'active' si l'URL correspond
+    // Boucler sur chaque lien et ajouter la classe 'active' si l'URL correspond ou commence par le lien's href
     menuLinks.forEach((link) => {
       let linkPath = link.getAttribute("href");
 
       // Vérifier que linkPath n'est pas null avant d'accéder à ses méthodes
-      if (linkPath && linkPath.endsWith("/")) {
-        linkPath = linkPath.slice(0, -1);
-      }
+      if (linkPath) {
+        // Retirer le dernier / si ce n'est pas la racine
+        if (linkPath.length > 1 && linkPath.endsWith("/")) {
+          linkPath = linkPath.slice(0, -1);
+        }
 
-      if (linkPath === currentPath) {
-        link.classList.add("active");
+        if (linkPath === "/") {
+          // Pour le lien "Accueil", activer uniquement si on est sur '/'
+          if (currentPath === "/") {
+            link.classList.add("active");
+          }
+        } else {
+          // Pour les autres liens, activer si le chemin correspond ou commence par le lienPath
+          if (
+            currentPath === linkPath ||
+            currentPath.startsWith(linkPath + "/")
+          ) {
+            link.classList.add("active");
+            // Si le lien est un sous-menu, ouvrir le parent
+            if (link.closest("#formations-desktop-submenu")) {
+              if (formationsDesktopSubmenu && formationsDesktopBtn) {
+                formationsDesktopSubmenu.classList.remove("hidden");
+                formationsDesktopBtn.setAttribute("aria-expanded", "true");
+              }
+            }
+            if (link.closest("#formations-mobile-submenu")) {
+              if (formationsMobileSubmenu && formationsMobileBtn) {
+                formationsMobileSubmenu.classList.remove("hidden");
+                formationsMobileBtn.setAttribute("aria-expanded", "true");
+              }
+            }
+          }
+        }
       }
 
       // Ajouter l'événement de clic pour changer l'état actif
@@ -159,14 +360,20 @@
         menuLinks.forEach((l) => l.classList.remove("active"));
         // Ajouter la classe active au lien cliqué
         link.classList.add("active");
+        // Fermer le menu mobile après la sélection d'un lien
+        if (mobileMenu && mobileMenu.classList.contains("open")) {
+          mobileMenu.classList.remove("open");
+          if (menuBtn) menuBtn.classList.remove("active");
+          closeAllSubmenus();
+        }
       });
     });
   });
 </script>
 
 <style>
-  /* Styles pour le lien actif */
-  .active {
+  /* Styles pour les liens actifs uniquement */
+  a.menu-link.active {
     color: #6b46c1; /* Violet */
     font-weight: bold;
     text-decoration: underline;
@@ -174,7 +381,12 @@
   }
 
   /* Styles du menu mobile pour un espacement plus grand et un look épuré */
-  #mobile-menu a {
+  #mobile-menu {
+    padding-left: 1.5rem; /* Ajout de padding à gauche pour l'alignement */
+    padding-right: 1.5rem; /* Ajout de padding à droite pour l'alignement */
+  }
+
+  #mobile-menu a.menu-link {
     padding: 0.75rem 0;
     font-size: 1.25rem; /* Taille de texte légèrement plus grande */
   }
@@ -196,5 +408,56 @@
   #mobile-menu.open {
     /* Lorsque ouvert : en place */
     transform: translateY(0);
+  }
+
+  /* Styles pour le sous-menu desktop */
+  #formations-desktop-submenu {
+    /* Positionnement */
+    top: 100%;
+    left: 0;
+    /* Apparence */
+    background-color: white;
+    border: 1px solid #e2e8f0; /* Border-gray-200 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Transition */
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 50;
+  }
+
+  /* Montrer le sous-menu desktop lorsqu'open est présent */
+  .relative.open #formations-desktop-submenu {
+    display: block;
+  }
+
+  /* Styles pour le sous-menu mobile */
+  #formations-mobile-submenu a.menu-link {
+    padding-left: 1rem; /* Indentation pour les sous-menus */
+  }
+
+  /* Bouton "Formations" dans le menu mobile */
+  #formations-mobile-btn {
+    width: 100%; /* Occuper toute la largeur */
+    text-align: left; /* Aligner le texte à gauche */
+    padding: 0.75rem 0; /* Espacement vertical */
+    font-size: 1.25rem; /* Taille de texte */
+  }
+
+  /* Bouton "Formations" hover state */
+  #formations-mobile-btn:hover {
+    color: #6b46c1; /* Changer la couleur au survol */
+  }
+
+  /* Bouton "Formations" active state */
+  #formations-mobile-btn:focus {
+    color: #6b46c1; /* Changer la couleur lors du focus */
+  }
+
+  /* Ajustements supplémentaires pour une meilleure apparence */
+  #mobile-menu button#formations-mobile-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 </style>
