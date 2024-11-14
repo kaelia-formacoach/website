@@ -11,7 +11,7 @@ $dotenv = Dotenv::createImmutable('../../');
 $dotenv->load();
 
 // Informations sur le destinataire et le sujet
-$recipient_email = "m.barre@kaelia-formacoach.com";
+$recipient_email = "contact@kaelia-formacoach.com";
 $subject = "Nouveau message de contact - Kaelia Forma'Coach";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
