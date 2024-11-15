@@ -1,0 +1,328 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- Header Section -->
+  <section class="text-center py-10">
+    <h1 class="text-4xl font-bold">CATALOGUE DE FORMATION</h1>
+    <p class="text-gray-500 mt-2">
+      Explorez nos formations personnalisées en <strong>informatique</strong>, <strong
+        >RSE</strong
+      >, <strong>juridique</strong>, <strong>entrepreneuriat</strong> et <strong
+        >management</strong
+      >, éligibles au <strong>CPF</strong>, conçues pour répondre à vos besoins
+      professionnels et accompagner votre parcours de carrière.
+    </p>
+
+    <!-- Category Buttons -->
+    <div class="flex flex-wrap justify-center mt-6 space-x-4">
+      <button
+        class="filter-button active bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="all"
+      >
+        Tous
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="informatique"
+      >
+        Informatique
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="rse"
+      >
+        RSE
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="juridique"
+      >
+        Juridique
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="entreprenariat"
+      >
+        Entreprenariat
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="management"
+      >
+        Management
+      </button>
+    </div>
+  </section>
+
+  <!-- Training Cards Section -->
+  <section class="container mx-auto py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="course-list">
+      <!-- Formation 1 -->
+      <div
+        class="course-card juridique entreprenariat flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="juridique entreprenariat"
+      >
+        <img
+          class="object-cover w-48 h-48 rounded-l-lg"
+          src="/images/formation/droit-et-entreprenariat.jpg"
+          loading="lazy"
+          alt="Aspects juridiques de la création et de la reprise d'entreprise"
+        />
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              <span class="text-purple-900">
+                Aspects juridiques de la création et de la reprise d'entreprise
+              </span>
+              : Droit et entrepreneuriat
+            </h5>
+            <p class="text-gray-600 mt-2">2 000€ HT/personne</p>
+            <p class="text-gray-700 mt-4">
+              Pour vous protéger, protéger votre entreprise et bonifier le
+              développement de votre business.
+            </p>
+          </div>
+          <a
+            href="/formations/droit-et-entreprenariat"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
+
+      <!-- Formation 2 -->
+      <div
+        class="course-card juridique flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="juridique"
+      >
+        <img
+          class="object-cover w-48 h-48 rounded-l-lg"
+          src="/images/formation/droit-contrat.png"
+          loading="lazy"
+          alt="Règles générales du droit des contrats"
+        />
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Règles générales du <span class="text-purple-900"
+                >droit des contrats</span
+              >
+            </h5>
+            <p class="text-gray-600 mt-2">3 900€ HT/personne</p>
+            <p class="text-gray-700 mt-4">
+              Pour rédiger, négocier et signer vos contrats en toute sérénité.
+            </p>
+          </div>
+          <a
+            href="/formations/droit-des-contrats"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
+
+      <!-- Formation 3 -->
+      <div
+        class="course-card rse flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="rse"
+      >
+        <img
+          class="object-cover w-48 h-48 rounded-l-lg"
+          src="/images/formation/sante-physique-mentale.png"
+          loading="lazy"
+          alt="Améliorer ma santé physique et mentale au travail"
+        />
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Améliorer ma <span class="text-purple-900"
+                >santé physique et mentale</span
+              > au travail
+            </h5>
+            <p class="text-gray-600 mt-2">
+              350€ HT/personne (minimum 3 personnes)
+            </p>
+            <p class="text-gray-700 mt-4">
+              Atelier prévention santé au travail.
+            </p>
+          </div>
+          <a
+            href="/formations/ameliorer-sante-physique-et-mentale"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
+
+      <!-- Formation 4 -->
+      <div
+        class="course-card rse flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="rse"
+      >
+        <img
+          class="object-cover w-48 h-48 rounded-l-lg"
+          src="/images/formation/sante-physique-mentale.png"
+          loading="lazy"
+          alt="Ma pause santé"
+        />
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Ma <span class="text-purple-900">pause santé</span>
+            </h5>
+            <p class="text-gray-600 mt-2">
+              90€ HT/personne (minimum 3 personnes)
+            </p>
+            <p class="text-gray-700 mt-4">Prévention santé au travail.</p>
+          </div>
+          <a
+            href="/formations/ma-pause-sante"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
+
+      <!-- Formation 5 -->
+      <div
+        class="course-card informatique flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="informatique"
+      >
+        <img
+          class="object-cover w-48 h-48 rounded-l-lg"
+          src="/images/formation/visible-net.png"
+          loading="lazy"
+          alt="Être visible sur le net"
+        />
+        <div class="p-4 flex flex-col justify-between">
+          <div>
+            <h5 class="text-2xl font-bold">
+              Être <span class="text-purple-900">visible</span> sur le net
+            </h5>
+            <p class="text-gray-600 mt-2">À partir de 600€ HT/personne</p>
+            <p class="text-gray-700 mt-4">
+              Concevez la stratégie et les supports de communication qui
+              correspondent à votre entreprise.
+            </p>
+          </div>
+          <a
+            href="/formations/etre-visible-sur-le-net"
+            class="text-purple-600 mt-4 block font-semibold hover:underline"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-side Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons =
+        document.querySelectorAll<HTMLButtonElement>(".filter-button");
+      const courses = document.querySelectorAll<HTMLElement>(".course-card");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event: Event) => {
+          const target = event.currentTarget as HTMLButtonElement | null;
+
+          if (!target) {
+            console.warn("Le bouton cliqué est null.");
+            return;
+          }
+
+          const category = target.getAttribute("data-category") || "";
+
+          // Retirer la classe active de tous les boutons
+          buttons.forEach((btn) => btn.classList.remove("active"));
+
+          // Ajouter la classe active au bouton sélectionné
+          target.classList.add("active");
+
+          if (category === "all") {
+            // Afficher toutes les cartes
+            courses.forEach((course) => {
+              course.style.display = "flex";
+            });
+          } else {
+            // Masquer toutes les cartes
+            courses.forEach((course) => {
+              course.style.display = "none";
+            });
+
+            // Afficher les cartes correspondant à la catégorie sélectionnée
+            courses.forEach((course) => {
+              const courseCategories =
+                course.getAttribute("data-category")?.split(" ") || [];
+              if (courseCategories.includes(category)) {
+                course.style.display = "flex";
+              }
+            });
+          }
+        });
+      });
+
+      // Afficher toutes les cartes par défaut
+      courses.forEach((course) => {
+        course.style.display = "flex";
+      });
+    });
+  </script>
+
+  <!-- Optional Styles for Active Button -->
+  <style>
+    /* Style des boutons par défaut */
+    .filter-button {
+      transition:
+        transform 0.3s ease,
+        font-weight 0.3s ease;
+    }
+
+    /* Style du bouton actif */
+    .filter-button.active {
+      transform: scale(1.1);
+      font-weight: bold;
+      background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+    }
+
+    /* Ajustements supplémentaires pour les cartes */
+    .course-card img {
+      /* Assurez-vous que les images occupent toute la hauteur disponible */
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .course-card h5 {
+      /* Limiter le nombre de lignes si nécessaire */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Responsivité pour les petites écrans */
+    @media (max-width: 768px) {
+      .course-card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .course-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .course-card div {
+        text-align: center;
+      }
+    }
+  </style>
+</Layout>

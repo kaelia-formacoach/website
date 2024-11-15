@@ -6,7 +6,8 @@
       <div class="relative">
         <button
           id="formations-desktop-btn"
-          class="text-xl text-gray-700 font-semibold hover:text-purple-600 focus:text-gray-700 transition focus:outline-none"
+          data-path="/formations"
+          class="menu-link text-xl text-gray-700 hover:text-purple-600 focus:text-gray-700 transition focus:outline-none"
           aria-haspopup="true"
           aria-expanded="false"
         >
@@ -39,7 +40,7 @@
       <!-- Nouveau lien "Financement" -->
       <a
         href="/financement"
-        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
+        class="text-xl menu-link text-gray-700 hover:text-purple-600 transition"
         role="menuitem"
       >
         Financement
@@ -47,7 +48,7 @@
 
       <a
         href="/inside-kaelia"
-        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
+        class="text-xl menu-link text-gray-700 hover:text-purple-600 transition"
         role="menuitem"
       >
         Inside Kaelia
@@ -67,14 +68,14 @@
     <nav class="hidden md:flex space-x-6">
       <a
         href="/le-klub"
-        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
+        class="text-xl menu-link text-gray-700 hover:text-purple-600 transition"
         role="menuitem"
       >
         Le Klub
       </a>
       <a
         href="/contact"
-        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
+        class="text-xl menu-link text-gray-700 hover:text-purple-600 transition"
         role="menuitem"
       >
         Contact
@@ -83,7 +84,7 @@
       <!-- Nouveau lien "Nous rejoindre" -->
       <a
         href="/nous-rejoindre"
-        class="text-xl menu-link text-gray-700 font-semibold hover:text-purple-600 transition"
+        class="text-xl menu-link text-gray-700 hover:text-purple-600 transition"
         role="menuitem"
       >
         Nous rejoindre
@@ -116,7 +117,7 @@
   <!-- Menu mobile en plein écran avec animation -->
   <div
     id="mobile-menu"
-    class="fixed inset-0 bg-white flex flex-col items-start justify-center space-y-6 text-lg font-semibold text-gray-700 z-40 transform -translate-y-full transition-transform duration-300 ease-in-out px-6"
+    class="fixed inset-0 bg-white flex flex-col items-start justify-center space-y-6 text-lg text-gray-700 z-40 transform -translate-y-full transition-transform duration-300 ease-in-out px-6"
     role="menu"
     aria-label="Menu Mobile"
   >
@@ -154,7 +155,8 @@
     <div class="w-full">
       <button
         id="formations-mobile-btn"
-        class="w-full text-left text-gray-700 font-semibold hover:text-purple-600 focus:text-gray-700 transition focus:outline-none"
+        data-path="/formations"
+        class="menu-link w-full text-left text-gray-700 hover:text-purple-600 focus:text-gray-700 transition focus:outline-none"
         aria-haspopup="true"
         aria-expanded="false"
       >
@@ -230,7 +232,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
-    const menuLinks = document.querySelectorAll("a.menu-link"); // Sélectionner uniquement les liens <a>
+    const menuLinks = document.querySelectorAll(".menu-link"); // Sélectionner tous les éléments avec la classe 'menu-link'
     const closeMenuBtn = document.getElementById("close-menu-btn");
     const formationsDesktopBtn = document.getElementById(
       "formations-desktop-btn"
@@ -350,11 +352,11 @@
       currentPath = currentPath.slice(0, -1);
     }
 
-    // Boucler sur chaque lien et ajouter la classe 'active' si l'URL correspond ou commence par le lien's href
+    // Boucler sur chaque lien et ajouter la classe 'active' si l'URL correspond ou commence par le href ou data-path
     menuLinks.forEach((link) => {
-      let linkPath = link.getAttribute("href");
+      let linkPath =
+        link.getAttribute("href") || link.getAttribute("data-path");
 
-      // Vérifier que linkPath n'est pas null avant d'accéder à ses méthodes
       if (linkPath) {
         // Retirer le dernier / si ce n'est pas la racine
         if (linkPath.length > 1 && linkPath.endsWith("/")) {
@@ -372,8 +374,17 @@
             currentPath === linkPath ||
             currentPath.startsWith(linkPath + "/")
           ) {
-            link.classList.add("active");
-            // Si le lien est un sous-menu, ouvrir le parent
+            // Vérifier si le lien est un sous-menu
+            const isSubmenuItem =
+              link.closest("#formations-desktop-submenu") ||
+              link.closest("#formations-mobile-submenu");
+
+            // N'ajouter 'active' que si ce n'est pas un sous-menu
+            if (!isSubmenuItem) {
+              link.classList.add("active");
+            }
+
+            // Ouvrir les sous-menus si nécessaire
             if (link.closest("#formations-desktop-submenu")) {
               if (formationsDesktopSubmenu && formationsDesktopBtn) {
                 formationsDesktopSubmenu.classList.remove("hidden");
@@ -394,8 +405,15 @@
       link.addEventListener("click", function () {
         // Supprimer la classe active de tous les liens
         menuLinks.forEach((l) => l.classList.remove("active"));
-        // Ajouter la classe active au lien cliqué
-        link.classList.add("active");
+
+        // Ajouter la classe active au lien cliqué s'il n'est pas un sous-menu
+        const isSubmenuItem =
+          link.closest("#formations-desktop-submenu") ||
+          link.closest("#formations-mobile-submenu");
+        if (!isSubmenuItem) {
+          link.classList.add("active");
+        }
+
         // Fermer le menu mobile après la sélection d'un lien
         if (mobileMenu && mobileMenu.classList.contains("open")) {
           mobileMenu.classList.remove("open");
@@ -409,7 +427,7 @@
 
 <style>
   /* Styles pour les liens actifs uniquement */
-  a.menu-link.active {
+  .menu-link.active {
     color: #6b46c1; /* Violet */
     font-weight: bold;
     text-decoration: underline;

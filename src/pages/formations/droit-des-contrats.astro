@@ -3,112 +3,166 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="bg-gradient-to-r from-blue-800 to-purple-600 px-6 py-12 w-full">
-        <div class="w-full flex flex-col justify-center items-center text-center">
-          <h2 class="text-white sm:text-4xl text-3xl font-bold mb-4">Règles générales du droit des contrats
+  <div class="bg-gradient-to-r from-blue-800 to-purple-600 px-6 py-12 w-full">
+    <div class="w-full flex flex-col justify-center items-center text-center">
+      <h2 class="text-white sm:text-4xl text-3xl font-bold mb-4">
+        Règles générales du droit des contrats
+      </h2>
+      <p class="text-white text-base text-center mb-8">
+        Pour rédiger, négocier et signer vos contrats en toute sérénité
+      </p>
+
+      <a
+        href="/contact"
+        class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 drop-shadow-lg transform hover:scale-105"
+      >
+        <span>Demandez un devis</span>
+        <span class="ml-2 group-hover:translate-x-1 transition-transform"
+          >→</span
+        >
+      </a>
+    </div>
+  </div>
+
+  <div class="grid mb-8 md:mb-12 md:grid-cols-2 bg-white">
+    <figure
+      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-e dark:bg-gray-800 dark:border-gray-700 text-l"
+    >
+      <blockquote
+        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <!-- TODO : change color with the right one -->
+          <span class="text-purple-500">Modalités</span> de formation
         </h2>
-          <p class="text-white text-base text-center mb-8">
-            Pour rédiger, négocier et signer vos contrats en toute sérénité
+        <p class="mt-4 mb-8 text-md italic">
+          La formation est destinée aux dirigeants, futurs dirigeants (créateurs
+          et repreneurs d’entreprise), commerciaux et managers.
         </p>
-      
-          <a href="/contact">
-            <button type="button" class="bg-white text-sm text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-slate-100">
-              Demandez un devis
-            </button>
-          </a>
-        </div>
-    </div>
-
-    <div class="grid mb-8 md:mb-12 md:grid-cols-2 bg-white">
-        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-e dark:bg-gray-800 dark:border-gray-700 text-l">
-            <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                <!-- TODO : change color with the right one -->
-                <span class="text-purple-500">Modalités</span> de formation
-            </h2>
-                <p class="mt-4 mb-8 text-md italic">La formation est destinée aux dirigeants, futurs dirigeants (créateurs et repreneurs d’entreprise), commerciaux et managers.
-                </p>
-                <!-- TODO : change color -->
-                <ul class="text-left text-grey-900 list-disc list-inside dark:text-gray-400 text-l">
-                <li class="mb-4">
-                    <span class="text-purple-500 font-bold">Prérequis : </span> Aucun prérequis spécifique n'est nécessaire.
-                </li>
-                <li class="mb-4">
-                    <span class="text-purple-500 font-bold">Durée de la formation : </span> 21h réparties sur 3 jours.
-                </li>
-                <li class="mb-4">
-                    <span class="text-purple-500 font-bold">Tarif : </span> 3 900€ HT/personne. Prix à titre indicatif pour une session de formation de 21h en présentiel. À définir en fonction du nombre de participants et de la nature de la prestation.
-
-                </li>
-            </ul>
-            </blockquote>   
-        </figure>
-        
-        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-            <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                <!-- TODO : change color with the right one -->
-                Le <span class="text-purple-500">formateur</span>
-            </h2>
-            </blockquote>
-            <img class="rounded-full w-200 h-200" src="/images/formateurs/tarik.png" alt="Photo du formateur">
-            <figcaption class="flex items-center justify-center ">
-                
-                <div class="text-center space-y-0.5 font-medium dark:text-white rtl:text-right ms-3">
-                    <div class="text-purple-500 mt-3 text-xl">Maître Tarik BACHIR</div>
-                    <div class="text-md text-gray-500 dark:text-gray-400">Formateur & Avocat</div>
-                </div>
-            </figcaption>    
-        </figure>
-        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700 text-l">
-            <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                <!-- TODO : change color with the right one -->
-                <span class="text-purple-500">Objectifs</span> pédagogiques
-            </h2>
-                <p class="mt-4 mb-8 text-md italic">Découvrez les savoir-faire et savoir-être que vous développerez tout au long de cette formation.</p>
-                <!-- TODO : change color -->
-                <ul class="text-left text-grey-900 list-disc list-inside dark:text-gray-400">
-                <li class="mb-4">
-                    Maîtriser les aspects théoriques et pratiques du droit des contrats et des obligations. Acquérir une bonne connaissance des règles générales gouvernant l’entreprise et ses partenaires (fournisseurs, clients, prêteurs, assureurs, administrations, etc.) 
-                </li>
-                <li class="mb-4">
-                    Comprendre les étapes de la conclusion d’un contrat et gérer les risques inhérents à son exécution
-                </li>
-                <li class="mb-4">
-                    Connaître l’environnement juridique et les interlocuteurs du chef d’entreprise
-                </li>
-                <li class="mb-4">
-                    Connaître les clauses contractuelles les plus usuelles et savoir les utiliser
-                </li>
-                <li class="mb-4">
-                    Savoir lire un contrat et gérer son exécution
-                </li>
-            </ul>
-            </blockquote>   
-        </figure>
-        <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400 text-md">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            <!-- TODO : change color with the right one -->
-            <span class="text-purple-500">Programme</span> de la formation
-            </h2>
-            <p class="mt-4 mb-8 italic">Explorez le contenu détaillé de notre programme pour atteindre vos objectifs de manière structurée et efficace.</p>
-            <!-- TODO : change color -->
-            <ul class="text-left text-grey-900 list-disc list-inside dark:text-gray-400">
-                <li class="mb-4">
-                    Techniques contractuelles : recherche du co-contractant – pourparlers – clauses usuelles – rédaction et conclusion du contrat
-                </li>
-                <li class="mb-4">
-                    Conclusion des contrats : classification des contrats – formation des contrats – modification des contrats – interprétation des contrats
-                </li>
-                <li class="mb-4">
-                    Exécution des contrats : régime des obligations contractuelles – responsabilité – inexécution des contrats (résiliation, résolution), gestion des litiges liés à l’exécution du contrat
-                </li>
-            </ul>
-        </blockquote>   
+        <!-- TODO : change color -->
+        <ul
+          class="text-left text-grey-900 list-disc list-inside dark:text-gray-400 text-l"
+        >
+          <li class="mb-4">
+            <span class="text-purple-500 font-bold">Prérequis : </span> Aucun prérequis
+            spécifique n'est nécessaire.
+          </li>
+          <li class="mb-4">
+            <span class="text-purple-500 font-bold"
+              >Durée de la formation :
+            </span> 21h réparties sur 3 jours.
+          </li>
+          <li class="mb-4">
+            <span class="text-purple-500 font-bold">Tarif : </span> 3 900€ HT/personne.
+            Prix à titre indicatif pour une session de formation de 21h en présentiel.
+            À définir en fonction du nombre de participants et de la nature de la
+            prestation.
+          </li>
+        </ul>
+      </blockquote>
     </figure>
-    
-        
-    </div>
+
+    <figure
+      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700"
+    >
+      <blockquote
+        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <!-- TODO : change color with the right one -->
+          Le <span class="text-purple-500">formateur</span>
+        </h2>
+      </blockquote>
+      <img
+        class="rounded-full w-200 h-200"
+        src="/images/formateurs/tarik.png"
+        alt="Photo du formateur"
+      />
+      <figcaption class="flex items-center justify-center">
+        <div
+          class="text-center space-y-0.5 font-medium dark:text-white rtl:text-right ms-3"
+        >
+          <div class="text-purple-500 mt-3 text-xl">Maître Tarik BACHIR</div>
+          <div class="text-md text-gray-500 dark:text-gray-400">
+            Formateur & Avocat
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+    <figure
+      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700 text-l"
+    >
+      <blockquote
+        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <!-- TODO : change color with the right one -->
+          <span class="text-purple-500">Objectifs</span> pédagogiques
+        </h2>
+        <p class="mt-4 mb-8 text-md italic">
+          Découvrez les savoir-faire et savoir-être que vous développerez tout
+          au long de cette formation.
+        </p>
+        <!-- TODO : change color -->
+        <ul
+          class="text-left text-grey-900 list-disc list-inside dark:text-gray-400"
+        >
+          <li class="mb-4">
+            Maîtriser les aspects théoriques et pratiques du droit des contrats
+            et des obligations. Acquérir une bonne connaissance des règles
+            générales gouvernant l’entreprise et ses partenaires (fournisseurs,
+            clients, prêteurs, assureurs, administrations, etc.)
+          </li>
+          <li class="mb-4">
+            Comprendre les étapes de la conclusion d’un contrat et gérer les
+            risques inhérents à son exécution
+          </li>
+          <li class="mb-4">
+            Connaître l’environnement juridique et les interlocuteurs du chef
+            d’entreprise
+          </li>
+          <li class="mb-4">
+            Connaître les clauses contractuelles les plus usuelles et savoir les
+            utiliser
+          </li>
+          <li class="mb-4">Savoir lire un contrat et gérer son exécution</li>
+        </ul>
+      </blockquote>
+    </figure>
+    <figure
+      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700"
+    >
+      <blockquote
+        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400 text-md"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <!-- TODO : change color with the right one -->
+          <span class="text-purple-500">Programme</span> de la formation
+        </h2>
+        <p class="mt-4 mb-8 italic">
+          Explorez le contenu détaillé de notre programme pour atteindre vos
+          objectifs de manière structurée et efficace.
+        </p>
+        <!-- TODO : change color -->
+        <ul
+          class="text-left text-grey-900 list-disc list-inside dark:text-gray-400"
+        >
+          <li class="mb-4">
+            Techniques contractuelles : recherche du co-contractant –
+            pourparlers – clauses usuelles – rédaction et conclusion du contrat
+          </li>
+          <li class="mb-4">
+            Conclusion des contrats : classification des contrats – formation
+            des contrats – modification des contrats – interprétation des
+            contrats
+          </li>
+          <li class="mb-4">
+            Exécution des contrats : régime des obligations contractuelles –
+            responsabilité – inexécution des contrats (résiliation, résolution),
+            gestion des litiges liés à l’exécution du contrat
+          </li>
+        </ul>
+      </blockquote>
+    </figure>
+  </div>
 </Layout>
