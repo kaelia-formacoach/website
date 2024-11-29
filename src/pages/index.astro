@@ -7,8 +7,8 @@ import Layout from "../layouts/Layout.astro";
   <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
     <!-- Section d'introduction avec l'image de fond en full page -->
     <section
-      class="snap-start snap-always relative bg-cover bg-center min-h-screen flex items-center justify-center section-wave animate-on-scroll"
-      style="background-image: url('/images/index/photo-accueil2.png');"
+      class="full-page-section snap-start snap-always relative bg-cover bg-center h-screen flex items-center justify-center section-wave animate-on-scroll"
+      style="background-image: url('/images/index/photo-accueil3.jpg');"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 text-center text-white px-4">
@@ -48,7 +48,7 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Section "Pourquoi choisir Kaelia ?" en full page -->
     <section
-      class="snap-start snap-always relative min-h-screen flex flex-col justify-center items-center text-center py-0 bg-white section-angle animate-on-scroll"
+      class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center py-0 bg-white section-angle animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_left.svg'); background-repeat: no-repeat; background-size:auto;"
     >
       <div class="container mx-auto">
@@ -108,12 +108,12 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Section "Les 4 étapes de notre accompagnement" en full page avec dégradé -->
     <section
-      class="snap-start snap-always relative min-h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
+      class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
       style="background: linear-gradient(90deg, #6b46c1, #4a90e2);"
     >
       <div class="container mx-auto">
         <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          Les 4 étapes de notre <span class="text-pink-300">accompagnement</span
+          Les 4 étapes de notre <span class="text-black">accompagnement</span
           >
         </h2>
         <p class="text-lg md:text-xl mb-10 drop-shadow-md">
@@ -130,10 +130,10 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div
-            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">01</h3>
-            <h4 class="text-3xl text-pink-300 font-semibold mb-2">
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">1</h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
               Comprendre votre besoin
             </h4>
             <p class="text-base">
@@ -144,10 +144,10 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">02</h3>
-            <h4 class="text-3xl text-pink-300 font-semibold mb-2">
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">2</h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
               Construire la formation
             </h4>
             <p class="text-base">
@@ -158,10 +158,10 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">03</h3>
-            <h4 class="text-3xl text-pink-300 font-semibold mb-2">
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">3</h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
               Apprendre et se former
             </h4>
             <p class="text-base">
@@ -172,10 +172,10 @@ import Layout from "../layouts/Layout.astro";
             </p>
           </div>
           <div
-            class="border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
+            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">04</h3>
-            <h4 class="text-3xl text-pink-300 font-semibold mb-2">
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4</h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
               Faire le bilan
             </h4>
             <p class="text-base">
@@ -192,12 +192,12 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Section "KAELIA en quelques chiffres..." en full page -->
     <section
-      class="snap-start snap-always min-h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
+      class="full-page-section snap-start snap-always h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_right.svg'); background-repeat: no-repeat; background-size: 100% auto;"
     >
       <div class="container mx-auto max-w-5xl">
         <h2 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-md">
-          <span class="text-purple-600">KAELIA</span> en quelques chiffres...
+          KAELIA en quelques chiffres...
         </h2>
         <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-12">
           Votre succès, notre priorité. Devenez l'expert que vous avez toujours
@@ -254,7 +254,7 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Section "Ils nous font confiance" en full page -->
     <section
-      class="snap-start snap-always min-h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
+      class="full-page-section snap-start snap-always h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_left.svg'); background-repeat: no-repeat; background-size: 100% auto;"
     >
       <div class="container mx-auto">
@@ -440,6 +440,26 @@ import Layout from "../layouts/Layout.astro";
   .snap-always {
     scroll-snap-stop: always;
   }
+
+  .etape {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement tout le contenu, y compris le chiffre */
+}
+
+.etape-chiffre {
+  display: flex;
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: center; /* Centre horizontalement le contenu */
+  border: 2px solid white; /* Bordure blanche */
+  border-radius: 50%; /* Faire un cercle */
+  width: 3rem; /* Ajustez la largeur du cercle */
+  height: 3rem; /* Ajustez la hauteur du cercle */
+  font-size: 1.5rem; /* Taille du texte */
+  color: white; /* Couleur du texte */
+  box-sizing: border-box; /* Inclure la bordure dans les dimensions */
+  margin-bottom: 1rem; /* Ajoute un espace entre le chiffre et le titre en dessous */
+}
 </style>
 
 <script>
@@ -509,4 +529,26 @@ import Layout from "../layouts/Layout.astro";
       observer.observe(element);
     });
   });
+
+  function adjustSectionHeight() {
+  const header = document.querySelector("header") as HTMLElement | null;
+  const sections = document.querySelectorAll(".full-page-section") as NodeListOf<HTMLElement>;
+
+  if (!header) return;
+
+  const headerHeight = header.offsetHeight;
+  const viewportHeight = window.innerHeight;
+
+  // Ajuste la hauteur des sections
+  sections.forEach((section) => {
+    section.style.height = `${viewportHeight - headerHeight}px`;
+  });
+
+  console.log("Sections ajustées :", sections); // Vérifiez dans la console
+}
+
+window.addEventListener("load", adjustSectionHeight);
+window.addEventListener("resize", adjustSectionHeight);
+
+
 </script>

@@ -1,5 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
@@ -16,7 +16,7 @@ import Layout from "../../layouts/Layout.astro";
           class="max-w-full h-auto"
         />
       </div>
-
+  
       <!-- Right Section: Text Content -->
       <div class="text-center md:text-left">
         <h1 class="text-4xl font-bold text-gray-900 mb-6">
@@ -30,11 +30,14 @@ import Layout from "../../layouts/Layout.astro";
         </p>
         <a
           href="/contact"
-          class="inline-block bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-purple-500"
+          class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 bg-white rounded-full transition-all duration-500 group hover:bg-purple-800 hover:text-white drop-shadow-lg transform hover:scale-105"
         >
-          Contactez-nous
+          <span>Contactez-nous</span>
+          <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
     </div>
   </section>
+  
+  
 </Layout>

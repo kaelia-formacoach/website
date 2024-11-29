@@ -1,7 +1,270 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 ---
-
 <Layout>
-  <h1>Sur-mesure</h1>
+  <!-- Header -->
+  <section
+    class="relative bg-cover bg-center h-screen text-white flex flex-col justify-center items-center"
+    style="background-image: url('/images/index/photo-accueil2.png');"
+  >
+    <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-6xl md:text-7xl font-bold drop-shadow-lg">
+        Construisez votre formation sur-mesure
+      </h1>
+      <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto drop-shadow-md">
+        Glissez et déposez les modules de formation pour composer le programme qui répond parfaitement à vos besoins.
+      </p>
+      <a
+        href="#customizer"
+        class="mt-8 inline-block bg-purple-700 hover:bg-purple-800 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105"
+      >
+        Commencez maintenant
+      </a>
+    </div>
+  </section>
+
+  <!-- Drag-and-Drop Section -->
+  <section id="customizer" class="bg-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">
+        Créez votre programme personnalisé
+      </h2>
+
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Available Modules -->
+        <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold text-purple-700 mb-4">Modules disponibles</h3>
+          <ul id="modules-list" class="min-h-[300px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg">
+            <!-- Example Modules -->
+            <li
+              class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
+              draggable="true"
+              data-id="module-1"
+            >
+              <h4 class="text-lg font-bold">Module 1: Gestion de projet</h4>
+              <p class="text-sm text-gray-600">
+                Apprenez à gérer efficacement vos projets de A à Z.
+              </p>
+            </li>
+            <li
+              class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
+              draggable="true"
+              data-id="module-2"
+            >
+              <h4 class="text-lg font-bold">Module 2: Communication d'équipe</h4>
+              <p class="text-sm text-gray-600">
+                Optimisez la collaboration entre vos équipes.
+              </p>
+            </li>
+            <li
+              class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
+              draggable="true"
+              data-id="module-3"
+            >
+              <h4 class="text-lg font-bold">Module 3: Stratégies de vente</h4>
+              <p class="text-sm text-gray-600">
+                Développez vos compétences en vente et en négociation.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Selected Modules -->
+        <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold text-purple-700 mb-4">Votre programme</h3>
+          <ul
+            id="selected-list"
+            class="min-h-[200px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg"
+          >
+            <li class="text-gray-500 italic">Glissez ici vos modules sélectionnés...</li>
+          </ul>
+          <button
+            id="submit-program"
+            class="mt-6 bg-purple-700 hover:bg-purple-800 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 w-full"
+          >
+            Valider votre programme
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for User Information -->
+  <div id="user-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Vos informations</h2>
+      <form id="user-form" action="http://localhost:8000/mailer/submit_program.php" method="POST" class="space-y-4">
+        <div>
+          <label for="user-name" class="block text-sm font-medium text-gray-700">Nom *</label>
+          <input
+            type="text"
+            id="user-name"
+            name="name"
+            required
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+          />
+        </div>
+        <div>
+          <label for="user-email" class="block text-sm font-medium text-gray-700">Email *</label>
+          <input
+            type="email"
+            id="user-email"
+            name="email"
+            required
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+          />
+        </div>
+        <div>
+          <label for="user-phone" class="block text-sm font-medium text-gray-700">Téléphone</label>
+          <input
+            type="tel"
+            id="user-phone"
+            name="phone"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+          />
+        </div>
+        <div>
+          <label for="user-message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea
+            id="user-message"
+            name="message"
+            rows="4"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+          ></textarea>
+        </div>
+
+        <!-- Champ caché pour les modules sélectionnés -->
+        <div id="hidden-modules"></div>
+
+        <div class="flex justify-end">
+          <button type="button" id="cancel-button" class="mr-4 bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded">
+            Annuler
+          </button>
+          <button type="submit" class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded">
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Sélection des éléments
+      const modulesList = document.getElementById("modules-list") as HTMLUListElement;
+      const selectedList = document.getElementById("selected-list") as HTMLUListElement;
+      const submitButton = document.getElementById("submit-program") as HTMLButtonElement;
+
+      const userModal = document.getElementById("user-modal") as HTMLElement;
+      const userForm = document.getElementById("user-form") as HTMLFormElement;
+      const cancelButton = document.getElementById("cancel-button") as HTMLButtonElement;
+      const hiddenModules = document.getElementById("hidden-modules") as HTMLElement;
+
+      if (!modulesList || !selectedList || !submitButton || !userModal || !userForm || !cancelButton || !hiddenModules) {
+        console.error("Un ou plusieurs éléments requis ne sont pas trouvés dans le DOM.");
+        return;
+      }
+
+      const moduleItems = modulesList.querySelectorAll(".module-item") as NodeListOf<HTMLLIElement>;
+
+      // Fonction permettant de déposer
+      const allowDrop = (event: DragEvent) => {
+        event.preventDefault(); // Permet le drop
+      };
+
+      // Fonction de gestion du drag
+      const handleDragStart = (event: DragEvent) => {
+        const target = event.target as HTMLElement;
+        const moduleId = target.dataset.id; // Récupère l'ID du module
+        if (moduleId && event.dataTransfer) {
+          event.dataTransfer.setData("text/plain", moduleId); // Stocke l'ID dans l'objet dataTransfer
+        }
+      };
+
+      // Fonction de gestion du drop
+      const handleDrop = (event: DragEvent) => {
+        event.preventDefault();
+
+        // Récupère l'ID du module déplacé
+        const moduleId = event.dataTransfer?.getData("text/plain");
+        if (!moduleId) return;
+
+        // Trouve l'élément d'origine dans les modules disponibles
+        const draggedElement = modulesList.querySelector(`[data-id='${moduleId}']`) as HTMLElement;
+        const isAlreadyAdded = selectedList.querySelector(`[data-id='${moduleId}']`);
+
+        if (!draggedElement || isAlreadyAdded) return;
+
+        // Clone le module et l'ajoute à la liste cible
+        const clonedElement = draggedElement.cloneNode(true) as HTMLElement;
+        clonedElement.draggable = false; // Désactive le drag pour le clone
+        clonedElement.classList.remove("cursor-grab"); // Retire le curseur de déplacement
+        clonedElement.classList.add("cursor-default", "bg-blue-50"); // Change le curseur et la couleur de fond
+
+        // Ajoute le bouton de suppression
+        const removeButton = document.createElement("button");
+        removeButton.title = "Retirer ce module";
+        removeButton.innerHTML = "&times;";
+        removeButton.className = "absolute top-2 right-2 bg-transparent border-none text-lg text-red-500 hover:text-red-700 cursor-pointer";
+        clonedElement.appendChild(removeButton);
+
+        // Gère le clic sur le bouton de suppression
+        removeButton.addEventListener("click", () => {
+          clonedElement.remove();
+        });
+
+        selectedList.appendChild(clonedElement); // Ajoute le clone dans la zone cible
+      };
+
+      // Lier les gestionnaires d'événements
+      moduleItems.forEach((item) => {
+        item.addEventListener("dragstart", handleDragStart); // Gérer le drag
+      });
+
+      selectedList.addEventListener("dragover", allowDrop); // Permet le drop
+      selectedList.addEventListener("drop", handleDrop); // Gère le drop
+
+      // Attacher l'événement au bouton de soumission
+      submitButton.addEventListener("click", () => {
+        const selectedModules = selectedList.querySelectorAll(".module-item");
+        if (!selectedModules || selectedModules.length === 0) {
+          alert("Veuillez sélectionner au moins un module avant de valider !");
+          return;
+        }
+        // Afficher le modal
+        userModal.classList.remove("hidden");
+      });
+
+      // Gérer la soumission du formulaire
+      userForm.addEventListener("submit", (event) => {
+        // Avant de soumettre, ajouter les modules sélectionnés comme champs cachés
+        const selectedModules = Array.from(selectedList.querySelectorAll(".module-item")) as HTMLElement[];
+
+        // Vider les champs cachés précédents
+        hiddenModules.innerHTML = '';
+
+        if (selectedModules.length > 0) {
+          selectedModules.forEach((module) => {
+            const titleElement = module.querySelector("h4");
+            const title = titleElement ? titleElement.textContent : "Module inconnu";
+
+            const hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = "program[]"; // Utiliser un tableau pour les modules
+            hiddenInput.value = title || "Module inconnu";
+
+            hiddenModules.appendChild(hiddenInput);
+          });
+        }
+
+        // Le formulaire sera soumis normalement avec les champs cachés ajoutés
+      });
+
+      // Gérer le bouton d'annulation
+      cancelButton.addEventListener("click", () => {
+        userModal.classList.add("hidden");
+      });
+    });
+  </script>
 </Layout>
