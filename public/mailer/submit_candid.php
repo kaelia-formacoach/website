@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = filter_var(trim($_POST["message"]), FILTER_SANITIZE_SPECIAL_CHARS);
 
     // Vérification des champs obligatoires
-    if (empty($name) || empty($email) || empty($message) || !isset($_FILES['cv'])) {
+    if (empty($name) || empty($email) || empty($message) || !isset($_FILES['cv']) || !isset($_FILES['cover_letter'])) {
         echo "Veuillez remplir tous les champs obligatoires.";
         exit;
     }
@@ -35,7 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérification du fichier CV
     $cv = $_FILES['cv'];
     if ($cv['error'] !== UPLOAD_ERR_OK || $cv['type'] !== 'application/pdf') {
-        echo "Veuillez uploader un fichier PDF valide.";
+        echo "Veuillez uploader un fichier PDF valide pour le CV.";
+        exit;
+    }
+
+    // Vérification du fichier de la lettre de motivation
+    $cover_letter = $_FILES['cover_letter'];
+    if ($cover_letter['error'] !== UPLOAD_ERR_OK || $cover_letter['type'] !== 'application/pdf') {
+        echo "Veuillez uploader un fichier PDF valide pour la lettre de motivation.";
         exit;
     }
 
@@ -56,8 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->setFrom($_ENV['MAIL_USERNAME'], 'Kaelia Forma\'Coach');
         $mail->addAddress($recipient_email);
 
-        // Pièce jointe
+        // Pièces jointes
         $mail->addAttachment($cv['tmp_name'], $cv['name']);
+        $mail->addAttachment($cover_letter['tmp_name'], $cover_letter['name']);
 
         // Contenu de l'email
         $mail->isHTML(false);

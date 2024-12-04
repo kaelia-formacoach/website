@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 ---
+
 <Layout>
   <!-- Header -->
   <section
@@ -13,7 +14,8 @@ import Layout from "../../layouts/Layout.astro";
         Construisez votre formation sur-mesure
       </h1>
       <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto drop-shadow-md">
-        Glissez et déposez les modules de formation pour composer le programme qui répond parfaitement à vos besoins.
+        Glissez et déposez les modules de formation pour composer le programme
+        qui répond parfaitement à vos besoins.
       </p>
       <a
         href="#customizer"
@@ -31,18 +33,23 @@ import Layout from "../../layouts/Layout.astro";
         Créez votre programme personnalisé
       </h2>
 
-      <div class="flex flex-col md:flex-row gap-8">
-        <!-- Available Modules -->
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Modules disponibles -->
         <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-700 mb-4">Modules disponibles</h3>
-          <ul id="modules-list" class="min-h-[300px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg">
-            <!-- Example Modules -->
+          <h3 class="text-2xl font-semibold text-purple-700 mb-4">
+            Modules disponibles
+          </h3>
+          <ul
+            id="modules-list"
+            class="min-h-[300px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg"
+          >
+            <!-- Exemple de modules -->
             <li
               class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
               draggable="true"
               data-id="module-1"
             >
-              <h4 class="text-lg font-bold">Module 1: Gestion de projet</h4>
+              <h4 class="text-lg font-bold">Module 1: Juridique</h4>
               <p class="text-sm text-gray-600">
                 Apprenez à gérer efficacement vos projets de A à Z.
               </p>
@@ -52,7 +59,9 @@ import Layout from "../../layouts/Layout.astro";
               draggable="true"
               data-id="module-2"
             >
-              <h4 class="text-lg font-bold">Module 2: Communication d'équipe</h4>
+              <h4 class="text-lg font-bold">
+                Module 2: RSE
+              </h4>
               <p class="text-sm text-gray-600">
                 Optimisez la collaboration entre vos équipes.
               </p>
@@ -62,7 +71,27 @@ import Layout from "../../layouts/Layout.astro";
               draggable="true"
               data-id="module-3"
             >
-              <h4 class="text-lg font-bold">Module 3: Stratégies de vente</h4>
+              <h4 class="text-lg font-bold">Module 3: RH</h4>
+              <p class="text-sm text-gray-600">
+                Développez vos compétences en vente et en négociation.
+              </p>
+            </li>
+            <li
+              class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
+              draggable="true"
+              data-id="module-4"
+            >
+              <h4 class="text-lg font-bold">Module 4: Stratégie d’entreprise</h4>
+              <p class="text-sm text-gray-600">
+                Développez vos compétences en vente et en négociation.
+              </p>
+            </li>
+            <li
+              class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
+              draggable="true"
+              data-id="module-5"
+            >
+              <h4 class="text-lg font-bold">Module 5: Numérique</h4>
               <p class="text-sm text-gray-600">
                 Développez vos compétences en vente et en négociation.
               </p>
@@ -70,14 +99,40 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
         </div>
 
-        <!-- Selected Modules -->
+        <!-- Indicateur central -->
+        <div
+          class="flex flex-col items-center justify-center text-gray-700 gap-2"
+        >
+          <p class="text-lg font-semibold text-center">
+            Glissez vos modules ici
+          </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-12 w-12 text-purple-500 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <!-- Modules sélectionnés -->
         <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-700 mb-4">Votre programme</h3>
+          <h3 class="text-2xl font-semibold text-purple-700 mb-4">
+            Votre programme
+          </h3>
           <ul
             id="selected-list"
             class="min-h-[200px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg"
           >
-            <li class="text-gray-500 italic">Glissez ici vos modules sélectionnés...</li>
+            <li class="text-gray-500 italic">
+              Glissez ici vos modules sélectionnés...
+            </li>
           </ul>
           <button
             id="submit-program"
@@ -91,12 +146,22 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- Modal for User Information -->
-  <div id="user-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+  <div
+    id="user-modal"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50"
+  >
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4">Vos informations</h2>
-      <form id="user-form" action="http://localhost:8000/mailer/submit_program.php" method="POST" class="space-y-4">
+      <form
+        id="user-form"
+        action="http://localhost:8000/mailer/submit_program.php"
+        method="POST"
+        class="space-y-4"
+      >
         <div>
-          <label for="user-name" class="block text-sm font-medium text-gray-700">Nom *</label>
+          <label for="user-name" class="block text-sm font-medium text-gray-700"
+            >Nom *</label
+          >
           <input
             type="text"
             id="user-name"
@@ -106,7 +171,10 @@ import Layout from "../../layouts/Layout.astro";
           />
         </div>
         <div>
-          <label for="user-email" class="block text-sm font-medium text-gray-700">Email *</label>
+          <label
+            for="user-email"
+            class="block text-sm font-medium text-gray-700">Email *</label
+          >
           <input
             type="email"
             id="user-email"
@@ -116,7 +184,10 @@ import Layout from "../../layouts/Layout.astro";
           />
         </div>
         <div>
-          <label for="user-phone" class="block text-sm font-medium text-gray-700">Téléphone</label>
+          <label
+            for="user-phone"
+            class="block text-sm font-medium text-gray-700">Téléphone</label
+          >
           <input
             type="tel"
             id="user-phone"
@@ -125,7 +196,10 @@ import Layout from "../../layouts/Layout.astro";
           />
         </div>
         <div>
-          <label for="user-message" class="block text-sm font-medium text-gray-700">Message</label>
+          <label
+            for="user-message"
+            class="block text-sm font-medium text-gray-700">Message</label
+          >
           <textarea
             id="user-message"
             name="message"
@@ -138,10 +212,17 @@ import Layout from "../../layouts/Layout.astro";
         <div id="hidden-modules"></div>
 
         <div class="flex justify-end">
-          <button type="button" id="cancel-button" class="mr-4 bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded">
+          <button
+            type="button"
+            id="cancel-button"
+            class="mr-4 bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
+          >
             Annuler
           </button>
-          <button type="submit" class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded">
+          <button
+            type="submit"
+            class="bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded"
+          >
             Envoyer
           </button>
         </div>
@@ -152,21 +233,43 @@ import Layout from "../../layouts/Layout.astro";
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Sélection des éléments
-      const modulesList = document.getElementById("modules-list") as HTMLUListElement;
-      const selectedList = document.getElementById("selected-list") as HTMLUListElement;
-      const submitButton = document.getElementById("submit-program") as HTMLButtonElement;
+      const modulesList = document.getElementById(
+        "modules-list"
+      ) as HTMLUListElement;
+      const selectedList = document.getElementById(
+        "selected-list"
+      ) as HTMLUListElement;
+      const submitButton = document.getElementById(
+        "submit-program"
+      ) as HTMLButtonElement;
 
       const userModal = document.getElementById("user-modal") as HTMLElement;
       const userForm = document.getElementById("user-form") as HTMLFormElement;
-      const cancelButton = document.getElementById("cancel-button") as HTMLButtonElement;
-      const hiddenModules = document.getElementById("hidden-modules") as HTMLElement;
+      const cancelButton = document.getElementById(
+        "cancel-button"
+      ) as HTMLButtonElement;
+      const hiddenModules = document.getElementById(
+        "hidden-modules"
+      ) as HTMLElement;
 
-      if (!modulesList || !selectedList || !submitButton || !userModal || !userForm || !cancelButton || !hiddenModules) {
-        console.error("Un ou plusieurs éléments requis ne sont pas trouvés dans le DOM.");
+      if (
+        !modulesList ||
+        !selectedList ||
+        !submitButton ||
+        !userModal ||
+        !userForm ||
+        !cancelButton ||
+        !hiddenModules
+      ) {
+        console.error(
+          "Un ou plusieurs éléments requis ne sont pas trouvés dans le DOM."
+        );
         return;
       }
 
-      const moduleItems = modulesList.querySelectorAll(".module-item") as NodeListOf<HTMLLIElement>;
+      const moduleItems = modulesList.querySelectorAll(
+        ".module-item"
+      ) as NodeListOf<HTMLLIElement>;
 
       // Fonction permettant de déposer
       const allowDrop = (event: DragEvent) => {
@@ -191,8 +294,12 @@ import Layout from "../../layouts/Layout.astro";
         if (!moduleId) return;
 
         // Trouve l'élément d'origine dans les modules disponibles
-        const draggedElement = modulesList.querySelector(`[data-id='${moduleId}']`) as HTMLElement;
-        const isAlreadyAdded = selectedList.querySelector(`[data-id='${moduleId}']`);
+        const draggedElement = modulesList.querySelector(
+          `[data-id='${moduleId}']`
+        ) as HTMLElement;
+        const isAlreadyAdded = selectedList.querySelector(
+          `[data-id='${moduleId}']`
+        );
 
         if (!draggedElement || isAlreadyAdded) return;
 
@@ -206,7 +313,8 @@ import Layout from "../../layouts/Layout.astro";
         const removeButton = document.createElement("button");
         removeButton.title = "Retirer ce module";
         removeButton.innerHTML = "&times;";
-        removeButton.className = "absolute top-2 right-2 bg-transparent border-none text-lg text-red-500 hover:text-red-700 cursor-pointer";
+        removeButton.className =
+          "absolute top-2 right-2 bg-transparent border-none text-lg text-red-500 hover:text-red-700 cursor-pointer";
         clonedElement.appendChild(removeButton);
 
         // Gère le clic sur le bouton de suppression
@@ -239,15 +347,19 @@ import Layout from "../../layouts/Layout.astro";
       // Gérer la soumission du formulaire
       userForm.addEventListener("submit", (event) => {
         // Avant de soumettre, ajouter les modules sélectionnés comme champs cachés
-        const selectedModules = Array.from(selectedList.querySelectorAll(".module-item")) as HTMLElement[];
+        const selectedModules = Array.from(
+          selectedList.querySelectorAll(".module-item")
+        ) as HTMLElement[];
 
         // Vider les champs cachés précédents
-        hiddenModules.innerHTML = '';
+        hiddenModules.innerHTML = "";
 
         if (selectedModules.length > 0) {
           selectedModules.forEach((module) => {
             const titleElement = module.querySelector("h4");
-            const title = titleElement ? titleElement.textContent : "Module inconnu";
+            const title = titleElement
+              ? titleElement.textContent
+              : "Module inconnu";
 
             const hiddenInput = document.createElement("input");
             hiddenInput.type = "hidden";

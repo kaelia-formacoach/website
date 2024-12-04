@@ -72,6 +72,19 @@ import Layout from "../layouts/Layout.astro";
             />
           </div>
 
+          <!-- Lettre de motivation -->
+          <div>
+            <label for="cover_letter" class="block text-gray-700 font-semibold">Lettre de motivation (PDF) *</label>
+            <input
+              type="file"
+              id="cover_letter"
+              name="cover_letter"
+              accept=".pdf"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+              required
+            />
+          </div>
+
           <!-- Message -->
           <div>
             <label for="message" class="block text-gray-700 font-semibold">Message *</label>
