@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+const { isHome } = Astro.props;
 ---
 
 <html lang="fr">
@@ -13,16 +14,31 @@ import Footer from "../components/Footer.astro";
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
     </style>
   </head>
-  <body class="flex flex-col min-h-screen font-roboto">
+  <body class={`font-roboto ${isHome ? "overflow-hidden" : ""}`}>
     <!-- Header called here -->
     <Header />
 
+
+    {isHome ? (
+      <!-- Sur la page d'accueil, on met main et footer dans un même conteneur scrollable -->
+      <div class="h-screen overflow-y-scroll snap-y">
+        <main id="main-container">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    ) : (
+      <!-- Sur les autres pages, comportement normal -->
+      <>
+
     <!-- Page content with responsive margins -->
-    <main>
+    <main id="main-container" class={isHome ? "h-screen overflow-y-scroll snap-y" : "min-h-screen overflow-auto"}>
       <slot />
     </main>
 
     <!-- Footer called here -->
     <Footer />
+    </>
+    )}
   </body>
 </html>

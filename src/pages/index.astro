@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout isHome={true}>
   <!-- Conteneur principal avec le scroll snapping -->
   <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
     <!-- Section d'introduction avec l'image de fond en full page -->
@@ -529,26 +529,23 @@ import Layout from "../layouts/Layout.astro";
       observer.observe(element);
     });
   });
+  document.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector("header");
+      const mainContainer = document.getElementById("main-container");
 
-  function adjustSectionHeight() {
-  const header = document.querySelector("header") as HTMLElement | null;
-  const sections = document.querySelectorAll(".full-page-section") as NodeListOf<HTMLElement>;
+      if (header && mainContainer) {
+        const headerHeight = (header as HTMLElement).offsetHeight;
+        const sections = mainContainer.querySelectorAll('.full-page-section');
 
-  if (!header) return;
-
-  const headerHeight = header.offsetHeight;
-  const viewportHeight = window.innerHeight;
-
-  // Ajuste la hauteur des sections
-  sections.forEach((section) => {
-    section.style.height = `${viewportHeight - headerHeight}px`;
-  });
-
-  console.log("Sections ajustées :", sections); // Vérifiez dans la console
-}
-
-window.addEventListener("load", adjustSectionHeight);
-window.addEventListener("resize", adjustSectionHeight);
-
-
+        sections.forEach((sec, index) => {
+          const section = sec as HTMLElement;
+          if (index < sections.length - 1) {
+            section.style.height = `calc(100vh - ${headerHeight}px)`;
+            section.classList.add('snap-start');
+          } else {
+            section.style.minHeight = `calc(100vh - ${headerHeight}px)`;
+          }
+        });
+      }
+    });
 </script>
