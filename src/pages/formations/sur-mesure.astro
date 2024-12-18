@@ -345,7 +345,7 @@ import Layout from "../../layouts/Layout.astro";
       });
 
       // Gérer la soumission du formulaire
-      userForm.addEventListener("submit", (event) => {
+      userForm.addEventListener("submit", () => {
         // Avant de soumettre, ajouter les modules sélectionnés comme champs cachés
         const selectedModules = Array.from(
           selectedList.querySelectorAll(".module-item")
