@@ -581,23 +581,27 @@ import Layout from "../layouts/Layout.astro";
   import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Enregistrer le plugin GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Animation des sections
+// Animation au chargement de la page
 document.addEventListener("DOMContentLoaded", () => {
-  gsap.utils.toArray(".full-page-section").forEach((section) => {
+  const sections = gsap.utils.toArray<HTMLElement>(".full-page-section");
+
+  sections.forEach((section, i) => {
     gsap.fromTo(
       section,
-      { opacity: 0, y: 100 },
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
+        delay: i * 0.2,
         scrollTrigger: {
           trigger: section,
-          start: "top 80%",
-          end: "top 20%",
-          scrub: true,
+          start: "top 75%",
+          end: "bottom center",
+          toggleActions: "play none none reverse",
         },
       }
     );
