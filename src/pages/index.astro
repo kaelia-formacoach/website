@@ -4,11 +4,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout isHome={true}>
   <!-- Conteneur principal avec le scroll snapping -->
-  <div class="h-screen overflow-y-scroll snap-y snap-mandatory">
+  <div class="smooth-scroll">
     <!-- Section d'introduction avec l'image de fond en full page -->
     <section
-      class="full-page-section snap-start snap-always relative bg-cover bg-center h-screen flex items-center justify-center section-wave animate-on-scroll"
-      style="background-image: url('/images/index/photo-accueil3.jpg');"
+      class="full-page-section snap-start snap-always relative bg-cover h-screen flex items-center justify-center section-wave animate-on-scroll"
+      style="background-image: url('/images/index/photo-accueil3.jpg'); background-position: center 20%;"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 text-center text-white px-4">
@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
           Formation et Coaching sur-mesure
         </h1>
         <p
-          class="text-xl md:text-xl lg:text-xl max-w-3xl mx-auto mb-6 animate-intro drop-shadow-md"
+          class="text-xl md:text-xl lg:text-xl max-w-3xl mx-auto mb-6 animate-intro drop-shadow-md text-justify"
         >
           Chez Kaelia, nous mettons à votre disposition un soutien sur mesure
           tout au long de votre formation. Nos parcours sont certifiés <strong
@@ -95,7 +95,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
         <a
-          href="/formations"
+          href="/formations/nos-formations"
           class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 rounded-full transition-all duration-500 hover:bg-purple-800 hover:text-white text-lg drop-shadow-lg transform hover:scale-105"
         >
           <span>Commencer votre formation</span>
@@ -113,8 +113,7 @@ import Layout from "../layouts/Layout.astro";
     >
       <div class="container mx-auto">
         <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          Les 4 étapes de notre <span class="text-black">accompagnement</span
-          >
+          Les 4 étapes de notre <span class="text-black">accompagnement</span>
         </h2>
         <p class="text-lg md:text-xl mb-10 drop-shadow-md">
           Chez Kaelia Forma'Coach, nous rendons la formation accessible à tous
@@ -132,9 +131,13 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">1</h3>
+            <h3
+              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
+            >
+              1
+            </h3>
             <h4 class="text-3xl text-black font-semibold mb-2">
-              Comprendre votre besoin
+              Evaluations des besoins
             </h4>
             <p class="text-base">
               Accédez à une formation sur mesure qui s’adapte à vos contraintes
@@ -146,9 +149,13 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">2</h3>
+            <h3
+              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
+            >
+              2
+            </h3>
             <h4 class="text-3xl text-black font-semibold mb-2">
-              Construire la formation
+              Conception du plan d'accompagnement
             </h4>
             <p class="text-base">
               Accédez à une formation sur mesure qui s’adapte à vos contraintes
@@ -160,7 +167,11 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">3</h3>
+            <h3
+              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
+            >
+              3
+            </h3>
             <h4 class="text-3xl text-black font-semibold mb-2">
               Apprendre et se former
             </h4>
@@ -174,7 +185,11 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
           >
-            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4</h3>
+            <h3
+              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
+            >
+              4
+            </h3>
             <h4 class="text-3xl text-black font-semibold mb-2">
               Faire le bilan
             </h4>
@@ -251,20 +266,21 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-
-    <!-- Section "Ils nous font confiance" en full page -->
+    <!-- Section "Ils nous font confiance" -->
     <section
-      class="full-page-section snap-start snap-always h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
+      class="full-page-section snap-start snap-always flex flex-col h-screen items-center bg-white text-center animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_left.svg'); background-repeat: no-repeat; background-size: 100% auto;"
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto py-10">
         <h2 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-md">
           Ils nous font <span class="text-purple-600">confiance</span>
         </h2>
         <p class="text-base md:text-lg text-gray-700 max-w-xl mx-auto mb-10">
           La confiance de nos partenaires, notre plus belle récompense.
         </p>
-        <div class="logo-carousel">
+
+        <!-- Carrousel en haut avec une marge inférieure importante -->
+        <div class="logo-carousel mb-32">
           <div class="logo-track">
             <div class="logo-item">
               <img
@@ -298,12 +314,11 @@ import Layout from "../layouts/Layout.astro";
                 class="h-16 md:h-20 lg:h-24 transition-transform"
               />
             </div>
-            <!-- Ajoutez d'autres logos si nécessaire -->
           </div>
         </div>
 
-        <!-- Début de la section des témoignages -->
-        <h3 class="text-3xl md:text-4xl font-bold mt-12 mb-6 drop-shadow-md">
+        <!-- Avis de nos clients plus bas -->
+        <h3 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">
           Avis de nos clients
         </h3>
         <div
@@ -321,6 +336,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
             <p class="font-bold">Amélie Virgadaula</p>
           </div>
+
           <!-- Témoignage 2 -->
           <div class="testimonial bg-gray-100 p-6 rounded-lg shadow-md">
             <p class="text-gray-700 mb-4">
@@ -334,6 +350,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
             <p class="font-bold">Sophie VACHER</p>
           </div>
+
           <!-- Témoignage 3 -->
           <div class="testimonial bg-gray-100 p-6 rounded-lg shadow-md">
             <p class="text-gray-700 mb-4">
@@ -344,7 +361,6 @@ import Layout from "../layouts/Layout.astro";
             </p>
             <p class="font-bold">Océane Mathieu</p>
           </div>
-          <!-- Ajoutez d'autres témoignages si nécessaire -->
         </div>
         <!-- Fin de la section des témoignages -->
       </div>
@@ -442,23 +458,37 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .etape {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre horizontalement tout le contenu, y compris le chiffre */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement tout le contenu, y compris le chiffre */
+  }
+
+  .etape-chiffre {
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 50%; /* Faire un cercle */
+    width: 3rem; /* Ajustez la largeur du cercle */
+    height: 3rem; /* Ajustez la hauteur du cercle */
+    font-size: 1.5rem; /* Taille du texte */
+    color: white; /* Couleur du texte */
+    box-sizing: border-box; /* Inclure la bordure dans les dimensions */
+    margin-bottom: 1rem; /* Ajoute un espace entre le chiffre et le titre en dessous */
+  }
+
+  .smooth-scroll {
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.etape-chiffre {
+.full-page-section {
+  height: 100vh;
   display: flex;
-  align-items: center; /* Centre verticalement le contenu */
-  justify-content: center; /* Centre horizontalement le contenu */
-  border: 2px solid white; /* Bordure blanche */
-  border-radius: 50%; /* Faire un cercle */
-  width: 3rem; /* Ajustez la largeur du cercle */
-  height: 3rem; /* Ajustez la hauteur du cercle */
-  font-size: 1.5rem; /* Taille du texte */
-  color: white; /* Couleur du texte */
-  box-sizing: border-box; /* Inclure la bordure dans les dimensions */
-  margin-bottom: 1rem; /* Ajoute un espace entre le chiffre et le titre en dessous */
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 </style>
 
@@ -530,22 +560,47 @@ import Layout from "../layouts/Layout.astro";
     });
   });
   document.addEventListener("DOMContentLoaded", () => {
-      const header = document.querySelector("header");
-      const mainContainer = document.getElementById("main-container");
+    const header = document.querySelector("header");
+    const mainContainer = document.getElementById("main-container");
 
-      if (header && mainContainer) {
-        const headerHeight = (header as HTMLElement).offsetHeight;
-        const sections = mainContainer.querySelectorAll('.full-page-section');
+    if (header && mainContainer) {
+      const headerHeight = (header as HTMLElement).offsetHeight;
+      const sections = mainContainer.querySelectorAll(".full-page-section");
 
-        sections.forEach((sec, index) => {
-          const section = sec as HTMLElement;
-          if (index < sections.length - 1) {
-            section.style.height = `calc(100vh - ${headerHeight}px)`;
-            section.classList.add('snap-start');
-          } else {
-            section.style.minHeight = `calc(100vh - ${headerHeight}px)`;
-          }
-        });
+      sections.forEach((sec, index) => {
+        const section = sec as HTMLElement;
+        if (index < sections.length - 1) {
+          section.style.height = `calc(100vh - ${headerHeight}px)`;
+          section.classList.add("snap-start");
+        } else {
+          section.style.minHeight = `calc(100vh - ${headerHeight}px)`;
+        }
+      });
+    }
+  });
+  import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation des sections
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.utils.toArray(".full-page-section").forEach((section) => {
+    gsap.fromTo(
+      section,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: true,
+        },
       }
-    });
+    );
+  });
+});
 </script>

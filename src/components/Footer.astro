@@ -1,130 +1,143 @@
 <footer
   class="relative bg-gradient-to-r from-blue-800 to-purple-600 text-white py-12"
 >
-  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-    <!-- Section Logo et Adresse -->
-    <div class="space-y-4 text-center md:text-left">
-      <img
-        src="/images/footer/badge-kaelia.webp"
-        alt="Logo Kaelia"
-        class="h-28 mx-auto md:mx-0"
-      />
-      <div>
-        <p class="font-semibold text-lg">SAS KAELIA FORMA’COACH</p>
-        <p>198 rue des amis de l’industrie,<br />42590 NEULISE, France</p>
-      </div>
-      <!-- Logo Qualiopi aligné ici -->
-      <div class="flex items-center space-x-4 mt-4">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-5 items-center">
+      <!-- Colonne gauche centrée -->
+      <div
+        class="col-span-2 flex flex-col items-center md:items-start space-y-4"
+      >
         <img
-          src="/images/footer/logo-qualiopi.png"
-          alt="Certification Qualiopi"
-          class="h-20 sm:h-24 w-auto"
+          src="/images/footer/badge-kaelia.webp"
+          alt="Logo Kaelia"
+          class="h-28 mx-auto md:mx-0"
         />
-        <p class="text-sm">
-          La certification qualité a été délivrée au titre de la catégorie
-          d'action suivante :
-          <br />
-          <span class="text-red-600">ACTIONS DE FORMATION</span>
-        </p>
-      </div>
-    </div>
-    <!-- Navigation et Mentions Légales -->
-    <div
-      class="flex flex-col md:flex-row justify-center md:justify-between space-y-8 md:space-y-0"
-    >
-      <!-- Liens de Navigation -->
-      <div class="space-y-2 text-center md:text-left">
-        <h3 class="font-semibold text-lg">Navigation</h3>
-        <ul class="space-y-1">
-          <li><a href="/formations" class="hover:underline">Formations</a></li>
-          <li>
-            <a href="/Financement" class="hover:underline">Financement</a>
-          </li>
-          <li>
-            <a href="/inside-kaelia" class="hover:underline">Inside Kaelia</a>
-          </li>
-          <li><a href="/le-klub" class="hover:underline">Le Klub</a></li>
-          <li><a href="/contact" class="hover:underline">Contact</a></li>
-          <li><a href="/contact" class="hover:underline">Nous rejoindre</a></li>
-        </ul>
-      </div>
-      <!-- Mentions légales et Politique -->
-      <div class="space-y-2 text-center md:text-left">
-        <h3 class="font-semibold text-lg">Informations Légales</h3>
-        <ul class="space-y-1">
-          <li>
-            <a href="/mentions-legales" class="hover:underline"
-              >Mentions légales</a
-            >
-          </li>
-          <li>
-            <a href="/conditions-generales" class="hover:underline"
-              >Conditions générales</a
-            >
-          </li>
-          <li>
-            <a href="/politique-confidentialite" class="hover:underline"
-              >Politique de confidentialité</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Contact et Réseaux Sociaux -->
-    <div class="space-y-6 text-center md:text-left">
-      <!-- Réseaux Sociaux -->
-      <div>
-        <h3 class="font-semibold text-lg">Suivez-nous</h3>
-        <div class="flex justify-center md:justify-start space-x-4">
-          <a
-            href="https://www.instagram.com/kaeliaformacoach/"
-            target="_blank"
-            aria-label="Instagram"
-            class="hover:opacity-80"
-          >
-            <img
-              src="/images/footer/icon-instagram.svg"
-              alt="Instagram"
-              class="h-6 w-6"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/kaelia-formacoach/"
-            target="_blank"
-            aria-label="LinkedIn"
-            class="hover:opacity-80"
-          >
-            <img
-              src="/images/footer/icon-linkedin.svg"
-              alt="LinkedIn"
-              class="h-6 w-6"
-            />
-          </a>
+        <div class="text-center md:text-left">
+          <p class="font-semibold text-lg">SAS KAELIA FORMA’COACH</p>
+          <p>198 rue des amis de l’industrie,<br />42590 NEULISE, France</p>
+        </div>
+        <div
+          class="flex items-center justify-center md:justify-start space-x-4 mt-4"
+        >
+          <img
+            src="/images/footer/logo-qualiopi.png"
+            alt="Certification Qualiopi"
+            class="h-20 sm:h-24 w-auto"
+          />
+          <p class="text-sm text-center md:text-left">
+            La certification qualité a été délivrée au titre de la catégorie
+            d'action suivante :
+            <br />
+            <span class="text-red-600">ACTIONS DE FORMATION</span>
+          </p>
         </div>
       </div>
-      <!-- Contact -->
-      <div>
-        <h3 class="font-semibold text-lg">Contactez-nous</h3>
-        <p class="text-md">
-          Email : <a
-            href="mailto:contact@kaelia-formacoach.com"
-            class="hover:underline text-md">contact@kaelia-formacoach.com</a
-          >
-        </p>
-        <p class="text-md">
-          Téléphone : <a
-            href="tel:+33123456789"
-            class="hover:underline text-md"
-          >
-            +33 7 63 77 31 38</a
-          >
-        </p>
+
+      <!-- Colonne droite divisée en 4 sections, placée sur le reste de l’espace -->
+      <div
+        class="col-span-3 flex flex-wrap justify-evenly items-start mt-8 md:mt-0"
+      >
+        <!-- Navigation -->
+        <div class="space-y-2">
+          <h3 class="font-semibold text-lg">Navigation</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="/formations/nos-formations" class="hover:underline"
+                >Nos formations</a>
+            </li>
+            <li>
+              <a href="/formations/sur-mesure" class="hover:underline"
+                >Sur Mesure</a>
+            </li>
+            <li>
+              <a href="/Financement" class="hover:underline">Financement</a>
+            </li>
+            <li>
+              <a href="/inside-kaelia" class="hover:underline">Inside Kaelia</a>
+            </li>
+            <li><a href="/le-klub" class="hover:underline">Le Klub</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+            <li>
+              <a href="/contact" class="hover:underline">Nous rejoindre</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Informations Légales -->
+        <div class="space-y-2">
+          <h3 class="font-semibold text-lg">Informations Légales</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="/mentions-legales" class="hover:underline"
+                >Mentions légales</a>
+            </li>
+            <li>
+              <a href="/conditions-generales" class="hover:underline"
+                >Conditions générales</a>
+            </li>
+            <li>
+              <a href="/politique-confidentialite" class="hover:underline"
+                >Politique de confidentialité</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Suivez-nous -->
+        <div class="space-y-2">
+          <h3 class="font-semibold text-lg">Suivez-nous</h3>
+          <div class="flex space-x-4">
+            <a
+              href="https://www.instagram.com/kaeliaformacoach/"
+              target="_blank"
+              aria-label="Instagram"
+              class="hover:opacity-80"
+            >
+              <img
+                src="/images/footer/icon-instagram.svg"
+                alt="Instagram"
+                class="h-6 w-6"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/kaelia-formacoach/"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="hover:opacity-80"
+            >
+              <img
+                src="/images/footer/icon-linkedin.svg"
+                alt="LinkedIn"
+                class="h-6 w-6"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Contactez-nous -->
+        <div class="space-y-2">
+          <h3 class="font-semibold text-lg">Contactez-nous</h3>
+          <p class="text-md">
+            Email :
+            <a
+              href="mailto:contact@kaelia-formacoach.com"
+              class="hover:underline text-md"
+            >
+              contact@kaelia-formacoach.com
+            </a>
+          </p>
+          <p class="text-md">
+            Téléphone :
+            <a href="tel:+33763773138" class="hover:underline text-md">
+              +33 7 63 77 31 38
+            </a>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Section Copyright -->
-  <div class="border-t border-gray-400 mt-8 pt-4 text-center text-sm">
-    <p>© 2025 – KAELIA FORMA’COACH. Tous droits réservés.</p>
+    <!-- Ligne de séparation et copyright -->
+    <div class="border-t border-gray-400 mt-8 pt-4 text-center text-sm">
+      <p>© 2025 – KAELIA FORMA’COACH. Tous droits réservés.</p>
+    </div>
   </div>
 </footer>
