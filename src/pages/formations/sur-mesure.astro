@@ -14,15 +14,23 @@ import Layout from "../../layouts/Layout.astro";
         Construisez votre formation sur-mesure
       </h1>
       <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto drop-shadow-md">
-        Glissez et déposez les modules de formation pour composer le programme
-        qui répond parfaitement à vos besoins.
+        Chez Kaelia, notre force réside dans la construction de formations sur mesure,
+adaptées à vos besoins spécifiques. Nos formations sont conçues en tenant compte de vos
+enjeux et de vos objectifs, afin de proposer des solutions qui répondent pleinement à vos
+attentes. Chaque programme est pensé et élaboré pour garantir une montée en compétences
+ciblée et efficace. Avec Kaelia, bénéficiez d’une approche personnalisée et d’un
+accompagnement dédié pour des résultats concrets et durables.
       </p>
+    <br>
       <a
-        href="#customizer"
-        class="mt-8 inline-block bg-purple-700 hover:bg-purple-800 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105"
-      >
-        Commencez maintenant
-      </a>
+          href="#customizer"
+          class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
+        >
+          <span>Commencez maintenant</span>
+          <span class="ml-2 group-hover:translate-x-1 transition-transform"
+            >→</span
+          >
+        </a>
     </div>
   </section>
 
@@ -30,14 +38,14 @@ import Layout from "../../layouts/Layout.astro";
   <section id="customizer" class="bg-white py-16">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">
-        Créez votre programme personnalisé
+        Créez votre programme de formation personnalisé
       </h2>
 
       <div class="flex flex-col md:flex-row items-center gap-8">
         <!-- Modules disponibles -->
         <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-700 mb-4">
-            Modules disponibles
+          <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">
+            Choix du ou des modules
           </h3>
           <ul
             id="modules-list"
@@ -51,7 +59,9 @@ import Layout from "../../layouts/Layout.astro";
             >
               <h4 class="text-lg font-bold">Module 1: Juridique</h4>
               <p class="text-sm text-gray-600">
-                Apprenez à gérer efficacement vos projets de A à Z.
+                Kaelia propose des offres de formation dédiées aux besoins juridiques des
+dirigeants, entreprises et entrepreneurs. Pour vous protéger, protéger votre entreprise
+et bonifier le développement de votre business.
               </p>
             </li>
             <li
@@ -63,7 +73,8 @@ import Layout from "../../layouts/Layout.astro";
                 Module 2: RSE
               </h4>
               <p class="text-sm text-gray-600">
-                Optimisez la collaboration entre vos équipes.
+                Kaelia propose des offres de formation dédiées aux besoins sociétales et
+environnementales des dirigeants, entreprises et entrepreneurs
               </p>
             </li>
             <li
@@ -73,7 +84,10 @@ import Layout from "../../layouts/Layout.astro";
             >
               <h4 class="text-lg font-bold">Module 3: RH</h4>
               <p class="text-sm text-gray-600">
-                Développez vos compétences en vente et en négociation.
+                Kaelia propose des offres de formation en ressources humaines visant à
+développer les compétences nécessaires pour gérer efficacement le capital humain
+d’une organisation. Elles abordent des thématiques clés telles que le recrutement, la
+gestion des talents, le dialogue social et la conformité réglementaire.
               </p>
             </li>
             <li
@@ -83,7 +97,10 @@ import Layout from "../../layouts/Layout.astro";
             >
               <h4 class="text-lg font-bold">Module 4: Stratégie d’entreprise</h4>
               <p class="text-sm text-gray-600">
-                Développez vos compétences en vente et en négociation.
+                Kaelia propose des offres de formation qui abordent des
+thématiques telles que la gestion de projet, l’innovation ou la prise de décision
+stratégique. Ces formations s’adressent aux dirigeants, managers et professionnels
+souhaitant optimiser leur performance et celle de leur structure.
               </p>
             </li>
             <li
@@ -93,7 +110,8 @@ import Layout from "../../layouts/Layout.astro";
             >
               <h4 class="text-lg font-bold">Module 5: Numérique</h4>
               <p class="text-sm text-gray-600">
-                Développez vos compétences en vente et en négociation.
+                Kaelia propose des offres de formation qui englobent digital,
+communication et informatique
               </p>
             </li>
           </ul>
@@ -103,9 +121,6 @@ import Layout from "../../layouts/Layout.astro";
         <div
           class="flex flex-col items-center justify-center text-gray-700 gap-2"
         >
-          <p class="text-lg font-semibold text-center">
-            Glissez vos modules ici
-          </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-12 w-12 text-purple-500 animate-bounce"
@@ -123,22 +138,22 @@ import Layout from "../../layouts/Layout.astro";
 
         <!-- Modules sélectionnés -->
         <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-700 mb-4">
-            Votre programme
+          <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">
+            Mon programme de formation personnalisé
           </h3>
           <ul
             id="selected-list"
             class="min-h-[200px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg"
           >
             <li class="text-gray-500 italic">
-              Glissez ici vos modules sélectionnés...
+              Glissez le ou les modules de formation sélectionné(s)
             </li>
           </ul>
           <button
             id="submit-program"
             class="mt-6 bg-purple-700 hover:bg-purple-800 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 w-full"
           >
-            Valider votre programme
+          Valider mon programme de formation
           </button>
         </div>
       </div>

@@ -5,14 +5,12 @@ import Layout from "../../layouts/Layout.astro";
 <Layout>
   <!-- Header Section -->
   <section class="text-center py-10">
-    <h1 class="text-4xl font-bold">CATALOGUE DE FORMATION</h1>
+    <h1 class="text-4xl font-bold">Notre catalogue de formation</h1>
     <p class="text-gray-500 mt-2">
-      Explorez nos formations personnalisées en <strong>informatique</strong>, <strong
-        >RSE</strong
-      >, <strong>juridique</strong>, <strong>entrepreneuriat</strong> et <strong
-        >management</strong
-      >, éligibles au <strong>CPF</strong>, conçues pour répondre à vos besoins
-      professionnels et accompagner votre parcours de carrière.
+      KAELIA propose des offres de formations dans quatre domaines clés : juridique, RSE,
+numérique, Stratégie d’entreprise. Nos programmes allient expertise et pragmatisme pour
+répondre aux besoins actuels et accompagner durablement le développement des
+compétences.
     </p>
 
     <!-- Category Buttons -->
@@ -25,9 +23,9 @@ import Layout from "../../layouts/Layout.astro";
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
-        data-category="informatique"
+        data-category="Numérique"
       >
-        Informatique
+        Numérique
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
@@ -43,9 +41,9 @@ import Layout from "../../layouts/Layout.astro";
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
-        data-category="entreprenariat"
+        data-category="Stratégie-d’entreprise"
       >
-        Entreprenariat
+        Stratégie d’entreprise
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
@@ -61,8 +59,8 @@ import Layout from "../../layouts/Layout.astro";
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="course-list">
       <!-- Formation 1 -->
       <div
-        class="course-card juridique entreprenariat flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
-        data-category="juridique entreprenariat"
+        class="course-card juridique Stratégie-d’entreprise flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="juridique Stratégie-d’entreprise"
       >
         <img
           class="object-cover w-48 h-48 rounded-l-lg"
@@ -73,7 +71,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="p-4 flex flex-col justify-between">
           <div>
             <h5 class="text-2xl font-bold">
-              <span class="text-purple-900">
+              <span class="text-purple-600">
                 Aspects juridiques de la création et de la reprise d'entreprise
               </span>
               : Droit et entrepreneuriat
@@ -113,7 +111,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="p-4 flex flex-col justify-between">
           <div>
             <h5 class="text-2xl font-bold">
-              Règles générales du <span class="text-purple-900"
+              Règles générales du <span class="text-purple-600"
                 >droit des contrats</span
               >
             </h5>
@@ -151,7 +149,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="p-4 flex flex-col justify-between">
           <div>
             <h5 class="text-2xl font-bold">
-              Améliorer ma <span class="text-purple-900"
+              Améliorer ma <span class="text-purple-600"
                 >santé physique et mentale</span
               > au travail
             </h5>
@@ -191,7 +189,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="p-4 flex flex-col justify-between">
           <div>
             <h5 class="text-2xl font-bold">
-              Ma <span class="text-purple-900">pause santé</span>
+              Ma <span class="text-purple-600">pause santé</span>
             </h5>
             <p class="text-gray-600 mt-2">
               90€ HT/personne (minimum 3 personnes)
@@ -215,8 +213,8 @@ import Layout from "../../layouts/Layout.astro";
 
       <!-- Formation 5 -->
       <div
-        class="course-card informatique flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
-        data-category="informatique"
+        class="course-card Numérique flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+        data-category="Numérique"
       >
         <img
           class="object-cover w-48 h-48 rounded-l-lg"
@@ -227,7 +225,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="p-4 flex flex-col justify-between">
           <div>
             <h5 class="text-2xl font-bold">
-              Être <span class="text-purple-900">visible</span> sur le net
+              Être <span class="text-purple-600">visible</span> sur le net
             </h5>
             <p class="text-gray-600 mt-2">À partir de 600€ HT/personne</p>
             <p class="text-gray-700 mt-4">
@@ -253,7 +251,7 @@ import Layout from "../../layouts/Layout.astro";
       <!-- Formation 6 -->
       <div
         class="course-card rse flex flex-row bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
-        data-category="entreprenariat"
+        data-category="Stratégie-d’entreprise"
       >
         <img
           class="object-cover w-48 h-48 rounded-l-lg"
