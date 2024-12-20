@@ -13,33 +13,40 @@ import Layout from "../../layouts/Layout.astro";
       <h1 class="text-6xl md:text-7xl font-bold drop-shadow-lg">
         Construisez votre formation sur-mesure
       </h1>
-      <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto drop-shadow-md">
-        Chez Kaelia, notre force réside dans la construction de formations sur mesure,
-adaptées à vos besoins spécifiques. Nos formations sont conçues en tenant compte de vos
-enjeux et de vos objectifs, afin de proposer des solutions qui répondent pleinement à vos
-attentes. Chaque programme est pensé et élaboré pour garantir une montée en compétences
-ciblée et efficace. Avec Kaelia, bénéficiez d’une approche personnalisée et d’un
-accompagnement dédié pour des résultats concrets et durables.
-      </p>
-    <br>
+      <!-- Le paragraphe a été supprimé de cette section -->
+      <br />
       <a
-          href="#customizer"
-          class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
+        href="#customizer"
+        class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
+      >
+        <span>Commencez maintenant</span>
+        <span class="ml-2 group-hover:translate-x-1 transition-transform"
+          >→</span
         >
-          <span>Commencez maintenant</span>
-          <span class="ml-2 group-hover:translate-x-1 transition-transform"
-            >→</span
-          >
-        </a>
+      </a>
     </div>
   </section>
 
   <!-- Drag-and-Drop Section -->
   <section id="customizer" class="bg-white py-16">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">
         Créez votre programme de formation personnalisé
       </h2>
+
+      <!-- Ajout du paragraphe souhaité -->
+      <div class="mb-8 text-center px-4">
+        <p class="text-xl md:text-2xl text-gray-800 max-w-4xl mx-auto">
+          Chez Kaelia, notre force réside dans la construction de formations sur
+          mesure, adaptées à vos besoins spécifiques. Nos formations sont
+          conçues en tenant compte de vos enjeux et de vos objectifs, afin de
+          proposer des solutions qui répondent pleinement à vos attentes. Chaque
+          programme est pensé et élaboré pour garantir une montée en compétences
+          ciblée et efficace. Avec Kaelia, bénéficiez d’une approche
+          personnalisée et d’un accompagnement dédié pour des résultats concrets
+          et durables.
+        </p>
+      </div>
 
       <div class="flex flex-col md:flex-row items-center gap-8">
         <!-- Modules disponibles -->
@@ -59,9 +66,10 @@ accompagnement dédié pour des résultats concrets et durables.
             >
               <h4 class="text-lg font-bold">Module 1: Juridique</h4>
               <p class="text-sm text-gray-600">
-                Kaelia propose des offres de formation dédiées aux besoins juridiques des
-dirigeants, entreprises et entrepreneurs. Pour vous protéger, protéger votre entreprise
-et bonifier le développement de votre business.
+                Kaelia propose des offres de formation dédiées aux besoins
+                juridiques des dirigeants, entreprises et entrepreneurs. Pour
+                vous protéger, protéger votre entreprise et bonifier le
+                développement de votre business.
               </p>
             </li>
             <li
@@ -69,12 +77,11 @@ et bonifier le développement de votre business.
               draggable="true"
               data-id="module-2"
             >
-              <h4 class="text-lg font-bold">
-                Module 2: RSE
-              </h4>
+              <h4 class="text-lg font-bold">Module 2: RSE</h4>
               <p class="text-sm text-gray-600">
-                Kaelia propose des offres de formation dédiées aux besoins sociétales et
-environnementales des dirigeants, entreprises et entrepreneurs
+                Kaelia propose des offres de formation dédiées aux besoins
+                sociétales et environnementales des dirigeants, entreprises et
+                entrepreneurs
               </p>
             </li>
             <li
@@ -84,10 +91,12 @@ environnementales des dirigeants, entreprises et entrepreneurs
             >
               <h4 class="text-lg font-bold">Module 3: RH</h4>
               <p class="text-sm text-gray-600">
-                Kaelia propose des offres de formation en ressources humaines visant à
-développer les compétences nécessaires pour gérer efficacement le capital humain
-d’une organisation. Elles abordent des thématiques clés telles que le recrutement, la
-gestion des talents, le dialogue social et la conformité réglementaire.
+                Kaelia propose des offres de formation en ressources humaines
+                visant à développer les compétences nécessaires pour gérer
+                efficacement le capital humain d’une organisation. Elles
+                abordent des thématiques clés telles que le recrutement, la
+                gestion des talents, le dialogue social et la conformité
+                réglementaire.
               </p>
             </li>
             <li
@@ -95,12 +104,15 @@ gestion des talents, le dialogue social et la conformité réglementaire.
               draggable="true"
               data-id="module-4"
             >
-              <h4 class="text-lg font-bold">Module 4: Stratégie d’entreprise</h4>
+              <h4 class="text-lg font-bold">
+                Module 4: Stratégie d’entreprise
+              </h4>
               <p class="text-sm text-gray-600">
                 Kaelia propose des offres de formation qui abordent des
-thématiques telles que la gestion de projet, l’innovation ou la prise de décision
-stratégique. Ces formations s’adressent aux dirigeants, managers et professionnels
-souhaitant optimiser leur performance et celle de leur structure.
+                thématiques telles que la gestion de projet, l’innovation ou la
+                prise de décision stratégique. Ces formations s’adressent aux
+                dirigeants, managers et professionnels souhaitant optimiser leur
+                performance et celle de leur structure.
               </p>
             </li>
             <li
@@ -111,7 +123,7 @@ souhaitant optimiser leur performance et celle de leur structure.
               <h4 class="text-lg font-bold">Module 5: Numérique</h4>
               <p class="text-sm text-gray-600">
                 Kaelia propose des offres de formation qui englobent digital,
-communication et informatique
+                communication et informatique
               </p>
             </li>
           </ul>
@@ -153,7 +165,7 @@ communication et informatique
             id="submit-program"
             class="mt-6 bg-purple-700 hover:bg-purple-800 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 w-full"
           >
-          Valider mon programme de formation
+            Valider mon programme de formation
           </button>
         </div>
       </div>

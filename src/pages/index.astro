@@ -17,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
         >
           Formation et Coaching sur-mesure
         </h1>
-        <p
+        <!-- <p
           class="text-xl md:text-xl lg:text-xl max-w-3xl mx-auto mb-6 animate-intro drop-shadow-md text-justify"
         >
         Chez Kaelia, l’humain et l’excellence professionnelle sont au cœur de notre démarche.
@@ -39,7 +39,7 @@ import Layout from "../layouts/Layout.astro";
          
         
         Élevez votre carrière avec Kaelia, et aidez votre entreprise à passer un cap pour réussir dans un monde en constante évolution.
-        </p>
+        </p> -->
         <a
           href="/contact"
           class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
@@ -61,9 +61,33 @@ import Layout from "../layouts/Layout.astro";
     >
       <div class="container mx-auto">
         <h2 class="text-5xl md:text-6xl font-bold mb-10 drop-shadow-md">
-          Pourquoi choisir <span class="text-purple-600">Kaelia</span> ?
+          Chez <span class="text-purple-600">Kaelia</span>, l'humain et l'excellence professionnelle sont au coeur de notre démarche.
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 mt-10">
+          <div class="text-center">
+            <h3 class="text-xl md:text-3xl font-semibold text-purple-700 mb-2">
+              Un accompagnement personnalisé
+            </h3>
+            <p class="text-base md:text-lg text-gray-700">
+              Votre projet est unique, et notre accompagnement l’est tout
+              autant. Nous vous soutenons à chaque étape, en
+              adaptant le contenu et le rythme pour répondre à vos
+              attentes. De l'évaluation de vos besoins jusqu’à la
+              validation de vos acquis, vous bénéficiez d’un suivi personnalisé.
+            </p>
+          </div>
+          <div class="text-center">
+            <h3 class="text-xl md:text-3xl font-semibold text-purple-700 mb-2">
+              Des experts à votre écoute
+            </h3>
+            <p class="text-base md:text-lg text-gray-700">
+              Notre équipe est composée de professionnels qualifiés
+              et passionnés par le développement des compétences. Grâce à leur
+              expertise pointue dans des domaines variés, ils vous guident avec
+              attention et vous apportent des solutions adaptées à votre
+              parcours et à vos défis professionnels.
+            </p>
+          </div>
           <div class="text-center">
             <h3 class="text-xl md:text-3xl font-semibold text-purple-700 mb-2">
               L'humain au cœur de nos actions
@@ -74,31 +98,6 @@ import Layout from "../layouts/Layout.astro";
               besoins et vos aspirations, pour créer des relations durables et
               vous accompagner efficacement vers la réussite de vos objectifs
               professionnels.
-            </p>
-          </div>
-          <div class="text-center">
-            <h3 class="text-xl md:text-3xl font-semibold text-purple-700 mb-2">
-              Des experts à votre écoute
-            </h3>
-            <p class="text-base md:text-lg text-gray-700">
-              Chez Kaelia, notre équipe est composée de professionnels qualifiés
-              et passionnés par le développement des compétences. Grâce à leur
-              expertise pointue dans des domaines variés, ils vous guident avec
-              attention et vous apportent des solutions adaptées à votre
-              parcours et à vos défis professionnels.
-            </p>
-          </div>
-          <div class="text-center">
-            <h3 class="text-xl md:text-3xl font-semibold text-purple-700 mb-2">
-              Un accompagnement personnalisé
-            </h3>
-            <p class="text-base md:text-lg text-gray-700">
-              Votre projet est unique, et notre accompagnement l’est tout
-              autant. Nous vous soutenons à chaque étape de votre formation, en
-              adaptant le contenu et le rythme pour répondre précisément à vos
-              attentes. De la première évaluation de vos besoins jusqu’à la
-              validation de vos acquis, vous bénéficiez d’un suivi personnalisé
-              et constant.
             </p>
           </div>
         </div>
@@ -121,14 +120,15 @@ import Layout from "../layouts/Layout.astro";
     >
       <div class="container mx-auto">
         <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          Les 4 étapes de notre <span class="text-black">accompagnement</span>
+          Les étapes de notre accompagnement
         </h2>
         <p class="text-lg md:text-xl mb-10 drop-shadow-md">
-          Chez Kaelia Forma'Coach, nous rendons la formation accessible à tous
-          grâce au Compte Personnel de Formation (CPF). Ce dispositif vous
+          Chez Kaelia Forma'Coach, nous rendons la formation accessible à tous.
+          Des solutions de financement existe (OPCO, FIF PL, CPF ...) : Nous vous accompagnont.
+          <!-- grâce aux aides publiques (OPCO, FIF PL ...) et au Compte Personnel de Formation (CPF). Ce dispositif vous
           permet de financer votre parcours d’apprentissage sans frais
           supplémentaires, afin de développer vos compétences tout en respectant
-          vos objectifs professionnels.
+          vos objectifs professionnels. -->
         </p>
         <div class="flex justify-center items-center mb-12">
           <div class="w-1/4 border-t border-white"></div>
@@ -338,8 +338,10 @@ import Layout from "../layouts/Layout.astro";
               "Ayant effectué 3 formations autour de la création d'entreprise, je recommande vivement KAELIA FORMA'COACH !
               Une équipe à l'écoute, bienveillante, professionnelle et avec des compétences très variées.
               Si vous recherchez une formation avec de bons intervenants, des supports pédagogiques pointus, et tout ça dans une bonne humeur, n'hésitez pas !"
+
             </p>
-            <p class="font-bold">Jerôme Monteuil</p>
+            <p class="font-bold">Jerôme Monteil <br>
+              Chef d'entreprise MJ participations</p>
           </div>
 
           <!-- Témoignage 2 -->
@@ -348,7 +350,8 @@ import Layout from "../layouts/Layout.astro";
               "Je remercie toute l'équipe kaelia pour les formations, tout en utilisant mon CPF. Des formations délivrées par des avocats afin d'élargir mes compétences en matière sociale et juridique.
               a très vite"
             </p>
-            <p class="font-bold">Florence Rebrond</p>
+            <p class="font-bold">Florence Rebrond<br>
+              Agent general AXA</p>
           </div>
 
           <!-- Témoignage 3 -->
@@ -356,7 +359,8 @@ import Layout from "../layouts/Layout.astro";
             <p class="text-gray-700 mb-4">
               "Merci à Kaelia Forma'Coach ! Une excellente expérience de formation que je recommande vivement 🙂"
             </p>
-            <p class="font-bold">Sophie Launay</p>
+            <p class="font-bold">Sophie Launay<br>
+             Responssable Communication HARVEST</p>
           </div>
         </div>
         <!-- Fin de la section des témoignages -->
