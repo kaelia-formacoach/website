@@ -3,45 +3,30 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="bg-gradient-to-r from-blue-800 to-purple-600 px-6 py-12 w-full">
-    <div class="w-full flex flex-col justify-center items-center text-center">
-      <h2 class="text-white sm:text-4xl text-3xl font-bold mb-4">
+  <!-- Section d'en-tête pleine écran avec image de fond -->
+  <div
+    class="relative h-screen w-full bg-cover bg-center"
+    style="background-image: url('/images/le-klub/photo-de-fond.jpg');"
+  >
+    <!-- Couche semi-transparente pour améliorer la lisibilité du texte -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Contenu centré -->
+    <div
+      class="relative z-10 flex flex-col justify-center items-center text-center h-full px-6"
+    >
+      <h1 class="text-white text-5xl sm:text-6xl font-bold mb-4">Le Klub</h1>
+      <p class="text-white sm:text-xl text-md max-w-3xl mx-auto">
         Des professionnels qualifiés pour vous accompagner dans votre projet
-      </h2>
-      <p class="text-white sm:text-xl text-center mb-8">
-        Découvrez une équipe de formateurs passionnés et expérimentés, prêts à
-        vous guider vers l'excellence. Chez Kaelia, chaque formateur est un
-        expert dans son domaine, engagé à vous offrir des formations de qualité
-        adaptées à vos besoins et à vos objectifs. Faites le choix d’un
-        accompagnement personnalisé pour développer vos compétences et atteindre
-        vos ambitions.
       </p>
-      <a
-        href="/contact"
-        class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 drop-shadow-lg transform hover:scale-105"
-      >
-        <span>Demandez un devis</span>
-        <span class="ml-2 group-hover:translate-x-1 transition-transform"
-          >→</span
-        >
-      </a>
     </div>
   </div>
 
   <div class="bg-white py-12 px-6">
-    <!-- Section Title -->
-    <div class="text-center mb-8">
-      <h2 class="text-2xl font-bold text-gray-900">Le Klub</h2>
-      <p class="text-gray-700 mt-2">
-        Utilisez les filtres pour en découvrir davantage sur l'équipe qui vous
-        accompagnera tout au long de votre apprentissage
-      </p>
-    </div>
-
     <!-- Filters Buttons -->
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
       <button
-        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none active-button"
         data-category="all"
       >
         Tous
@@ -77,15 +62,15 @@ import Layout from "../layouts/Layout.astro";
         Management
       </button>
       <button
-        data-category="team"
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
+        data-category="team"
       >
         Équipe pédagogique
       </button>
     </div>
 
     <!-- Ligne avec carré de couleur différente -->
-    <div class="flex justify-center items-center mb-12 mt-12">
+    <div class="flex justify-center items-center mb-12">
       <div class="w-1/4 border-t border-black"></div>
       <div class="mx-2 h-4 w-4 bg-purple-600"></div>
       <div class="w-1/4 border-t border-black"></div>
@@ -94,10 +79,10 @@ import Layout from "../layouts/Layout.astro";
     <!-- Trainers Cards Section -->
     <section class="bg-white py-12">
       <div
-        class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"
         id="trainer-list"
       >
-        <!-- Trainer Card 1 -->
+        <!-- Cartes Formateurs existants -->
         <div
           class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
           data-category="Juridique"
@@ -116,7 +101,7 @@ import Layout from "../layouts/Layout.astro";
             <span class="text-sm text-cyan-400">Juridique</span>
           </div>
         </div>
-        <!-- Trainer Card 2 -->
+
         <div
           class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
           data-category="RSE"
@@ -136,7 +121,7 @@ import Layout from "../layouts/Layout.astro";
             <span class="text-sm text-purple-400">RSE</span>
           </div>
         </div>
-        <!-- Trainer Card 3 -->
+
         <div
           class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
           data-category="RSE Coaching"
@@ -156,7 +141,7 @@ import Layout from "../layouts/Layout.astro";
             <span class="text-sm text-purple-400">RSE</span>
           </div>
         </div>
-        <!-- Trainer Card 4 -->
+
         <div
           class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
           data-category="Informatique"
@@ -175,187 +160,127 @@ import Layout from "../layouts/Layout.astro";
             <span class="text-sm text-blue-400">Informatique</span>
           </div>
         </div>
+
+        <!-- Équipe pédagogique (catégorie "team") -->
+        <div
+          class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
+          data-category="team"
+        >
+          <img
+            src=""
+            loading="lazy"
+            alt="Martin BARRE"
+            class="w-full h-full object-cover aspect-square"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+          >
+            <h3 class="font-bold text-lg">Martin BARRE</h3>
+            <p class="text-sm">Développeur Web</p>
+            <span class="text-sm text-cyan-400">Informatique</span>
+          </div>
+        </div>
+
+        <div
+          class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
+          data-category="team"
+        >
+          <img
+            src=""
+            loading="lazy"
+            alt="Karine WEIL"
+            class="w-full h-full object-cover aspect-square"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+          >
+            <h3 class="font-bold text-lg">Karine WEIL</h3>
+            <p class="text-sm">???</p>
+            <span class="text-sm text-blue-400">???</span>
+          </div>
+        </div>
+
+        <div
+          class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
+          data-category="team"
+        >
+          <img
+            src=""
+            loading="lazy"
+            alt="Killian GUILLEMOIS"
+            class="w-full h-full object-cover aspect-square"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
+          >
+            <h3 class="font-bold text-lg">Killian GUILLEMOIS</h3>
+            <p class="text-sm">???</p>
+            <span class="text-sm text-blue-400">???</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Acteurs Pédagogiques Section -->
-<section
-id="team-section"
-class="bg-gray-50 py-12 hidden"
->
-<div class="container mx-auto px-4">
-  <!-- Title -->
-  <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold text-gray-900">Nos Acteurs Pédagogiques</h2>
-    <p class="text-gray-600 mt-2">
-      Découvrez les experts qui vous accompagnent dans votre parcours de formation.
-    </p>
-  </div>
-
-  <!-- Trainers Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <!-- Trainer Card 1 -->
-    <div
-      class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
-      data-category="Juridique"
-    >
-      <img
-        src="/images/formateurs/tarik.png"
-        loading="lazy"
-        alt="Tarik BACHIR"
-        class="w-full h-full object-cover aspect-square"
-      />
-      <div
-        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
-      >
-        <h3 class="font-bold text-lg">Tarik BACHIR</h3>
-        <p class="text-sm">Avocat au barreau de Lyon</p>
-        <span class="text-sm text-cyan-400">Juridique</span>
-      </div>
-    </div>
-
-    <!-- Trainer Card 2 -->
-    <div
-      class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
-      data-category="RSE"
-    >
-      <img
-        src="/images/formateurs/aurelia.png"
-        loading="lazy"
-        alt="Aurélia SAINT-JEAN"
-        class="w-full h-full object-cover aspect-square"
-      />
-      <div
-        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
-      >
-        <h3 class="font-bold text-lg">Aurélia SAINT-JEAN</h3>
-        <p class="text-sm">Coach certifiée</p>
-        <span class="text-sm text-blue-400">Coaching</span>
-        <span class="text-sm text-purple-400">RSE</span>
-      </div>
-    </div>
-
-    <!-- Trainer Card 3 -->
-    <div
-      class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
-      data-category="RSE Coaching"
-    >
-      <img
-        src="/images/formateurs/hayet.png"
-        loading="lazy"
-        alt="Hayet RHARDA BOUALI"
-        class="w-full h-full object-cover aspect-square"
-      />
-      <div
-        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
-      >
-        <h3 class="font-bold text-lg">Hayet RHARDA BOUALI</h3>
-        <p class="text-sm">Coach certifiée</p>
-        <span class="text-sm text-blue-400">Coaching</span>
-        <span class="text-sm text-purple-400">RSE</span>
-      </div>
-    </div>
-
-    <!-- Trainer Card 4 -->
-    <div
-      class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
-      data-category="Informatique"
-    >
-      <img
-        src="/images/formateurs/cellya.jpg"
-        loading="lazy"
-        alt="Cellya SIROT"
-        class="w-full h-full object-cover aspect-square"
-      />
-      <div
-        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
-      >
-        <h3 class="font-bold text-lg">Cellya SIROT</h3>
-        <p class="text-sm">Développeuse web</p>
-        <span class="text-sm text-blue-400">Informatique</span>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-    <!-- Client-side Script -->
+    <!-- Script personnalisé -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(
-    ".filter-button"
-  ) as NodeListOf<HTMLElement>;
-  const trainers = document.querySelectorAll(
-    ".trainer-card"
-  ) as NodeListOf<HTMLElement>;
-  const teamSection = document.getElementById("team-section") as HTMLElement;
+        const buttons = document.querySelectorAll(
+          ".filter-button"
+        ) as NodeListOf<HTMLButtonElement>;
+        const trainers = document.querySelectorAll(
+          ".trainer-card"
+        ) as NodeListOf<HTMLElement>;
 
-  // Sélectionnez le bouton "Tous" par défaut
-  const defaultButton = document.querySelector(
-    '.filter-button[data-category="all"]'
-  ) as HTMLElement;
+        // Bouton "Tous" par défaut
+        const defaultButton = document.querySelector(
+          '.filter-button[data-category="all"]'
+        ) as HTMLButtonElement | null;
 
-  // Ajoutez la classe active au bouton par défaut
-  if (defaultButton) {
-    defaultButton.classList.add("active-button");
-  }
-
-  // Ajoutez un gestionnaire d'événement à chaque bouton
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const category = button.getAttribute("data-category") ?? "";
-
-      // Retirer la classe active de tous les boutons
-      buttons.forEach((btn) => btn.classList.remove("active-button"));
-
-      // Ajouter la classe active au bouton sélectionné
-      button.classList.add("active-button");
-
-      // Logique pour "Équipe pédagogique"
-      if (category === "team") {
-        // Afficher la section "Équipe pédagogique"
-        if (teamSection) {
-          teamSection.classList.remove("hidden");
-          teamSection.scrollIntoView({ behavior: "smooth" });
+        if (defaultButton) {
+          defaultButton.classList.add("active-button");
         }
 
-        // Masquer toutes les autres cartes
-        trainers.forEach((trainer) => {
-          trainer.style.display = "none";
-        });
-      } else {
-        // Masquer la section "Équipe pédagogique"
-        if (teamSection) {
-          teamSection.classList.add("hidden");
+        function filterTrainers(category: string): void {
+          trainers.forEach((trainer) => {
+            const trainerCategories =
+              trainer.getAttribute("data-category")?.split(" ") ?? [];
+
+            if (category === "all") {
+              // Afficher tous les formateurs sauf la catégorie "team"
+              if (trainerCategories.includes("team")) {
+                trainer.style.display = "none";
+              } else {
+                trainer.style.display = "block";
+              }
+            } else {
+              // Affichage normal pour les autres catégories
+              trainer.style.display = trainerCategories.includes(category)
+                ? "block"
+                : "none";
+            }
+          });
         }
 
-        // Filtrer les formateurs pour les autres catégories
-        trainers.forEach((trainer) => {
-          const trainerCategories =
-            trainer.getAttribute("data-category")?.split(" ") ?? [];
-          trainer.style.display =
-            category === "all" || trainerCategories.includes(category)
-              ? "block"
-              : "none";
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category") ?? "";
+
+            // Retirer la classe active de tous les boutons
+            buttons.forEach((btn) => btn.classList.remove("active-button"));
+
+            // Ajouter la classe active au bouton cliqué
+            button.classList.add("active-button");
+
+            // Filtrer
+            filterTrainers(category);
+          });
         });
-      }
-    });
-  });
 
-  // Afficher tous les formateurs par défaut
-  trainers.forEach((trainer) => {
-    trainer.style.display = "block";
-  });
-
-  // Masquer la section "Équipe pédagogique" par défaut
-  if (teamSection) {
-    teamSection.classList.add("hidden");
-  }
-});
-
+        // Afficher les formateurs par défaut (sans l'équipe pédagogique)
+        filterTrainers("all");
+      });
     </script>
 
-    <!-- Styles pour les boutons -->
     <style>
       /* Style des boutons par défaut */
       .filter-button {
@@ -363,13 +288,9 @@ class="bg-gray-50 py-12 hidden"
       }
       /* Style du bouton actif */
       .active-button {
-        transform: scale(1.1); /* Agrandir légèrement */
-        font-weight: bold; /* Rendre le texte plus gras */
-        background-image: linear-gradient(
-          to right,
-          #8b5cf6,
-          #ec4899
-        ); /* Dégradé différent lorsqu'actif */
+        transform: scale(1.1);
+        font-weight: bold;
+        background-image: linear-gradient(to right, #8b5cf6, #ec4899);
       }
     </style>
   </div>

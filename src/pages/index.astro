@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
     <!-- Section d'introduction avec l'image de fond en full page -->
     <section
       class="full-page-section snap-start snap-always relative bg-cover h-screen flex items-center justify-center section-wave animate-on-scroll"
-      style="background-image: url('/images/index/photo-accueil3.jpg'); background-position: center 20%;"
+      style="background-image: url('/images/index/photo-accueil4.jpg'); background-position: center 20%;"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 text-center text-white px-4">
@@ -46,6 +46,8 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
+  </section>
+  <section>
     <!-- Section "Pourquoi choisir Kaelia ?" en full page -->
     <section
       class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center py-0 bg-white section-angle animate-on-scroll"
@@ -607,4 +609,43 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const sections = gsap.utils.toArray<HTMLElement>(".full-page-section");
+
+// On initialise l'opacité de toutes les sections sauf la première à 0
+sections.forEach((section, i) => {
+  if (i !== 0) {
+    gsap.set(section, { opacity: 0 });
+  }
+});
+
+// Pour chaque section (sauf la première), on crée un ScrollTrigger
+// qui va faire apparaître progressivement la nouvelle section au scroll.
+// En même temps, on fera disparaître l'ancienne section, créant un fondu enchaîné.
+sections.forEach((section, i) => {
+  if (i === 0) return; // La première section est déjà visible
+
+  const prevSection = sections[i - 1];
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 90%", // Ajustez le point de déclenchement selon votre mise en page
+    end: "top 50%",
+    scrub: true,
+    onUpdate: (self: ScrollTrigger) => {
+      const progress = self.progress;
+
+      // progress varie entre 0 et 1 au fur et à mesure que la section entre dans la vue
+      // On fait apparaître la nouvelle section (section) au fur et à mesure :
+      gsap.to(section, { opacity: progress, duration: 0.1, overwrite: true });
+
+      // On fait disparaître l'ancienne section (prevSection) dans le même temps :
+      gsap.to(prevSection, { opacity: 1 - progress, duration: 0.1, overwrite: true });
+    }
+  });
+});
+
 </script>
