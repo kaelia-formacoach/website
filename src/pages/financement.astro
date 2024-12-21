@@ -3,41 +3,85 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="bg-white py-20">
-    <div
-      class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
-    >
-      <!-- Left Section: SVG Image -->
-      <div class="flex justify-center md:justify-start">
+  <section class="bg-gradient-to-b from-purple-50 to-white py-16">
+    <div class="container mx-auto px-6 space-y-12">
+      <!-- Image Section -->
+      <div class="flex justify-center">
         <img
           src="/images/financement/photo-financement2.png"
           loading="lazy"
           alt="Illustration financements"
-          class="max-w-full h-auto"
+          class="w-full max-w-4xl rounded-lg shadow-lg"
         />
       </div>
-  
-      <!-- Right Section: Text Content -->
-      <div class="text-center md:text-left">
-        <h1 class="text-4xl font-bold text-gray-900 mb-6">
+
+      <!-- Main Text Content -->
+      <div class="bg-white p-8 rounded-lg shadow-md text-center">
+        <h1 class="text-4xl font-extrabold text-purple-800 mb-6">
           Des solutions de financement pour tous vos projets de formation
         </h1>
-        <p class="text-lg text-gray-600 mb-8">
-          Profitez d’un accompagnement personnalisé pour financer votre parcours
-          CPF, OPCO, aides régionales... Découvrez toutes les options qui
-          s’offrent à vous pour vous concrétiser vos ambitions professionnelles
-          sans contrainte financière.
+        <p class="text-lg text-gray-700">
+          Chez <strong>KAELIA</strong>, nous sommes convaincus que la formation ne doit pas être freinée par des contraintes financières. C’est pourquoi nous vous accompagnons pour tirer parti des solutions de financement public, comme le <strong>CPF</strong> et les dispositifs des <strong>OPCO</strong>, afin de concrétiser vos projets de montée en compétences.
         </p>
-        <a
-          href="/contact"
-          class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 bg-white rounded-full transition-all duration-500 group hover:bg-purple-800 hover:text-white drop-shadow-lg transform hover:scale-105"
-        >
-          <span>Contactez-nous</span>
-          <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-        </a>
+      </div>
+
+      <!-- Modular Sections -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            Le Compte Personnel de Formation (CPF)
+          </h2>
+          <p class="text-lg text-gray-700 mb-4">
+            Le CPF est une solution simple et accessible pour financer vos formations. Chaque salarié ou demandeur d’emploi cumule des droits à la formation tout au long de sa carrière, qu’il peut utiliser pour développer ses compétences.
+          </p>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Pourquoi utiliser votre CPF avec KAELIA ?
+          </h3>
+          <ul class="list-disc pl-6 text-lg text-gray-700 space-y-2">
+            <li>Formations éligibles au CPF, répondant à vos besoins professionnels.</li>
+            <li>Accompagnement personnalisé pour mobiliser vos droits en toute simplicité.</li>
+            <li>Possibilité de formations en présentiel ou à distance.</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            Les OPCO : votre allié pour financer vos formations professionnelles
+          </h2>
+          <p class="text-lg text-gray-700 mb-4">
+            Les Opérateurs de Compétences (<strong>OPCO</strong>) accompagnent les entreprises dans le financement de la formation de leurs salariés. En tant qu’employeur, vous pouvez mobiliser des fonds pour :
+          </p>
+          <ul class="list-disc pl-6 text-lg text-gray-700 space-y-2">
+            <li>Le Plan de Développement des Compétences (PDC).</li>
+            <li>Les formations obligatoires ou stratégiques pour vos collaborateurs.</li>
+            <li>L’alternance, via les contrats de professionnalisation et d’apprentissage.</li>
+          </ul>
+          <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+            KAELIA s’engage à vos côtés :
+          </h3>
+          <ul class="list-disc pl-6 text-lg text-gray-700 space-y-2">
+            <li>Diagnostic des financements disponibles selon votre secteur et votre OPCO.</li>
+            <li>Aide dans le montage de vos dossiers pour simplifier vos démarches.</li>
+            <li>Formations adaptées aux besoins de votre organisation et de vos équipes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call to Action Section -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <p class="text-lg text-gray-700">
+          <strong>Besoin d’aide pour financer votre formation ?</strong><br />
+          Notre équipe est là pour vous guider à chaque étape : de l’identification du financement à la finalisation de votre dossier.
+        </p>
+        <div class="mt-6">
+          <a
+            href="/contact"
+            class="inline-block font-semibold py-3 px-8 bg-purple-800 text-white rounded-full hover:bg-purple-700 transition-transform transform hover:scale-105"
+          >
+            Contactez-nous
+          </a>
+        </div>
       </div>
     </div>
   </section>
-  
-  
 </Layout>

@@ -13,11 +13,17 @@ import Layout from "../layouts/Layout.astro";
       >
         <h2 class="text-2xl font-semibold mb-4">Contactez-nous</h2>
         <p class="mb-4 text-xl text-justify">
-          Prêt à passer à l’étape suivante ? <br /><br />Contactez notre équipe
-          pour discuter de vos besoins de formation et des options de
-          financement. Kaelia Forma'Coach est votre partenaire pour un
-          apprentissage sur mesure, éligible au CPF, et parfaitement aligné avec
-          vos ambitions.
+          Vous avez une question, besoin d’informations ou souhaitez échanger sur vos projets de formation ?
+          L’équipe KAELIA est à votre écoute pour vous accompagner et vous apporter des réponses
+          personnalisées.
+          <br /><br />
+          <strong>Pourquoi nous contacter ?</strong>
+          <ul class="list-disc pl-6 text-l space-y-2">
+            <li>Obtenir des renseignements sur nos formations.</li>
+            <li>Être accompagné dans vos démarches de financement.</li>
+            <li>Construire un programme de formation sur mesure.</li>
+            <li>Recevoir notre catalogue ou notre planning de formations.</li>
+          </ul>
           <br /><br />
           <span class="font-bold">
             Téléphone : 
@@ -40,7 +46,7 @@ import Layout from "../layouts/Layout.astro";
       <!-- Contact Form -->
       <div class="w-full lg:w-2/3 bg-white p-8 rounded-lg shadow-md border-4 border-purple-800">
         <h2 class="text-3xl font-bold mb-6 text-purple-800">
-          Parlons de votre projet !
+          <strong>KAELIA</strong>, votre partenaire formation, à votre service pour faire de vos projets une réussite.
         </h2>
         <p class="text-gray-600 mb-8">
           Présentez-nous vos besoins en formation, nous vous recontacterons dans
@@ -101,6 +107,24 @@ import Layout from "../layouts/Layout.astro";
               rows="4"
               class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
             ></textarea>
+          </div>
+
+          <!-- Checkbox Ajoutée -->
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                class="h-4 w-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                required
+              />
+            </div>
+            <div class="ml-3 text-sm">
+              <label for="consent" class="font-medium text-gray-700">
+                J'accepte d’être recontacté par KAELIA
+              </label>
+            </div>
           </div>
 
           <div>
