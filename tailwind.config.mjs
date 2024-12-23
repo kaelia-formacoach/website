@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        sans: ["gothic-a1-regular", "sans-serif"],
       },
     },
   },

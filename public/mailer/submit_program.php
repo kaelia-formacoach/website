@@ -13,7 +13,7 @@ $dotenv->load();
 
 // Informations sur le destinataire et le sujet
 $recipient_email = "contact@kaelia-formacoach.com";
-$subject = "Nouvelle demande de programme personnalisé - Kaelia Forma'Coach";
+$subject = "Nouvelle demande de programme personnalisé - Kaelia";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer et nettoyer les données

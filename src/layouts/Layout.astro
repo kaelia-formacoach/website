@@ -8,13 +8,67 @@ const { isHome } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaelia Forma'Coach - L'accompagnement qui donne du sens</title>
+    <title>Kaelia - L'accompagnement qui donne du sens</title>
     <link rel="icon" href="/images/favicon.png" type="image/png" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-    </style>
+      @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      .gothic-a1-thin {
+  font-family: "Gothic A1", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.gothic-a1-extralight {
+  font-family: "Gothic A1", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.gothic-a1-light {
+  font-family: "Gothic A1", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.gothic-a1-regular {
+  font-family: "Gothic A1", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gothic-a1-medium {
+  font-family: "Gothic A1", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.gothic-a1-semibold {
+  font-family: "Gothic A1", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.gothic-a1-bold {
+  font-family: "Gothic A1", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gothic-a1-extrabold {
+  font-family: "Gothic A1", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.gothic-a1-black {
+  font-family: "Gothic A1", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+      </style>
   </head>
-  <body class={`font-roboto ${isHome ? "overflow-hidden" : ""}`}>
+  <body class={`gothic-a1-regular ${isHome ? "overflow-hidden" : ""}`}>
     <!-- Header called here -->
     <Header />
 

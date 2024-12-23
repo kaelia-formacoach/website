@@ -12,7 +12,7 @@ $dotenv->load();
 
 // Informations sur le destinataire et le sujet
 $recipient_email = "contact@kaelia-formacoach.com";
-$subject = "Nouveau message de contact - Kaelia Forma'Coach";
+$subject = "Nouveau message de contact - Kaelia";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_SPECIAL_CHARS);

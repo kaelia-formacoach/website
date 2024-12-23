@@ -1,49 +1,33 @@
-<footer
-  class="relative bg-gradient-to-r from-blue-800 to-purple-600 text-white py-12"
->
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-6 items-start gap-x-6 gap-y-0">
-      <!-- Badge de l'entreprise et nom -->
-      <div class="flex flex-col items-center md:items-start space-y-4">
+<footer class="bg-gradient-to-r from-blue-800 to-purple-600 text-white">
+  <!-- Conteneur principal, positionné en "relative" -->
+  <div class="container mx-auto px-6 relative pt-12 pb-24">
+    <!-- Grille pour les 5 colonnes du footer -->
+    <div class="grid grid-cols-5 items-start gap-x-6 gap-y-0">
+      <!-- Colonne 1 : Logo & adresse -->
+      <div class="flex flex-col items-center md:items-start space-y-4 col-span-5 md:col-span-1">
         <img
           src="/images/footer/badge-kaelia.webp"
           alt="Logo Kaelia"
           class="h-28"
         />
         <div class="text-center md:text-left">
-          <p class="font-semibold text-lg">SAS KAELIA FORMA’COACH</p>
-          <p>198 rue des amis de l’industrie,<br />42590 NEULISE, France</p>
+          <p class="font-semibold text-lg">KAELIA</p>
+          <p>
+            198 rue des amis de l’industrie,<br />
+            42590 NEULISE, France
+          </p>
         </div>
       </div>
 
-      <!-- Certification Qualiopi -->
-      <div class="flex flex-col items-center space-y-4">
-        <img
-          src="/images/footer/logo-qualiopi.png"
-          alt="Certification Qualiopi"
-          class="h-20 sm:h-24 w-auto"
-        />
-        <p class="text-sm text-center">
-          La certification qualité a été délivrée au titre de la catégorie
-          d'action suivante :
-          <br />
-          <span class="text-red-600">ACTIONS DE FORMATION</span>
-        </p>
-      </div>
-
-      <!-- Navigation -->
-      <div class="flex flex-col space-y-4">
+      <!-- Colonne 2 : Navigation -->
+      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
         <h3 class="font-semibold text-lg">Navigation</h3>
         <ul class="space-y-1">
           <li>
-            <a href="/formations/nos-formations" class="hover:underline"
-              >Nos formations</a
-            >
+            <a href="/formations/nos-formations" class="hover:underline">Nos formations</a>
           </li>
           <li>
-            <a href="/formations/sur-mesure" class="hover:underline"
-              >Sur Mesure</a
-            >
+            <a href="/formations/sur-mesure" class="hover:underline">Sur Mesure</a>
           </li>
           <li>
             <a href="/Financement" class="hover:underline">Financement</a>
@@ -51,35 +35,38 @@
           <li>
             <a href="/inside-kaelia" class="hover:underline">Inside Kaelia</a>
           </li>
-          <li><a href="/le-klub" class="hover:underline">Le Klub</a></li>
-          <li><a href="/contact" class="hover:underline">Contact</a></li>
+          <li>
+            <a href="/le-klub" class="hover:underline">Le Klub</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:underline">Contact</a>
+          </li>
           <li>
             <a href="/contact" class="hover:underline">Nous rejoindre</a>
           </li>
         </ul>
       </div>
 
-      <!-- Informations Légales -->
-      <div class="flex flex-col space-y-4">
+      <!-- Colonne 3 : Informations Légales -->
+      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
         <h3 class="font-semibold text-lg">Informations Légales</h3>
         <ul class="space-y-1">
           <li>
-            <a href="/mentions-legales" class="hover:underline"
-              >Mentions légales</a>
+            <a href="/mentions-legales" class="hover:underline">Mentions légales</a>
           </li>
           <li>
-            <a href="/conditions-generales" class="hover:underline"
-              >Conditions générales</a>
+            <a href="/conditions-generales" class="hover:underline">Conditions générales</a>
           </li>
           <li>
             <a href="/politique-confidentialite" class="hover:underline"
-              >Politique de confidentialité</a>
+              >Politique de confidentialité</a
+            >
           </li>
         </ul>
       </div>
 
-      <!-- Suivez-nous -->
-      <div class="flex flex-col space-y-4">
+      <!-- Colonne 4 : Suivez-nous -->
+      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
         <h3 class="font-semibold text-lg">Suivez-nous</h3>
         <div class="flex space-x-4">
           <a
@@ -109,8 +96,8 @@
         </div>
       </div>
 
-      <!-- Contactez-nous -->
-      <div class="flex flex-col space-y-4">
+      <!-- Colonne 5 : Contactez-nous -->
+      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
         <h3 class="font-semibold text-lg">Contactez-nous</h3>
         <p class="text-md">
           Email :
@@ -130,9 +117,26 @@
       </div>
     </div>
 
-    <!-- Ligne de séparation et copyright -->
-    <div class="border-t border-gray-400 mt-8 pt-4 text-center text-sm">
-      <p>© 2025 – KAELIA FORMA’COACH. Tous droits réservés.</p>
+    <!-- Certification Qualiopi ABSOLUE -->
+    <div
+      class="absolute bottom-4 right-6 flex flex-col items-end space-y-2"
+    >
+      <img
+        src="/images/footer/logo-qualiopi.png"
+        alt="Certification Qualiopi"
+        class="h-20 sm:h-24 w-auto"
+      />
+      <p class="text-sm text-right leading-tight">
+        La certification qualité a été délivrée<br />
+        au titre de la catégorie d’action suivante&nbsp;:
+        <br />
+        <span class="text-red-600">ACTIONS DE FORMATION</span>
+      </p>
     </div>
+  </div>
+
+  <!-- Ligne de séparation + Copyright -->
+  <div class="border-t border-gray-400 text-center text-sm py-4 mt-4">
+    <p>© 2025 – KAELIA. Tous droits réservés.</p>
   </div>
 </footer>

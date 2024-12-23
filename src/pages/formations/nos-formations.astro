@@ -5,12 +5,11 @@ import Layout from "../../layouts/Layout.astro";
 <Layout>
   <!-- Header Section -->
   <section class="text-center py-10">
-    <h1 class="text-4xl font-bold">Notre catalogue de formation</h1>
     <p class="text-gray-500 mt-2">
-      KAELIA propose des offres de formations dans quatre domaines clés : juridique, RSE,
-numérique, Stratégie d’entreprise. Nos programmes allient expertise et pragmatisme pour
-répondre aux besoins actuels et accompagner durablement le développement des
-compétences.
+      KAELIA propose des offres de formations dans quatre domaines clés :
+      juridique, RSE, numérique, Stratégie d’entreprise. Nos programmes allient
+      expertise et pragmatisme pour répondre aux besoins actuels et accompagner
+      durablement le développement des compétences.
     </p>
 
     <!-- Category Buttons -->
@@ -18,20 +17,15 @@ compétences.
       <button
         class="filter-button active bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
         data-category="all"
+        aria-label="Afficher toutes les catégories"
       >
-        Tous
-      </button>
-      <button
-        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
-        data-category="Numérique"
-      >
-        Numérique
-      </button>
-      <button
-        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
-        data-category="rse"
-      >
-        RSE
+        <!-- On affiche l'icône de maison -->
+        <img
+          src="/images/index/pictogramme-maison.png"
+          alt="Tous"
+          class="h-7 w-7"
+          aria-hidden="true"
+        />
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
@@ -41,15 +35,27 @@ compétences.
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="rse"
+      >
+        RSE
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
+        data-category="rh"
+      >
+        RH
+      </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
         data-category="Stratégie-d’entreprise"
       >
         Stratégie d’entreprise
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white px-4 py-2 rounded-full focus:outline-none"
-        data-category="management"
+        data-category="Numérique"
       >
-        Management
+        Numérique
       </button>
     </div>
   </section>
@@ -64,7 +70,7 @@ compétences.
       >
         <img
           class="object-cover w-48 h-48 rounded-l-lg"
-          src="/images/formation/droit-et-entreprenariat.jpg"
+          src="/images/formation/test2.jpg"
           loading="lazy"
           alt="Aspects juridiques de la création et de la reprise d'entreprise"
         />
@@ -127,7 +133,6 @@ compétences.
             En savoir plus
           </a>
         </div>
-
       </div>
 
       <!-- Formation 3 -->
@@ -162,7 +167,6 @@ compétences.
             En savoir plus
           </a>
         </div>
-
       </div>
 
       <!-- Formation 4 -->
@@ -193,7 +197,6 @@ compétences.
             En savoir plus
           </a>
         </div>
-       
       </div>
 
       <!-- Formation 5 -->
@@ -226,7 +229,6 @@ compétences.
           </a>
         </div>
         <!-- Ajout du logo CPF agrandi -->
-        
       </div>
 
       <!-- Formation 6 -->
@@ -243,11 +245,10 @@ compétences.
         <div class="p-4 flex flex-col justify-between">
           <div>
             <h5 class="text-2xl font-bold">
-              JE ME LANCE  Accompagnement à la création / reprise d’entreprise ou prise d’une fonction de management (7 formules)
+              JE ME LANCE Accompagnement à la création / reprise d’entreprise ou
+              prise d’une fonction de management (7 formules)
             </h5>
-            <p class="text-gray-600 mt-2">
-              Nous contacter
-            </p>
+            <p class="text-gray-600 mt-2">Nous contacter</p>
             <p class="text-gray-700 mt-4">Je me lance</p>
           </div>
           <a
@@ -281,12 +282,12 @@ compétences.
             <h5 class="text-2xl font-bold">
               Harcèlement moral et sexuel en entreprise
             </h5>
-            <p class="text-gray-600 mt-2">
-              13 900€ TTC / 21 heures (3 jours)
+            <p class="text-gray-600 mt-2">13 900€ TTC / 21 heures (3 jours)</p>
+            <p class="text-gray-700 mt-4">
+              . Les actions de formations dispensées ont pour objectif de
+              sensibiliser et développer les connaissances des salariés sur le
+              harcèlement moral et sexuel en entreprise
             </p>
-            <p class="text-gray-700 mt-4">. Les actions de formations
-              dispensées ont pour objectif de sensibiliser et développer les connaissances des salariés sur le
-              harcèlement moral et sexuel en entreprise</p>
           </div>
           <a
             href="/formations/harcelement-moral-et-sexuel-en-entreprise"
@@ -296,7 +297,6 @@ compétences.
           </a>
         </div>
         <!-- Ajout du logo CPF agrandi -->
-       
       </div>
 
       <!-- Formation 8 -->
@@ -312,12 +312,8 @@ compétences.
         />
         <div class="p-4 flex flex-col justify-between">
           <div>
-            <h5 class="text-2xl font-bold">
-              RH sur mesure
-            </h5>
-            <p class="text-gray-600 mt-2">
-              2500€ / 28 heures
-            </p>
+            <h5 class="text-2xl font-bold">RH sur mesure</h5>
+            <p class="text-gray-600 mt-2">2500€ / 28 heures</p>
             <p class="text-gray-700 mt-4">RH</p>
           </div>
           <a
@@ -328,9 +324,7 @@ compétences.
           </a>
         </div>
         <!-- Ajout du logo CPF agrandi -->
-       
       </div>
-
 
       <!-- Formation 9 -->
       <div
@@ -348,12 +342,11 @@ compétences.
             <h5 class="text-2xl font-bold">
               Prise de parole en public avec impact
             </h5>
-            <p class="text-gray-600 mt-2">
-              1300 € TTC / 14 heures (2 jours)
+            <p class="text-gray-600 mt-2">1300 € TTC / 14 heures (2 jours)</p>
+            <p class="text-gray-700 mt-4">
+              Les actions de formations dispensées ont pour objectif de préparer
+              ces hommes clés à une prise de parole à enjeu en public
             </p>
-            <p class="text-gray-700 mt-4">Les actions de
-              formations dispensées ont pour objectif de préparer ces hommes clés à une prise de parole à enjeu
-              en public</p>
           </div>
           <a
             href="/formations/prise-de-parole-en-public-avec-impact"
@@ -363,123 +356,123 @@ compétences.
           </a>
         </div>
         <!-- Ajout du logo CPF agrandi -->
-       
+      </div>
     </div>
-  </section>
 
-  <!-- Client-side Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons =
-        document.querySelectorAll<HTMLButtonElement>(".filter-button");
-      const courses = document.querySelectorAll<HTMLElement>(".course-card");
+    <!-- Client-side Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons =
+          document.querySelectorAll<HTMLButtonElement>(".filter-button");
+        const courses = document.querySelectorAll<HTMLElement>(".course-card");
 
-      buttons.forEach((button) => {
-        button.addEventListener("click", (event: Event) => {
-          const target = event.currentTarget as HTMLButtonElement | null;
+        buttons.forEach((button) => {
+          button.addEventListener("click", (event: Event) => {
+            const target = event.currentTarget as HTMLButtonElement | null;
 
-          if (!target) {
-            console.warn("Le bouton cliqué est null.");
-            return;
-          }
+            if (!target) {
+              console.warn("Le bouton cliqué est null.");
+              return;
+            }
 
-          const category = target.getAttribute("data-category") || "";
+            const category = target.getAttribute("data-category") || "";
 
-          // Retirer la classe active de tous les boutons
-          buttons.forEach((btn) => btn.classList.remove("active"));
+            // Retirer la classe active de tous les boutons
+            buttons.forEach((btn) => btn.classList.remove("active"));
 
-          // Ajouter la classe active au bouton sélectionné
-          target.classList.add("active");
+            // Ajouter la classe active au bouton sélectionné
+            target.classList.add("active");
 
-          if (category === "all") {
-            // Afficher toutes les cartes
-            courses.forEach((course) => {
-              course.style.display = "flex";
-            });
-          } else {
-            // Masquer toutes les cartes
-            courses.forEach((course) => {
-              course.style.display = "none";
-            });
-
-            // Afficher les cartes correspondant à la catégorie sélectionnée
-            courses.forEach((course) => {
-              const courseCategories =
-                course.getAttribute("data-category")?.split(" ") || [];
-              if (courseCategories.includes(category)) {
+            if (category === "all") {
+              // Afficher toutes les cartes
+              courses.forEach((course) => {
                 course.style.display = "flex";
-              }
-            });
-          }
+              });
+            } else {
+              // Masquer toutes les cartes
+              courses.forEach((course) => {
+                course.style.display = "none";
+              });
+
+              // Afficher les cartes correspondant à la catégorie sélectionnée
+              courses.forEach((course) => {
+                const courseCategories =
+                  course.getAttribute("data-category")?.split(" ") || [];
+                if (courseCategories.includes(category)) {
+                  course.style.display = "flex";
+                }
+              });
+            }
+          });
+        });
+
+        // Afficher toutes les cartes par défaut
+        courses.forEach((course) => {
+          course.style.display = "flex";
         });
       });
+    </script>
 
-      // Afficher toutes les cartes par défaut
-      courses.forEach((course) => {
-        course.style.display = "flex";
-      });
-    });
-  </script>
-
-  <!-- Optional Styles for Active Button -->
-  <style>
-    /* Style des boutons par défaut */
-    .filter-button {
-      transition:
-        transform 0.3s ease,
-        font-weight 0.3s ease;
-    }
-
-    /* Style du bouton actif */
-    .filter-button.active {
-      transform: scale(1.1);
-      font-weight: bold;
-      background-image: linear-gradient(to right, #8b5cf6, #ec4899);
-    }
-
-    /* Ajustements supplémentaires pour les cartes */
-    .course-card img {
-      /* Assurez-vous que les images occupent toute la hauteur disponible */
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .course-card h5 {
-      /* Limiter le nombre de lignes si nécessaire */
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Responsivité pour les petites écrans */
-    @media (max-width: 768px) {
-      .course-card {
-        flex-direction: column;
-        align-items: center;
+    <!-- Optional Styles for Active Button -->
+    <style>
+      /* Style des boutons par défaut */
+      .filter-button {
+        transition:
+          transform 0.3s ease,
+          font-weight 0.3s ease;
       }
 
+      /* Style du bouton actif */
+      .filter-button.active {
+        transform: scale(1.1);
+        font-weight: bold;
+        background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+      }
+
+      /* Ajustements supplémentaires pour les cartes */
       .course-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px 8px 0 0;
+        /* Assurez-vous que les images occupent toute la hauteur disponible */
+        height: 100%;
+        object-fit: cover;
       }
 
-      .course-card div {
-        text-align: center;
+      .course-card h5 {
+        /* Limiter le nombre de lignes si nécessaire */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
-    }
-    .course-card {
-      position: relative;
-    }
 
-    .course-card img[alt="Eligible CPF"] {
-      position: absolute;
-      bottom: 12px; /* Ajustez selon votre besoin */
-      right: 12px; /* Ajustez selon votre besoin */
-      width: 64px; /* Taille agrandie */
-      height: 64px; /* Taille agrandie */
-      object-fit: contain;
-    }
-  </style>
+      /* Responsivité pour les petites écrans */
+      @media (max-width: 768px) {
+        .course-card {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .course-card img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px 8px 0 0;
+        }
+
+        .course-card div {
+          text-align: center;
+        }
+      }
+      .course-card {
+        position: relative;
+      }
+
+      .course-card img[alt="Eligible CPF"] {
+        position: absolute;
+        bottom: 12px; /* Ajustez selon votre besoin */
+        right: 12px; /* Ajustez selon votre besoin */
+        width: 64px; /* Taille agrandie */
+        height: 64px; /* Taille agrandie */
+        object-fit: contain;
+      }
+    </style>
+  </section>
 </Layout>

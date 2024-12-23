@@ -26,22 +26,17 @@ import Layout from "../layouts/Layout.astro";
     <!-- Filters Buttons -->
     <div class="flex flex-wrap justify-center gap-4 mb-8">
       <button
-        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none active-button"
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none active-button flex items-center justify-center"
         data-category="all"
+        aria-label="Afficher toutes les catégories"
       >
-        Tous
-      </button>
-      <button
-        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
-        data-category="Informatique"
-      >
-        Informatique
-      </button>
-      <button
-        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
-        data-category="RSE"
-      >
-        RSE
+        <!-- On affiche l'icône de maison -->
+        <img
+          src="/images/index/pictogramme-maison.png"
+          alt="Tous"
+          class="h-7 w-7"
+          aria-hidden="true"
+        />
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
@@ -51,15 +46,27 @@ import Layout from "../layouts/Layout.astro";
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
-        data-category="Entreprenariat"
+        data-category="RSE"
       >
-        Entreprenariat
+        RSE
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
-        data-category="Management"
+        data-category="RH"
       >
-        Management
+        RH
+      </button>
+      <button
+      class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
+      data-category="Stratégie d’entreprise"
+    >
+      Stratégie d’entreprise
+    </button>
+      <button
+        class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
+        data-category="Numérique"
+      >
+        Numérique
       </button>
       <button
         class="filter-button bg-gradient-to-r from-blue-800 to-purple-600 text-white py-3 px-6 rounded-full focus:outline-none"
@@ -144,7 +151,7 @@ import Layout from "../layouts/Layout.astro";
 
         <div
           class="relative bg-white shadow-md rounded-lg overflow-hidden trainer-card"
-          data-category="Informatique"
+          data-category="Numérique"
         >
           <img
             src="/images/formateurs/cellya.jpg"
@@ -157,7 +164,7 @@ import Layout from "../layouts/Layout.astro";
           >
             <h3 class="font-bold text-lg">Cellya SIROT</h3>
             <p class="text-sm">Développeuse web</p>
-            <span class="text-sm text-blue-400">Informatique</span>
+            <span class="text-sm text-blue-400">Numérique</span>
           </div>
         </div>
 
@@ -171,14 +178,13 @@ import Layout from "../layouts/Layout.astro";
             loading="lazy"
             alt="Martin BARRE"
             class="w-full h-full object-cover object-[center_10%] aspect-square"
-
           />
           <div
             class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent px-4 py-6 text-white"
           >
             <h3 class="font-bold text-lg">Martin BARRE</h3>
             <p class="text-sm">Développeur Web</p>
-            <span class="text-sm text-cyan-400">Informatique</span>
+            <span class="text-sm text-cyan-400">Numérique</span>
           </div>
         </div>
 
