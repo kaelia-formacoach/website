@@ -19,7 +19,7 @@ import Layout from "../../layouts/Layout.astro";
         href="#customizer"
         class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
       >
-        <span>Commencez maintenant</span>
+        <span>Entrez dans l'excellence</span>
         <span class="ml-2 group-hover:translate-x-1 transition-transform"
           >→</span
         >
@@ -50,13 +50,13 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="flex flex-col md:flex-row items-center gap-8">
         <!-- Modules disponibles -->
-        <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">
+        <div class="w-full md:w-1/2 bg-purple-900 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold text-purple-100 mb-4 text-center">
             Choix du ou des modules
           </h3>
           <ul
             id="modules-list"
-            class="min-h-[300px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg"
+            class="min-h-[300px] flex flex-col gap-4 p-4 bg-gray-300 border-2 border-dashed border-gray-300 rounded-lg"
           >
             <!-- Exemple de modules -->
             <li
@@ -81,7 +81,7 @@ import Layout from "../../layouts/Layout.astro";
               <p class="text-sm text-gray-600">
                 Kaelia propose des offres de formation dédiées aux besoins
                 sociétales et environnementales des dirigeants, entreprises et
-                entrepreneurs
+                entrepreneurs.
               </p>
             </li>
             <li
@@ -123,9 +123,19 @@ import Layout from "../../layouts/Layout.astro";
               <h4 class="text-lg font-bold">Module 5: Numérique</h4>
               <p class="text-sm text-gray-600">
                 Kaelia propose des offres de formation qui englobent digital,
-                communication et informatique
+                communication et informatique.
               </p>
             </li>
+            <li
+            class="module-item relative transform transition-transform duration-300 cursor-grab p-4 bg-white border border-gray-300 rounded shadow hover:scale-105"
+            draggable="true"
+            data-id="module-6"
+          >
+            <h4 class="text-lg font-bold">Module 6: Coaching</h4>
+            <p class="text-sm text-gray-600">
+              Kaelia propose une méthode d'accompagnement personnalisé destinée à améliorer les compétences et la performance d'un individu, d'un groupe ou d'une organisation.
+            </p>
+          </li>
           </ul>
         </div>
 
@@ -149,13 +159,13 @@ import Layout from "../../layouts/Layout.astro";
         </div>
 
         <!-- Modules sélectionnés -->
-        <div class="w-full md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-purple-700 mb-4 text-center">
-            Mon programme de formation personnalisé
+        <div class="w-full md:w-1/2 bg-purple-900 p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold text-purple-100 mb-4 text-center">
+            Mon programme personnalisé
           </h3>
           <ul
             id="selected-list"
-            class="min-h-[200px] flex flex-col gap-4 p-4 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg"
+            class="min-h-[200px] flex flex-col gap-4 p-4 bg-gray-300 border-2 border-dashed border-gray-300 rounded-lg"
           >
             <li class="text-gray-500 italic">
               Glissez le ou les modules de formation sélectionné(s)
@@ -163,9 +173,9 @@ import Layout from "../../layouts/Layout.astro";
           </ul>
           <button
             id="submit-program"
-            class="mt-6 bg-purple-700 hover:bg-purple-800 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 w-full"
+            class="mt-6 bg-black hover:bg-gray-500 text-white py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 w-full"
           >
-            Valider mon programme de formation
+            Valider mon programme
           </button>
         </div>
       </div>
