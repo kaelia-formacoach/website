@@ -5,8 +5,11 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <!-- Section d'en-tête pleine écran avec image de fond -->
   <div
-    class="relative h-screen w-full bg-cover bg-center"
-    style="background-image: url('/images/le-klub/photo-de-fond.jpg');"
+    class="relative h-screen w-full bg-cover"
+    style="
+      background-image: url('/images/le-klub/photo-de-fond.jpg');
+      background-position: center 15%;
+    "
   >
     <!-- Couche semi-transparente pour améliorer la lisibilité du texte -->
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
