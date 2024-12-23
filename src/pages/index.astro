@@ -3,65 +3,43 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout isHome={true}>
-  <!-- Conteneur principal avec le scroll snapping -->
-  <div class="smooth-scroll">
-    <!-- Section d'introduction avec l'image de fond en full page -->
+
+  <!-- Conteneur principal SANS scroll snapping -->
+  <!-- Retiré la classe "smooth-scroll" pour ne plus bloquer le scroll -->
+  <div>
+    <!-- Section d'introduction avec l'image de fond -->
     <section
-      class="full-page-section snap-start snap-always relative bg-cover h-screen flex items-center justify-center section-wave animate-on-scroll"
+      class="relative bg-cover min-h-screen flex items-center justify-center section-wave animate-on-scroll"
       style="background-image: url('/images/index/photo-accueil5.jpg'); background-position: center 20%;"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative z-10 text-center text-white px-4">
-        <h1
-          class="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 animate-intro drop-shadow-lg"
-        >
-        Formation & Coaching
-        <br />
-        Sur-mesure
+        <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 animate-intro drop-shadow-lg">
+          Formation & Coaching
+          <br />
+          Sur-mesure
         </h1>
-        <!-- <p
-          class="text-xl md:text-xl lg:text-xl max-w-3xl mx-auto mb-6 animate-intro drop-shadow-md text-justify"
-        >
-        Chez Kaelia, l’humain et l’excellence professionnelle sont au cœur de notre démarche.
-
- 
-
-        Nous vous offrons un accompagnement sur mesure tout au long de votre parcours professionnel afin de répondre à vos besoins spécifiques et ceux de l’entreprise.
-        
-        Nous avons pour objectif de répondre à l’obligation légale de formation en proposant des solutions innovantes pour développer vos compétences sans contraintes financières.
-        
-        Kaelia est certifiée Qualiopi et éligible aux financements publics.
-        
-         
-        
-        Kaelia propose des solutions taillées sur mesure pour répondre aux enjeux actuels
-        
-        avec une équipe d’experts passionnés dévoués à délivrer un accompagnement qui donne du sens et vers l’excellence. Nous vous guidons à chaque étape pour vous aider à atteindre vos objectifs et révéler les potentiels.
-        
-         
-        
-        Élevez votre carrière avec Kaelia, et aidez votre entreprise à passer un cap pour réussir dans un monde en constante évolution.
-        </p> -->
         <a
-  href="/contact"
-  class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
->
-  <span>Contactez-nous</span>
-  <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-</a>
+          href="/contact"
+          class="relative inline-block font-semibold py-3 px-8 border-2 border-white text-white rounded-full transition-all duration-500 group hover:bg-white hover:text-purple-800 animate-intro drop-shadow-lg transform hover:scale-105"
+        >
+          <span>Contactez-nous</span>
+          <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
       </div>
     </section>
+  </div>
 
-  </section>
   <section>
-    <!-- Section "Pourquoi choisir Kaelia ?" en full page -->
+    <!-- Section "Pourquoi choisir Kaelia ?" -->
     <section
-      class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center py-0 bg-white section-angle animate-on-scroll"
+      class="relative min-h-screen flex flex-col justify-center items-center text-center py-0 bg-white section-angle animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_left.svg'); background-repeat: no-repeat; background-size:auto;"
     >
       <div class="container mx-auto">
         <h2 class="text-5xl md:text-6xl font-bold mb-10 drop-shadow-md">
-          Chez <span class="text-purple-600">Kaelia</span>, l'humain et l'excellence professionnelle sont au coeur de notre démarche.
+          Chez <span class="text-purple-600">Kaelia</span>, l'humain et
+          l'excellence professionnelle sont au coeur de notre démarche.
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 mt-10">
           <div class="text-center">
@@ -70,10 +48,10 @@ import Layout from "../layouts/Layout.astro";
             </h3>
             <p class="text-base md:text-lg text-gray-700">
               Votre projet est unique, et notre accompagnement l’est tout
-              autant. Nous vous soutenons à chaque étape, en
-              adaptant le contenu et le rythme pour répondre à vos
-              attentes. De l'évaluation de vos besoins jusqu’à la
-              validation de vos acquis, vous bénéficiez d’un suivi personnalisé.
+              autant. Nous vous soutenons à chaque étape, en adaptant le contenu
+              et le rythme pour répondre à vos attentes. De l'évaluation de vos
+              besoins jusqu’à la validation de vos acquis, vous bénéficiez d’un
+              suivi personnalisé.
             </p>
           </div>
           <div class="text-center">
@@ -81,8 +59,8 @@ import Layout from "../layouts/Layout.astro";
               Des experts à votre écoute
             </h3>
             <p class="text-base md:text-lg text-gray-700">
-              Notre équipe est composée de professionnels qualifiés
-              et passionnés par le développement des compétences. Grâce à leur
+              Notre équipe est composée de professionnels qualifiés et
+              passionnés par le développement des compétences. Grâce à leur
               expertise pointue dans des domaines variés, ils vous guident avec
               attention et vous apportent des solutions adaptées à votre
               parcours et à vos défis professionnels.
@@ -106,86 +84,123 @@ import Layout from "../layouts/Layout.astro";
           class="relative inline-block font-semibold py-3 px-8 border-2 border-purple-800 text-purple-800 rounded-full transition-all duration-500 hover:bg-purple-800 hover:text-white text-lg drop-shadow-lg transform hover:scale-105"
         >
           <span>Entrez dans l'excellence</span>
-          <span class="ml-2 group-hover:translate-x-1 transition-transform"
-            >→</span
-          >
+          <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
     </section>
 
-    <!-- Section "Les 4 étapes de notre accompagnement" en full page avec dégradé -->
+    <!-- Section "Les 4 étapes de notre accompagnement" avec image de fond -->
     <section
-  class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
-  style="background: linear-gradient(90deg, #6b46c1, #4a90e2);"
->
-  <div class="container mx-auto">
-    <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-      AU CŒUR DE LA FORMATION
-    </h2>
+      class="relative min-h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
+      style="
+        background-image: url('/images/index/background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="container mx-auto">
+        <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+          AU CŒUR DE LA FORMATION
+        </h2>
 
-    <p class="text-lg md:text-xl mb-10 drop-shadow-md">
-      Nous vous accompagnons à chaque étape de votre parcours professionnel ou de la vie de votre entreprise
-    </p>
-
-    <!-- Petite déco -->
-    <div class="flex justify-center items-center mb-12">
-      <div class="w-1/4 border-t border-white"></div>
-      <div class="mx-2 h-4 w-4 bg-white"></div>
-      <div class="w-1/4 border-t border-white"></div>
-    </div>
-
-    <!-- Le grid qui s'étire pour que toutes les cartes aient la même hauteur -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
-      <!-- Étape 1 -->
-      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
-        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">1</h3>
-        <h4 class="text-3xl text-black font-semibold mb-2">Analyse des besoins</h4>
-        <p class="text-base">
-          Accédez à une formation sur mesure adaptée à votre situation, 
-          vos ambitions et vos aspirations.
+        <p class="text-lg md:text-xl mb-10 drop-shadow-md">
+          Nous vous accompagnons à chaque étape de votre parcours professionnel
+          ou de la vie de votre entreprise
         </p>
+
+        <!-- Petite déco -->
+        <div class="flex justify-center items-center mb-12">
+          <div class="w-1/4 border-t border-white"></div>
+          <div class="mx-2 h-4 w-4 bg-white"></div>
+          <div class="w-1/4 border-t border-white"></div>
+        </div>
+
+        <!-- Le grid qui s'étire pour que toutes les cartes aient la même hauteur -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+          <!-- Étape 1 -->
+          <div
+            class="flex flex-col border border-white rounded-lg p-6
+            drop-shadow-md bg-opacity-25
+            transition-transform duration-300 ease-out
+            transform hover:scale-110
+            hover:bg-white hover:bg-opacity-20"
+          >
+            <h3 class="text-4xl font-bold mb-2">1</h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
+              Analyse des besoins
+            </h4>
+            <p class="text-base">
+              Accédez à une formation sur mesure, adaptée à votre situation.
+            </p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div
+            class="etape flex flex-col border border-white rounded-lg p-6
+            drop-shadow-md bg-opacity-25
+            transition-transform duration-300 ease-out
+            transform hover:scale-110
+            hover:bg-white hover:bg-opacity-20"
+          >
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+              2
+            </h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
+              Conception du plan d'accompagnement
+            </h4>
+            <p class="text-base">
+              Co-construisons votre programme afin de structurer et formaliser
+              les étapes pour vous accompagner vers l’atteinte de vos objectifs.
+            </p>
+          </div>
+
+          <!-- Étape 3 -->
+          <div
+            class="etape flex flex-col border border-white rounded-lg p-6
+            drop-shadow-md bg-opacity-25
+            transition-transform duration-300 ease-out
+            transform hover:scale-110
+            hover:bg-white hover:bg-opacity-20"
+          >
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+              3
+            </h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
+              Apprendre et se former
+            </h4>
+            <p class="text-base">
+              Nos experts vous accompagnent pour développer vos compétences.
+            </p>
+          </div>
+
+          <!-- Étape 4 -->
+          <div
+            class="etape flex flex-col border border-white rounded-lg p-6
+            drop-shadow-md bg-opacity-25
+            transition-transform duration-300 ease-out
+            transform hover:scale-110
+            hover:bg-white hover:bg-opacity-20"
+          >
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+              4
+            </h3>
+            <h4 class="text-3xl text-black font-semibold mb-2">
+              Bilan et suivi personnalisé
+            </h4>
+            <p class="text-base">
+              Nous effectuons un bilan complet afin de mesurer vos progrès. Le
+              suivi personnalisé favorise la consolidation des compétences
+              acquises.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Étape 2 -->
-      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
-        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">2</h3>
-        <h4 class="text-3xl text-black font-semibold mb-2">
-          Conception du plan d'accompagnement
-        </h4>
-        <p class="text-base">
-          Co-construisons votre programme afin de structurer et formaliser 
-          les étapes pour vous accompagner vers l’atteinte de vos objectifs.
-        </p>
-      </div>
-
-      <!-- Étape 3 -->
-      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
-        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">3</h3>
-        <h4 class="text-3xl text-black font-semibold mb-2">Apprendre et se former</h4>
-        <p class="text-base">
-          Nos experts vous accompagnent pour développer vos compétences.
-        </p>
-      </div>
-
-      <!-- Étape 4 -->
-      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
-        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4</h3>
-        <h4 class="text-3xl text-black font-semibold mb-2">
-          Bilan et suivi personnalisé
-        </h4>
-        <p class="text-base">
-          Nous effectuons un bilan complet afin de mesurer vos progrès.
-          Le suivi personnalisé favorise la consolidation des compétences acquises.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Section "KAELIA en quelques chiffres..." en full page -->
+    <!-- Section "KAELIA en quelques chiffres..." -->
     <section
-      class="full-page-section snap-start snap-always h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
+      class="min-h-screen flex flex-col justify-center items-center bg-white text-center animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_right4.svg'); background-repeat: no-repeat; background-size: 100% auto;"
     >
       <div class="container mx-auto max-w-5xl">
@@ -203,9 +218,8 @@ import Layout from "../layouts/Layout.astro";
           >
             <h3 class="text-6xl md:text-7xl font-bold mb-2 md:mb-4">4,9/5</h3>
             <p class="text-4xl font-semibold">
-              <span class="text-pink-300">Satisfaction</span><br /><span
-                class="text-white">Client</span
-              >
+              <span class="text-pink-300">Satisfaction</span><br />
+              <span class="text-white">Client</span>
             </p>
           </div>
           <div
@@ -214,9 +228,8 @@ import Layout from "../layouts/Layout.astro";
           >
             <h3 class="text-5xl font-bold mb-2">0%</h3>
             <p class="text-2xl font-semibold">
-              <span class="text-pink-300">Taux</span><br /><span
-                class="text-white">d'Absentéisme</span
-              >
+              <span class="text-pink-300">Taux</span><br />
+              <span class="text-white">d'Absentéisme</span>
             </p>
           </div>
           <div
@@ -225,9 +238,8 @@ import Layout from "../layouts/Layout.astro";
           >
             <h3 class="text-5xl font-bold mb-2">35</h3>
             <p class="text-2xl font-semibold">
-              <span class="text-pink-300">Clients</span><br /><span
-                class="text-white">Formés</span
-              >
+              <span class="text-pink-300">Clients</span><br />
+              <span class="text-white">Formés</span>
             </p>
           </div>
           <div
@@ -236,17 +248,17 @@ import Layout from "../layouts/Layout.astro";
           >
             <h3 class="text-5xl font-bold mb-2">5/5</h3>
             <p class="text-2xl font-semibold">
-              <span class="text-pink-300">Avis</span><br /><span
-                class="text-white">Google</span
-              >
+              <span class="text-pink-300">Avis</span><br />
+              <span class="text-white">Google</span>
             </p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Section "Ils nous font confiance" -->
     <section
-      class="full-page-section snap-start snap-always flex flex-col h-screen items-center bg-white text-center animate-on-scroll"
+      class="min-h-screen flex flex-col items-center bg-white text-center animate-on-scroll"
       style="background-image: url('/images/index/liserai_quorum_left.svg'); background-repeat: no-repeat; background-size: 100% auto;"
     >
       <div class="container mx-auto py-10">
@@ -257,7 +269,7 @@ import Layout from "../layouts/Layout.astro";
           La confiance de nos partenaires, notre plus belle récompense.
         </p>
 
-        <!-- Carrousel en haut avec une marge inférieure importante -->
+        <!-- Carrousel -->
         <div class="logo-carousel mb-32">
           <div class="logo-track">
             <div class="logo-item">
@@ -292,106 +304,110 @@ import Layout from "../layouts/Layout.astro";
                 class="h-16 md:h-20 lg:h-24 transition-transform"
               />
             </div>
-
-            <!-- Nouveaux logos ajoutés -->
-    <div class="logo-item">
-      <img
-        loading="lazy"
-        src="/images/index/logo-partenaire-quorum.png"
-        alt="Quorum"
-        class="h-16 md:h-20 lg:h-24 transition-transform"
-      />
-    </div>
-    <!-- <div class="logo-item">
-      <img
-        loading="lazy"
-        src="/images/index/logo-partenaire-CNR.png"
-        alt="CNR"
-        class="h-16 md:h-20 lg:h-24 transition-transform"
-      />
-    </div> -->
-    <div class="logo-item">
-      <img
-        loading="lazy"
-        src="/images/index/logo-partenaire-Arlim.png"
-        alt="Arlim"
-        class="h-16 md:h-20 lg:h-24 transition-transform"
-      />
-    </div>
-    <div class="logo-item">
-      <img
-        loading="lazy"
-        src="/images/index/logo-partenaire-CRMT.jpg"
-        alt="CRMT"
-        class="h-16 md:h-20 lg:h-24 transition-transform"
-      />
-    </div>
-    <div class="logo-item">
-      <img
-        loading="lazy"
-        src="/images/index/logo-partenaire-agora-dazibao.png"
-        alt="AGORA DAZIBAO"
-        class="h-16 md:h-20 lg:h-24 transition-transform"
-      />
-    </div>
+            <!-- Nouveaux logos -->
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-quorum.png"
+                alt="Quorum"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-Arlim.png"
+                alt="Arlim"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-CRMT.jpg"
+                alt="CRMT"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                loading="lazy"
+                src="/images/index/logo-partenaire-agora-dazibao.png"
+                alt="AGORA DAZIBAO"
+                class="h-16 md:h-20 lg:h-24 transition-transform"
+              />
+            </div>
           </div>
         </div>
 
-       <!-- Titre de la section -->
-<h3 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">
-  Avis de nos clients
-</h3>
+        <!-- Titre de la section -->
+        <h3 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">
+          Avis de nos clients
+        </h3>
 
-<!-- Container en grid avec items-stretch -->
-<div
-  class="testimonials grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
->
-  <!-- Témoignage 1 -->
-  <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
-    <p class="text-gray-700 mb-4 flex-grow">
-      "Ayant effectué 3 formations autour de la création d'entreprise, je recommande vivement KAELIA !
-      Une équipe à l'écoute, bienveillante, professionnelle et avec des compétences très variées.
-      Si vous recherchez une formation avec de bons intervenants, des supports pédagogiques pointus, et tout ça dans une bonne humeur, n'hésitez pas !"
-    </p>
-    <p class="font-bold mt-auto">
-      Jérôme Monteil <br>
-      Chef d'entreprise M.J. Participations
-    </p>
-  </div>
+        <!-- Témoignages -->
+        <div class="testimonials grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+          <!-- Témoignage 1 -->
+          <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 mb-4 flex-grow">
+              "Ayant effectué 3 formations autour de la création d'entreprise,
+              je recommande vivement KAELIA ! Une équipe à l'écoute,
+              bienveillante, professionnelle et avec des compétences très
+              variées. Si vous recherchez une formation avec de bons
+              intervenants, des supports pédagogiques pointus, et tout ça dans
+              une bonne humeur, n'hésitez pas !"
+            </p>
+            <p class="font-bold mt-auto">
+              Jérôme Monteil <br />
+              Chef d'entreprise M.J. Participations
+            </p>
+          </div>
 
-  <!-- Témoignage 2 -->
-  <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
-    <p class="text-gray-700 mb-4 flex-grow">
-      "Je remercie toute l'équipe kaelia pour les formations, tout en utilisant mon CPF. 
-      Des formations délivrées par des avocats afin d'élargir mes compétences 
-      en matière sociale et juridique. À très vite !"
-    </p>
-    <p class="font-bold mt-auto">
-      Florence Rebrond<br>
-      Agent général AXA
-    </p>
-  </div>
+          <!-- Témoignage 2 -->
+          <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 mb-4 flex-grow">
+              "Je remercie toute l'équipe kaelia pour les formations, tout en
+              utilisant mon CPF. Des formations délivrées par des avocats afin
+              d'élargir mes compétences en matière sociale et juridique. À très
+              vite !"
+            </p>
+            <p class="font-bold mt-auto">
+              Florence Rebrond<br />
+              Agent général AXA
+            </p>
+          </div>
 
-  <!-- Témoignage 3 -->
-  <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
-    <p class="text-gray-700 mb-4 flex-grow">
-      "Merci à Kaelia ! Une excellente expérience de formation que je recommande vivement 🙂"
-    </p>
-    <p class="font-bold mt-auto">
-      Sophie Launay<br>
-      Responsable Communication HARVEST
-    </p>
-  </div>
-</div>
+          <!-- Témoignage 3 -->
+          <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 mb-4 flex-grow">
+              "Merci à Kaelia ! Une excellente expérience de formation que je
+              recommande vivement 🙂"
+            </p>
+            <p class="font-bold mt-auto">
+              Sophie Launay<br />
+              Responsable Communication HARVEST
+            </p>
+          </div>
 
-        <!-- Fin de la section des témoignages -->
+          <!-- Témoignage 4 -->
+          <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 mb-4 flex-grow">
+              "Formation très instructive et dynamique dispensée par Rudy sur la thématique du bien-être au travail et la lutte contre la sédentarité. Rudy donne des explications concrètes, précises et se montre très à l'écoute. Je n'ai pas vu le temps passer pendant la formation théorique et ses conseils sur l'adaptation de mon poste de travail se sont avérés précieux. Rudy est par ailleurs un excellent ostéopathe. Je recommande vivement !"
+            </p>
+            <p class="font-bold mt-auto">
+              Sophie Vacher<br />
+              Responsable Communication HARVEST
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-  </div>
+  </section>
 </Layout>
 
+
 <style>
-  /* Animation de montée et de fondu simultanée pour tous les éléments de la section d'introduction */
+  /* Animation intro */
   @keyframes introAnimation {
     0% {
       opacity: 0;
@@ -407,7 +423,7 @@ import Layout from "../layouts/Layout.astro";
     animation: introAnimation 1.2s ease-out forwards;
   }
 
-  /* Animation de fade-in pour les sections */
+  /* Animation de fade-in au scroll */
   @keyframes sectionFadeIn {
     from {
       opacity: 0;
@@ -427,7 +443,7 @@ import Layout from "../layouts/Layout.astro";
     animation: sectionFadeIn 1s ease-out forwards;
   }
 
-  /* Style de base pour le carrousel */
+  /* Carrousel */
   .logo-carousel {
     overflow: hidden;
     position: relative;
@@ -444,7 +460,6 @@ import Layout from "../layouts/Layout.astro";
     padding: 0 1rem;
   }
 
-  /* Suppression de la hauteur fixe des images */
   .logo-item img {
     filter: grayscale(100%);
     transition: filter 0.3s;
@@ -454,7 +469,7 @@ import Layout from "../layouts/Layout.astro";
     filter: grayscale(0%);
   }
 
-  /* Animation de fade-in pour les éléments au scroll */
+  /* Fade in on scroll pour les autres éléments */
   @keyframes fadeInOnScroll {
     0% {
       opacity: 0;
@@ -474,45 +489,43 @@ import Layout from "../layouts/Layout.astro";
     animation: fadeInOnScroll 1s ease-out forwards;
   }
 
-  /* Ajout de la classe pour scroll-snap-stop */
-  .snap-always {
-    scroll-snap-stop: always;
+  /* Retiré scroll-snap, hauteur forcée, etc. */
+  /* Plus de .smooth-scroll { overflow: hidden; } */
+  
+  /* Juste pour aligner nos "full-page-section" si vous gardez la classe : 
+     on enlève scroll-snap-align, etc. */
+  .full-page-section {
+    /* height: 100vh;  <-- Supprimé pour permettre le scroll libre */
+    min-height: 100vh; /* Optionnel, si vous voulez garder des sections pleines. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* scroll-snap-align: start; <-- Supprimé */
+    /* scroll-snap-stop: always; <-- Supprimé */
   }
 
+  /* Styles pour vos "etape" et "etape-chiffre" */
   .etape {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre horizontalement tout le contenu, y compris le chiffre */
+    align-items: center;
   }
 
   .etape-chiffre {
     display: flex;
-    align-items: center; /* Centre verticalement le contenu */
-    justify-content: center; /* Centre horizontalement le contenu */
-    border: 2px solid white; /* Bordure blanche */
-    border-radius: 50%; /* Faire un cercle */
-    width: 3rem; /* Ajustez la largeur du cercle */
-    height: 3rem; /* Ajustez la hauteur du cercle */
-    font-size: 1.5rem; /* Taille du texte */
-    color: white; /* Couleur du texte */
-    box-sizing: border-box; /* Inclure la bordure dans les dimensions */
-    margin-bottom: 1rem; /* Ajoute un espace entre le chiffre et le titre en dessous */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
   }
-
-  .smooth-scroll {
-  overflow: hidden;
-  scroll-behavior: smooth;
-}
-
-.full-page-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
 </style>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -601,71 +614,73 @@ import Layout from "../layouts/Layout.astro";
     }
   });
   import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Enregistrer le plugin GSAP ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+  // Enregistrer le plugin GSAP ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
 
-// Animation au chargement de la page
-document.addEventListener("DOMContentLoaded", () => {
+  // Animation au chargement de la page
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = gsap.utils.toArray<HTMLElement>(".full-page-section");
+
+    sections.forEach((section, i) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: i * 0.2,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 75%",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
   const sections = gsap.utils.toArray<HTMLElement>(".full-page-section");
 
+  // On initialise l'opacité de toutes les sections sauf la première à 0
   sections.forEach((section, i) => {
-    gsap.fromTo(
-      section,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: i * 0.2,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 75%",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
-});
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-const sections = gsap.utils.toArray<HTMLElement>(".full-page-section");
-
-// On initialise l'opacité de toutes les sections sauf la première à 0
-sections.forEach((section, i) => {
-  if (i !== 0) {
-    gsap.set(section, { opacity: 0 });
-  }
-});
-
-// Pour chaque section (sauf la première), on crée un ScrollTrigger
-// qui va faire apparaître progressivement la nouvelle section au scroll.
-// En même temps, on fera disparaître l'ancienne section, créant un fondu enchaîné.
-sections.forEach((section, i) => {
-  if (i === 0) return; // La première section est déjà visible
-
-  const prevSection = sections[i - 1];
-
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top 90%", // Ajustez le point de déclenchement selon votre mise en page
-    end: "top 50%",
-    scrub: true,
-    onUpdate: (self: ScrollTrigger) => {
-      const progress = self.progress;
-
-      // progress varie entre 0 et 1 au fur et à mesure que la section entre dans la vue
-      // On fait apparaître la nouvelle section (section) au fur et à mesure :
-      gsap.to(section, { opacity: progress, duration: 0.1, overwrite: true });
-
-      // On fait disparaître l'ancienne section (prevSection) dans le même temps :
-      gsap.to(prevSection, { opacity: 1 - progress, duration: 0.1, overwrite: true });
+    if (i !== 0) {
+      gsap.set(section, { opacity: 0 });
     }
   });
-});
 
+  // Pour chaque section (sauf la première), on crée un ScrollTrigger
+  // qui va faire apparaître progressivement la nouvelle section au scroll.
+  // En même temps, on fera disparaître l'ancienne section, créant un fondu enchaîné.
+  sections.forEach((section, i) => {
+    if (i === 0) return; // La première section est déjà visible
+
+    const prevSection = sections[i - 1];
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 90%", // Ajustez le point de déclenchement selon votre mise en page
+      end: "top 50%",
+      scrub: true,
+      onUpdate: (self: ScrollTrigger) => {
+        const progress = self.progress;
+
+        // progress varie entre 0 et 1 au fur et à mesure que la section entre dans la vue
+        // On fait apparaître la nouvelle section (section) au fur et à mesure :
+        gsap.to(section, { opacity: progress, duration: 0.1, overwrite: true });
+
+        // On fait disparaître l'ancienne section (prevSection) dans le même temps :
+        gsap.to(prevSection, {
+          opacity: 1 - progress,
+          duration: 0.1,
+          overwrite: true,
+        });
+      },
+    });
+  });
 </script>
