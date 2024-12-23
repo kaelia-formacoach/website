@@ -115,85 +115,73 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Section "Les 4 étapes de notre accompagnement" en full page avec dégradé -->
     <section
-      class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
-      style="background: linear-gradient(90deg, #6b46c1, #4a90e2);"
-    >
-      <div class="container mx-auto">
-        <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          AU CŒUR DE LA FORMATION
-        </h2>
-        <p class="text-lg md:text-xl mb-10 drop-shadow-md">
-          Nous vous accompagnons à chaque étape de votre parcours professionnel ou de la vie de votre entreprise
+  class="full-page-section snap-start snap-always relative h-screen flex flex-col justify-center items-center text-center text-white section-wave animate-on-scroll"
+  style="background: linear-gradient(90deg, #6b46c1, #4a90e2);"
+>
+  <div class="container mx-auto">
+    <h2 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+      AU CŒUR DE LA FORMATION
+    </h2>
+
+    <p class="text-lg md:text-xl mb-10 drop-shadow-md">
+      Nous vous accompagnons à chaque étape de votre parcours professionnel ou de la vie de votre entreprise
+    </p>
+
+    <!-- Petite déco -->
+    <div class="flex justify-center items-center mb-12">
+      <div class="w-1/4 border-t border-white"></div>
+      <div class="mx-2 h-4 w-4 bg-white"></div>
+      <div class="w-1/4 border-t border-white"></div>
+    </div>
+
+    <!-- Le grid qui s'étire pour que toutes les cartes aient la même hauteur -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+      <!-- Étape 1 -->
+      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
+        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">1</h3>
+        <h4 class="text-3xl text-black font-semibold mb-2">Analyse des besoins</h4>
+        <p class="text-base">
+          Accédez à une formation sur mesure adaptée à votre situation, 
+          vos ambitions et vos aspirations.
         </p>
-        <div class="flex justify-center items-center mb-12">
-          <div class="w-1/4 border-t border-white"></div>
-          <div class="mx-2 h-4 w-4 bg-white"></div>
-          <div class="w-1/4 border-t border-white"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div
-            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
-          >
-            <h3
-              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
-            >
-              1
-            </h3>
-            <h4 class="text-3xl text-black font-semibold mb-2">
-              Analyse des besoins 
-            </h4>
-            <p class="text-base">
-              Accédez à une formation sur mesure adaptée à votre situation, vos ambitions et vos aspirations.
-            </p>
-          </div>
-          <div
-            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
-          >
-            <h3
-              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
-            >
-              2
-            </h3>
-            <h4 class="text-3xl text-black font-semibold mb-2">
-              Conception du plan d'accompagnement
-            </h4>
-            <p class="text-base">
-              Co-construisons votre programme afin de structurer et formaliser les étapes pour vous accompagner vers l’atteinte de vos objectifs.
-            </p>
-          </div>
-          <div
-            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
-          >
-            <h3
-              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
-            >
-              3
-            </h3>
-            <h4 class="text-3xl text-black font-semibold mb-2">
-              Apprendre et se former
-            </h4>
-            <p class="text-base">
-              Nos experts vous accompagnent pour développer vos compétences.
-            </p>
-          </div>
-          <div
-            class="etape border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll"
-          >
-            <h3
-              class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
-            >
-              4
-            </h3>
-            <h4 class="text-3xl text-black font-semibold mb-2">
-              Bilan et suvi personnalisé
-            </h4>
-            <p class="text-base">
-              Nous effectuons un bilan complet afin de mesurer vos progrès. Le suivi personnalisé favorise la consolidation des compétences acquises.
-            </p>
-          </div>
-        </div>
       </div>
-    </section>
+
+      <!-- Étape 2 -->
+      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
+        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">2</h3>
+        <h4 class="text-3xl text-black font-semibold mb-2">
+          Conception du plan d'accompagnement
+        </h4>
+        <p class="text-base">
+          Co-construisons votre programme afin de structurer et formaliser 
+          les étapes pour vous accompagner vers l’atteinte de vos objectifs.
+        </p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
+        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">3</h3>
+        <h4 class="text-3xl text-black font-semibold mb-2">Apprendre et se former</h4>
+        <p class="text-base">
+          Nos experts vous accompagnent pour développer vos compétences.
+        </p>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="etape flex flex-col border border-white rounded-lg p-6 transition transform hover:scale-105 drop-shadow-md bg-opacity-25 animate-fade-in-on-scroll">
+        <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">4</h3>
+        <h4 class="text-3xl text-black font-semibold mb-2">
+          Bilan et suivi personnalisé
+        </h4>
+        <p class="text-base">
+          Nous effectuons un bilan complet afin de mesurer vos progrès.
+          Le suivi personnalisé favorise la consolidation des compétences acquises.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Section "KAELIA en quelques chiffres..." en full page -->
     <section
@@ -349,44 +337,53 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
 
-        <!-- Avis de nos clients plus bas -->
-        <h3 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">
-          Avis de nos clients
-        </h3>
-        <div
-          class="testimonials grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <!-- Témoignage 1 -->
-          <div class="testimonial bg-gray-100 p-6 rounded-lg shadow-md">
-            <p class="text-gray-700 mb-4">
-              "Ayant effectué 3 formations autour de la création d'entreprise, je recommande vivement KAELIA !
-              Une équipe à l'écoute, bienveillante, professionnelle et avec des compétences très variées.
-              Si vous recherchez une formation avec de bons intervenants, des supports pédagogiques pointus, et tout ça dans une bonne humeur, n'hésitez pas !"
+       <!-- Titre de la section -->
+<h3 class="text-3xl md:text-4xl font-bold mb-6 drop-shadow-md">
+  Avis de nos clients
+</h3>
 
-            </p>
-            <p class="font-bold">Jerôme Monteil <br>
-              Chef d'entreprise M.J. Participations</p>
-          </div>
+<!-- Container en grid avec items-stretch -->
+<div
+  class="testimonials grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+>
+  <!-- Témoignage 1 -->
+  <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+    <p class="text-gray-700 mb-4 flex-grow">
+      "Ayant effectué 3 formations autour de la création d'entreprise, je recommande vivement KAELIA !
+      Une équipe à l'écoute, bienveillante, professionnelle et avec des compétences très variées.
+      Si vous recherchez une formation avec de bons intervenants, des supports pédagogiques pointus, et tout ça dans une bonne humeur, n'hésitez pas !"
+    </p>
+    <p class="font-bold mt-auto">
+      Jérôme Monteil <br>
+      Chef d'entreprise M.J. Participations
+    </p>
+  </div>
 
-          <!-- Témoignage 2 -->
-          <div class="testimonial bg-gray-100 p-6 rounded-lg shadow-md">
-            <p class="text-gray-700 mb-4">
-              "Je remercie toute l'équipe kaelia pour les formations, tout en utilisant mon CPF. Des formations délivrées par des avocats afin d'élargir mes compétences en matière sociale et juridique.
-              a très vite"
-            </p>
-            <p class="font-bold">Florence Rebrond<br>
-              Agent general AXA</p>
-          </div>
+  <!-- Témoignage 2 -->
+  <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+    <p class="text-gray-700 mb-4 flex-grow">
+      "Je remercie toute l'équipe kaelia pour les formations, tout en utilisant mon CPF. 
+      Des formations délivrées par des avocats afin d'élargir mes compétences 
+      en matière sociale et juridique. À très vite !"
+    </p>
+    <p class="font-bold mt-auto">
+      Florence Rebrond<br>
+      Agent général AXA
+    </p>
+  </div>
 
-          <!-- Témoignage 3 -->
-          <div class="testimonial bg-gray-100 p-6 rounded-lg shadow-md">
-            <p class="text-gray-700 mb-4">
-              "Merci à Kaelia ! Une excellente expérience de formation que je recommande vivement 🙂"
-            </p>
-            <p class="font-bold">Sophie Launay<br>
-             Responssable Communication HARVEST</p>
-          </div>
-        </div>
+  <!-- Témoignage 3 -->
+  <div class="testimonial flex flex-col h-full bg-gray-100 p-6 rounded-lg shadow-md">
+    <p class="text-gray-700 mb-4 flex-grow">
+      "Merci à Kaelia ! Une excellente expérience de formation que je recommande vivement 🙂"
+    </p>
+    <p class="font-bold mt-auto">
+      Sophie Launay<br>
+      Responsable Communication HARVEST
+    </p>
+  </div>
+</div>
+
         <!-- Fin de la section des témoignages -->
       </div>
     </section>
