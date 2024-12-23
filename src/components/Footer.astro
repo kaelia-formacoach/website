@@ -1,16 +1,19 @@
 <footer class="bg-gradient-to-r from-blue-800 to-purple-600 text-white">
-  <!-- Conteneur principal, positionné en "relative" -->
-  <div class="container mx-auto px-6 relative pt-12 pb-24">
-    <!-- Grille pour les 5 colonnes du footer -->
-    <div class="grid grid-cols-5 items-start gap-x-6 gap-y-0">
-      <!-- Colonne 1 : Logo & adresse -->
-      <div class="flex flex-col items-center md:items-start space-y-4 col-span-5 md:col-span-1">
+  <!-- Conteneur positionné en "relative" pour y accrocher l'élément absolu -->
+  <!-- On supprime "mx-auto" pour ne pas centrer, et on gère à la main pl-8 / pr-32 -->
+  <div class="relative pl-8 pr-32 pt-12 pb-24">
+
+    <!-- Grille 4 colonnes, même espace entre chaque col grâce à "gap-x-8" -->
+    <div class="grid grid-cols-4 gap-x-8 gap-y-8">
+
+      <!-- COLONNE 1 : Logo & Adresse -->
+      <div class="col-span-4 md:col-span-1 flex flex-col items-start space-y-4">
         <img
           src="/images/footer/badge-kaelia.webp"
           alt="Logo Kaelia"
           class="h-28"
         />
-        <div class="text-center md:text-left">
+        <div>
           <p class="font-semibold text-lg">KAELIA</p>
           <p>
             198 rue des amis de l’industrie,<br />
@@ -19,54 +22,59 @@
         </div>
       </div>
 
-      <!-- Colonne 2 : Navigation -->
-      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
+      <!-- COLONNE 2 : Navigation -->
+      <div class="col-span-4 md:col-span-1 flex flex-col space-y-4">
         <h3 class="font-semibold text-lg">Navigation</h3>
         <ul class="space-y-1">
-          <li>
-            <a href="/formations/nos-formations" class="hover:underline">Nos formations</a>
-          </li>
-          <li>
-            <a href="/formations/sur-mesure" class="hover:underline">Sur Mesure</a>
-          </li>
-          <li>
-            <a href="/Financement" class="hover:underline">Financement</a>
-          </li>
-          <li>
-            <a href="/inside-kaelia" class="hover:underline">Inside Kaelia</a>
-          </li>
-          <li>
-            <a href="/le-klub" class="hover:underline">Le Klub</a>
-          </li>
-          <li>
-            <a href="/contact" class="hover:underline">Contact</a>
-          </li>
-          <li>
-            <a href="/contact" class="hover:underline">Nous rejoindre</a>
-          </li>
+          <li><a href="/formations/nos-formations" class="hover:underline">Nos formations</a></li>
+          <li><a href="/formations/sur-mesure" class="hover:underline">Sur Mesure</a></li>
+          <li><a href="/Financement" class="hover:underline">Financement</a></li>
+          <li><a href="/inside-kaelia" class="hover:underline">Inside Kaelia</a></li>
+          <li><a href="/le-klub" class="hover:underline">Le Klub</a></li>
+          <li><a href="/contact" class="hover:underline">Contact</a></li>
+          <li><a href="/contact" class="hover:underline">Nous rejoindre</a></li>
         </ul>
       </div>
 
-      <!-- Colonne 3 : Informations Légales -->
-      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
-        <h3 class="font-semibold text-lg">Informations Légales</h3>
-        <ul class="space-y-1">
-          <li>
-            <a href="/mentions-legales" class="hover:underline">Mentions légales</a>
-          </li>
-          <li>
-            <a href="/conditions-generales" class="hover:underline">Conditions générales</a>
-          </li>
-          <li>
-            <a href="/politique-confidentialite" class="hover:underline"
-              >Politique de confidentialité</a
+      <!-- COLONNE 3 : Infos légales + Contact -->
+      <div class="col-span-4 md:col-span-1 flex flex-col space-y-8">
+        <!-- Infos légales -->
+        <div>
+          <h3 class="font-semibold text-lg">Informations Légales</h3>
+          <ul class="space-y-1 mt-2">
+            <li><a href="/mentions-legales" class="hover:underline">Mentions légales</a></li>
+            <li><a href="/conditions-generales" class="hover:underline">Conditions générales</a></li>
+            <li>
+              <a href="/politique-confidentialite" class="hover:underline">
+                Politique de confidentialité
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contactez-nous -->
+        <div>
+          <h3 class="font-semibold text-lg">Contactez-nous</h3>
+          <p class="mt-2">
+            Email : 
+            <a
+              href="mailto:contact@kaelia-formacoach.com"
+              class="hover:underline"
             >
-          </li>
-        </ul>
+              contact@kaelia-formacoach.com
+            </a>
+          </p>
+          <p>
+            Téléphone : 
+            <a href="tel:+33763773138" class="hover:underline">
+              +33 7 63 77 31 38
+            </a>
+          </p>
+        </div>
       </div>
 
-      <!-- Colonne 4 : Suivez-nous -->
-      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
+      <!-- COLONNE 4 : Suivez-nous -->
+      <div class="col-span-4 md:col-span-1 flex flex-col space-y-4">
         <h3 class="font-semibold text-lg">Suivez-nous</h3>
         <div class="flex space-x-4">
           <a
@@ -95,32 +103,10 @@
           </a>
         </div>
       </div>
-
-      <!-- Colonne 5 : Contactez-nous -->
-      <div class="flex flex-col space-y-4 col-span-5 md:col-span-1">
-        <h3 class="font-semibold text-lg">Contactez-nous</h3>
-        <p class="text-md">
-          Email :
-          <a
-            href="mailto:contact@kaelia-formacoach.com"
-            class="hover:underline text-md"
-          >
-            contact@kaelia-formacoach.com
-          </a>
-        </p>
-        <p class="text-md">
-          Téléphone :
-          <a href="tel:+33763773138" class="hover:underline text-md">
-            +33 7 63 77 31 38
-          </a>
-        </p>
-      </div>
     </div>
 
-    <!-- Certification Qualiopi ABSOLUE -->
-    <div
-      class="absolute bottom-4 right-6 flex flex-col items-end space-y-2"
-    >
+    <!-- Logo Qualiopi, en position absolue en bas à droite, "rien au-dessus" -->
+    <div class="absolute bottom-4 right-6 flex flex-col items-end space-y-2">
       <img
         src="/images/footer/logo-qualiopi.png"
         alt="Certification Qualiopi"
