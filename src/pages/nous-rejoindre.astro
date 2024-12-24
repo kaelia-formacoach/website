@@ -1,42 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-
 <Layout>
   <section class="bg-white py-12">
     <div class="container mx-auto px-6">
       <!-- Section Header -->
-      <h1 class="text-4xl font-bold text-purple-800 mb-6 text-center">
+      <h1 class="text-4xl font-bold text-purple-800 mb-6 text-center fade-in">
         Rejoignez l'équipe KAELIA
       </h1>
-      <p class="text-lg text-gray-700 mb-12 text-center">
+      <p class="text-lg text-gray-700 mb-12 text-center fade-in">
         Vous êtes passionné(e) par la formation et souhaitez faire partie d’une équipe dynamique et engagée ? Chez KAELIA, nous croyons au pouvoir de l’apprentissage pour transformer les parcours professionnels et accompagner les organisations vers le succès.
       </p>
 
-      <!-- Pourquoi rejoindre KAELIA ? -->
-      <div class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Pourquoi rejoindre KAELIA ?</h2>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li><strong>Un impact concret</strong> : En intégrant notre équipe, vous contribuez à former et inspirer des talents de tous horizons.</li>
-          <li><strong>Une culture collaborative</strong> : Nous valorisons le travail d'équipe, la créativité et les initiatives personnelles.</li>
-          <li><strong>Des opportunités de développement</strong> : Chez KAELIA, nous investissons dans nos collaborateurs avec des formations et des projets ambitieux.</li>
-        </ul>
+      <!-- Conteneur Flex pour les deux colonnes -->
+      <div class="flex flex-col md:flex-row gap-8 mb-8">
+        
+        <!-- Colonne gauche : Pourquoi rejoindre KAELIA -->
+        <div class="flex-1 slide-in-left">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Pourquoi rejoindre KAELIA ?</h2>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li><strong>Un impact concret</strong> : En intégrant notre équipe, vous contribuez à former et inspirer des talents de tous horizons.</li>
+            <li><strong>Une culture collaborative</strong> : Nous valorisons le travail d'équipe, la créativité et les initiatives personnelles.</li>
+            <li><strong>Des opportunités de développement</strong> : Chez KAELIA, nous investissons dans nos collaborateurs avec des formations et des projets ambitieux.</li>
+          </ul>
+        </div>
+
+        <!-- Colonne droite : Profils recherchés -->
+        <div class="flex-1 slide-in-right">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Profils recherchés</h2>
+          <p class="text-gray-700 mb-4">Nous sommes toujours à la recherche de talents motivés et curieux pour renforcer notre équipe :</p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Formateurs/trices experts dans leur domaine.</li>
+            <li>Responsables pédagogiques et administratifs.</li>
+            <li>Collaborateurs (communication, marketing, commercial, gestion et administration).</li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Profils recherchés -->
-      <div class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Profils recherchés</h2>
-        <p class="text-gray-700 mb-4">Nous sommes toujours à la recherche de talents motivés et curieux pour renforcer notre équipe :</p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Formateurs/trices experts dans leur domaine.</li>
-          <li>Responsables pédagogiques et administratifs.</li>
-          <li>Collaborateurs (communication, marketing, commercial, gestion et administration).</li>
-        </ul>
-        <p class="text-gray-700 font-bold mt-4">Rejoignez-nous et participez à une aventure où la passion pour l'apprentissage fait la différence ! 🦋</p>
-      </div>
+      <!-- Phrase détachée -->
+      <p class="text-center text-gray-700 font-bold text-lg mb-8 fade-in">
+        Rejoignez-nous et participez à une aventure où la passion pour l'apprentissage fait la différence ! 🚀
+      </p>
 
       <!-- Formulaire -->
-      <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+      <div class="bg-gray-50 p-8 rounded-lg shadow-md fade-in">
         <h2 class="text-3xl font-semibold text-gray-900 mb-6">
           Postulez dès maintenant
         </h2>
@@ -132,3 +140,56 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 </Layout>
+
+<style>
+  /* Initial State (hidden) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Visible State */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+</style>
+
+<script>
+  // Observer to detect when elements enter the viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  // Attach the observer to elements with animation classes
+  const animatedElements = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right");
+  animatedElements.forEach((el) => observer.observe(el));
+</script>
