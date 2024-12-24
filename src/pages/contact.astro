@@ -6,17 +6,20 @@ import Layout from "../layouts/Layout.astro";
   <section class="bg-gradient-to-r from-blue-800 to-purple-600 py-12 text-white">
     <div class="container mx-auto px-6 text-center">
       <!-- Header -->
-      <h1 class="text-4xl font-bold mb-4">Contactez-nous</h1>
-      <p class="text-lg mb-12">Vous avez une question, besoin d’informations ou souhaitez échanger sur vos projets de formation ? L’équipe KAELIA est à votre écoute pour vous accompagner et vous apporter des réponses personnalisées.</p>
+      <h1 class="text-4xl font-bold mb-4 transition-opacity duration-1000 opacity-0 animate-fadeIn">
+        Contactez-nous
+      </h1>
+      <p class="text-lg mb-12 transition-opacity duration-1000 opacity-0 animate-fadeIn delay-100">
+        Vous avez une question, besoin d’informations ou souhaitez échanger sur vos projets de formation ? L’équipe KAELIA est à votre écoute pour vous accompagner et vous apporter des réponses personnalisées.
+      </p>
   
       <!-- Informations de contact en 3 colonnes -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <!-- Téléphone -->
         <div
-          class="p-8 rounded-lg border border-white transition-all duration-300 flex flex-col items-center hover:bg-white hover:text-purple-900"
+          class="p-8 rounded-lg border border-white transition-all duration-300 flex flex-col items-center hover:bg-white hover:text-purple-900 scale-95 hover:scale-100 animate-fadeIn delay-200"
         >
           <div class="mb-4">
-            <!-- Téléphone Icon -->
             <img
               src="https://cdn-icons-png.flaticon.com/512/8138/8138799.png"
               alt="Icône Téléphone"
@@ -29,10 +32,9 @@ import Layout from "../layouts/Layout.astro";
   
         <!-- Mail -->
         <div
-          class="p-8 rounded-lg border border-white transition-all duration-300 flex flex-col items-center hover:bg-white hover:text-purple-900"
+          class="p-8 rounded-lg border border-white transition-all duration-300 flex flex-col items-center hover:bg-white hover:text-purple-900 scale-95 hover:scale-100 animate-fadeIn delay-300"
         >
           <div class="mb-4">
-            <!-- Mail Icon -->
             <img
               src="https://cdn-icons-png.flaticon.com/512/561/561127.png"
               alt="Icône Mail"
@@ -49,10 +51,9 @@ import Layout from "../layouts/Layout.astro";
   
         <!-- Localisation -->
         <div
-          class="p-8 rounded-lg border border-white transition-all duration-300 flex flex-col items-center hover:bg-white hover:text-purple-900"
+          class="p-8 rounded-lg border border-white transition-all duration-300 flex flex-col items-center hover:bg-white hover:text-purple-900 scale-95 hover:scale-100 animate-fadeIn delay-400"
         >
           <div class="mb-4">
-            <!-- Localisation Icon -->
             <img
               src="https://cdn-icons-png.flaticon.com/512/2567/2567752.png"
               alt="Icône Localisation"
@@ -65,6 +66,41 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+  
+  <!-- Ajouter des animations personnalisées dans le fichier TailwindCSS -->
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+  
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+  
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+  
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+  
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+  </style>
+  
 
   <!-- Section formulaire -->
   <section class="bg-white py-12">

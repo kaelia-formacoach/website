@@ -27,7 +27,7 @@ style="background-image: url('/images/index/photo-accueil8.jpg');"
 </div>
 </section>
 
-  <section class="text-center py-10">
+  <section class="text-center py-10" id="customizer">
     <p class="text-gray-500 mt-2">
       <!-- KAELIA propose des offres de formations dans quatre domaines clés :
       juridique, RSE, numérique, Stratégie d’entreprise. Nos programmes allient
@@ -521,3 +521,14 @@ style="background-image: url('/images/index/photo-accueil8.jpg');"
     </style>
   </section>
 </Layout>
+
+<script>
+  const link = document.querySelector('a[href="#customizer"]');
+if (link) {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector('#customizer')!;
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+</script>
