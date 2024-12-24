@@ -120,13 +120,15 @@ import Layout from "../layouts/Layout.astro";
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
           <!-- Étape 1 -->
           <div
-            class="flex flex-col border border-white rounded-lg p-6
+            class="etape flex flex-col border border-white rounded-lg p-6
             drop-shadow-md bg-opacity-25
             transition-transform duration-300 ease-out
             transform hover:scale-110
             hover:bg-white hover:bg-opacity-20"
           >
-            <h3 class="text-4xl font-bold mb-2">1</h3>
+            <h3 class="etape-chiffre text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
+              1
+            </h3>
             <h4 class="text-3xl text-black font-semibold mb-2">
               Analyse des besoins
             </h4>
@@ -257,13 +259,17 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Section "Ils nous font confiance" -->
     <section
-      class="min-h-screen flex flex-col items-center bg-white text-center animate-on-scroll"
-      style="background-image: url('/images/index/liserai_quorum_left.svg'); background-repeat: no-repeat; background-size: 100% auto;"
-    >
-      <div class="container mx-auto py-10">
-        <h2 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-md">
-          Ils nous font <span class="text-purple-600">confiance</span>
-        </h2>
+  class="min-h-screen flex flex-col items-center bg-white text-center animate-on-scroll pt-20" 
+  style="
+    background-image: url('/images/index/liserai_quorum_left.svg'); 
+    background-repeat: no-repeat; 
+    background-size: 100% auto;
+  "
+>
+  <div class="container mx-auto pb-10">
+    <h2 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-md">
+      Ils nous font <span class="text-purple-600">confiance</span>
+    </h2>
         <p class="text-base md:text-lg text-gray-700 max-w-xl mx-auto mb-10">
           La confiance de nos partenaires, notre plus belle récompense.
         </p>
@@ -395,7 +401,7 @@ import Layout from "../layouts/Layout.astro";
             </p>
             <p class="font-bold mt-auto">
               Sophie Vacher<br />
-              Avocats
+              Avocat
             </p>
           </div>
         </div>

@@ -1,11 +1,9 @@
 <footer class="bg-gradient-to-r from-blue-800 to-purple-600 text-white">
-  <!-- Conteneur positionné en "relative" pour y accrocher l'élément absolu -->
-  <!-- On supprime "mx-auto" pour ne pas centrer, et on gère à la main pl-8 / pr-32 -->
-  <div class="relative pl-8 pr-32 pt-12 pb-24">
-
-    <!-- Grille 4 colonnes, même espace entre chaque col grâce à "gap-x-8" -->
-    <div class="grid grid-cols-4 gap-x-8 gap-y-8">
-
+  <!-- On peut conserver "relative" si besoin, sinon on peut le retirer -->
+  <div class="relative pl-8 pr-8 pt-12 pb-16">
+    <!-- Grille 4 colonnes, on ajoute "items-start" pour tout aligner en haut -->
+    <div class="grid grid-cols-4 gap-x-8 gap-y-8 items-start">
+      
       <!-- COLONNE 1 : Logo & Adresse -->
       <div class="col-span-4 md:col-span-1 flex flex-col items-start space-y-4">
         <img
@@ -36,7 +34,7 @@
         </ul>
       </div>
 
-      <!-- COLONNE 3 : Infos légales + Contact -->
+      <!-- COLONNE 3 : Informations Légales + Contact + Suivez-nous -->
       <div class="col-span-4 md:col-span-1 flex flex-col space-y-8">
         <!-- Infos légales -->
         <div>
@@ -71,58 +69,59 @@
             </a>
           </p>
         </div>
-      </div>
 
-      <!-- COLONNE 4 : Suivez-nous -->
-      <div class="col-span-4 md:col-span-1 flex flex-col space-y-4">
-        <h3 class="font-semibold text-lg">Suivez-nous</h3>
-        <div class="flex space-x-4">
-          <a
-            href="https://www.instagram.com/kaeliaformacoach/"
-            target="_blank"
-            aria-label="Instagram"
-            class="hover:opacity-80"
-          >
-            <img
-              src="/images/footer/icon-instagram.svg"
-              alt="Instagram"
-              class="h-6 w-6"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/kaelia-formacoach/"
-            target="_blank"
-            aria-label="LinkedIn"
-            class="hover:opacity-80"
-          >
-            <img
-              src="/images/footer/icon-linkedin.svg"
-              alt="LinkedIn"
-              class="h-6 w-6"
-            />
-          </a>
+        <!-- Suivez-nous -->
+        <div>
+          <h3 class="font-semibold text-lg">Suivez-nous</h3>
+          <div class="flex space-x-4 mt-2">
+            <a
+              href="https://www.instagram.com/kaeliaformacoach/"
+              target="_blank"
+              aria-label="Instagram"
+              class="hover:opacity-80"
+            >
+              <img
+                src="/images/footer/icon-instagram.svg"
+                alt="Instagram"
+                class="h-6 w-6"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/kaelia-formacoach/"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="hover:opacity-80"
+            >
+              <img
+                src="/images/footer/icon-linkedin.svg"
+                alt="LinkedIn"
+                class="h-6 w-6"
+              />
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- COLONNE 4 : Logo Qualiopi (aligné en haut à droite) -->
+      <div class="col-span-4 md:col-span-1 flex flex-col items-end space-y-2">
+        <img
+          src="/images/footer/logo-qualiopi.png"
+          alt="Certification Qualiopi"
+          class="h-20 sm:h-24 w-auto"
+        />
+        <p class="text-sm text-right leading-tight">
+          La certification qualité a été délivrée<br />
+          au titre de la catégorie d’action suivante&nbsp;:
+          <br />
+          <span class="text-red-600">ACTIONS DE FORMATION</span>
+        </p>
+      </div>
+
     </div>
 
-    <!-- Logo Qualiopi, en position absolue en bas à droite, "rien au-dessus" -->
-    <div class="absolute bottom-4 right-6 flex flex-col items-end space-y-2">
-      <img
-        src="/images/footer/logo-qualiopi.png"
-        alt="Certification Qualiopi"
-        class="h-20 sm:h-24 w-auto"
-      />
-      <p class="text-sm text-right leading-tight">
-        La certification qualité a été délivrée<br />
-        au titre de la catégorie d’action suivante&nbsp;:
-        <br />
-        <span class="text-red-600">ACTIONS DE FORMATION</span>
-      </p>
+    <!-- Ligne de séparation + Copyright -->
+    <div class="border-t border-gray-400 text-center text-sm py-4 mt-4">
+      <p>© 2025 – KAELIA. Tous droits réservés.</p>
     </div>
-  </div>
-
-  <!-- Ligne de séparation + Copyright -->
-  <div class="border-t border-gray-400 text-center text-sm py-4 mt-4">
-    <p>© 2025 – KAELIA. Tous droits réservés.</p>
   </div>
 </footer>
